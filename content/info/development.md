@@ -43,6 +43,7 @@ tags: [
 
 ## Development Workflow
 
+- [GitOps Best Practices](https://www.permit.io/blog/gitops-today-why-and-how): Slightly heavy on the policy-as-code front (not surprising given the source), but otherwise some really good best practices.
 - [How atomic Git commits dramatically increased my productivity - and will increase yours too](https://dev.to/samuelfaure/how-atomic-git-commits-dramatically-increased-my-productivity-and-will-increase-yours-too-4a84)
 - [Reverse Pull Request](https://dzone.com/articles/reverse-pull-requests): A way to review code in rapid-release cycles.
 
