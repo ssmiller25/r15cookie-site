@@ -38,6 +38,7 @@ Post mortums are the basis of planning for future improvements.
   - [Details based on spam I received](/info/post-mortem-namecheap) - third party provider most likely Sendgrid
 - [Reddit Pi Day Outage](https://www.reddit.com/r/RedditEng/comments/11xx5o0/you_broke_reddit_the_piday_outage/) - Great overview of a Kubernetes outage centered around an upgrade from 1.23 to 1.24
 - [Reddit Thread: Wiedest Outages](https://www.reddit.com/r/ExperiencedDevs/comments/16cjdez/weirdest_outages_youve_had_to_experience_and_how/)
+- [Square Incident Summary: 2023-09-07](https://developer.squareup.com/blog/incident-summary-2023-09-07/)
 
 ### 2022
 
