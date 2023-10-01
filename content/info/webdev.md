@@ -54,6 +54,7 @@ tags: ["dev", "web"]
   - [Materialize](http://materializecss.com/): CSS Framework based on Google's Material design
   - [ZeroStatic](https://www.zerostatic.io): Static Website Themes
 - Web Development
+  - [R15Cookie Javascript](/info/javascript)
   - [CS50: Web Programming with Python and JavaScript (Harvard University)](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript): Free course covering Python, JavaScript, and SQL using frameworks like Django, React, and Bootstrap.
   - [Yii Framework](http://www.yiiframework.com/): My current goto for PHP development
   - [MEAN Stack](http://mean.io/#!/): MongoDB, Express.js, Angular.js, and Node.js

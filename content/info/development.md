@@ -36,10 +36,11 @@ tags: [
   - [Pocketbase](https://pocketbase.io/): Realtime DB + Auth + Objectstore
   - [SaltCorn](https://saltcorn.com/)
 - [Development - AI](/fino/ai)
-- [Development - Web](/info/webdev)
 - [Development - Go](/info/golang)
+- [Development - Javascript](/info/javascript)
 - [Development - Python](/info/python)
 - [Development - Scripting](/info/scripting)
+- [Development - Web](/info/webdev)
 
 ## Development Workflow
 
