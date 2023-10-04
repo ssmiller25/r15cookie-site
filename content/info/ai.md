@@ -23,6 +23,7 @@ With the Hype around ChatGPT, good to gather some resources
 
 - [HuggingFace VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=HuggingFace.huggingface-vscode). - leveraging the [StarCoder](https://huggingface.co/blog/starcoder) model
 - [FauxPilot](https://github.com/fauxpilot/fauxpilot): Attempt for locally-hosted Copilot (nVidia GPUs required)
+- [LocalPilot](https://github.com/danielgross/localpilot/): Another attempt for a locally-hosted Copilot
 
 ## Alternative Models
 
