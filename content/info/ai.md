@@ -37,3 +37,4 @@ With the Hype around ChatGPT, good to gather some resources
 - [LocalGPT](https://github.com/PromtEngineer/localGPT): Based on PrivateGPT, but replaced the GPT4ALL model with Vicuna-7B model and we are using the InstructorEmbeddings instead of LlamaEmbedding
 - [OnPrem.LLM](https://github.com/amaiya/onprem): (although as of 9/8/2023, does NOT suport GGUF format models...)
 - [PrivateGPT](https://github.com/imartinez/privateGPT): Ask question of your documentation
+- [Slowllama](https://github.com/okuvshynov/slowllama): llama2-70b tuned for Macbook Air M1/M2
