@@ -36,6 +36,7 @@ Post mortums are the basis of planning for future improvements.
 - [CircleCI Security Breach](https://circleci.com/blog/jan-4-2023-incident-report/)
 - [NameCheap Spam Email](https://www.namecheap.com/status-updates/archives/74848)
   - [Details based on spam I received](/info/post-mortem-namecheap) - third party provider most likely Sendgrid
+- [Okta Security Compromise](https://sec.okta.com/harfiles): Beleved to be a combination of session compromise via saved HAR files, and an employee saving their work credentials to personal Google account that was compromised.
 - [Reddit Pi Day Outage](https://www.reddit.com/r/RedditEng/comments/11xx5o0/you_broke_reddit_the_piday_outage/) - Great overview of a Kubernetes outage centered around an upgrade from 1.23 to 1.24
 - [Reddit Thread: Wiedest Outages](https://www.reddit.com/r/ExperiencedDevs/comments/16cjdez/weirdest_outages_youve_had_to_experience_and_how/)
 - [Square Incident Summary: 2023-09-07](https://developer.squareup.com/blog/incident-summary-2023-09-07/)

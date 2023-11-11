@@ -33,6 +33,7 @@ Toward the top, as automated scanning of code and infrastructure is the first li
   - [Center for Internet Security](http://www.cisecurity.org/): Provides configuration guides for common OS and server software.
   - [Linux Foundation Workstation Guidelines](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md): Excellent overview for securely configuring a Linux workstation
 - [Endian](http://www.endian.com): Appliance for security and hotspot management
+- [HAR Cleaner](https://blog.cloudflare.com/introducing-har-sanitizer-secure-har-sharing/): Clean HARs.  Root cause of the [Okta Compromise](https://sec.okta.com/harfiles)
 - [IPFire](http://www.ipfire.org/): Linux based firewall distro
 - [Mailu](https://mailu.io/): Docker based e-mail system.  If I were to deploy a mail system today, this would be the basis.  Granted, I feel that there is limited justification for hosting one's own mail system.
 - [Odessa](http://odessa.sourceforge.net/): Alternative to Autopsy/Sleuth Kit for Open Source forensics work.
