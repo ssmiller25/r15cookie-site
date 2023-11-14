@@ -28,7 +28,7 @@ git check-ignore --verbose <file>
 git log # Record commit id of correct commit you want to save
 # Now in new branch
 git checkout <correct-branch>
-git checkk-pick COMMIT_ID
+git cherry-pick COMMIT_ID
 # Fix the branch with bad commit
 git checkout <wrong-branch>
 git reset --hard HEAD^
@@ -92,6 +92,17 @@ Say...accidentally commit a change to the master branch that I did not intent to
 
 ```sh
 git checkout -B master origin/master
+```
+
+## Reset branch to a specific commit
+
+```sh
+git checkout <goodbranch>
+git log   #record commit hash, will look something like 617d1bc1870caaf36b65d5062b6e091437a44c5b
+git checkout <badbranch>
+git pull --rebase
+git reset --hard <commit_hash>
+git push --force
 ```
 
 ## Sync local with upstream
