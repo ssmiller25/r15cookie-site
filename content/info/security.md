@@ -10,6 +10,13 @@ tags: [
 
 ## Authentication
 
+- Authentication Systems
+  - [KeyCloak](https://www.keycloak.org/)
+  - [Authentik](https://goauthentik.io/)
+  - [Kanidm](https://kanidm.com/): Both Web and Linux PAM
+  - [Netlify Identity](https://www.netlify.com/docs/identity/): Netlify's Authentication...basically a hosted version of their Open-source GoTrue library.
+  - [GoTrue](https://github.com/netlify/gotrue): Open soruce JWT authentication backend)
+  - [SuperTokens](https://github.com/supertokens/supertokens-core): Open source authentication solution, similar to Auth0
 - [Securing Git with SSH and FIDO security keys](https://developers.yubico.com/SSH/Securing_git_with_SSH_and_FIDO2.html)
 
 ## Automated Code/Infra Scanning
