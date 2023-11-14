@@ -10,10 +10,7 @@ tags: ["dev", "web"]
   - [Six tools for a Static E-commerce Site](https://www.netlify.com/blog/2015/08/25/a-great-fast-static-e-commerce-experience-with-6-easy-tools/)
   - [Walkthrough For a Subscription Email Site](https://trolley.link/2019/03/03/paid-email-newsletter.html)
   - Authentication
-    - [Auth0](https://auth0.com/): Provide JWT authentication based SaaS
-    - [Netlify Identity](https://www.netlify.com/docs/identity/): Netlify's Authentication...basically a hosted version of their Open-source GoTrue library.
-    - [GoTrue](https://github.com/netlify/gotrue): Open soruce JWT authentication backend)
-    - [SuperTokens](https://github.com/supertokens/supertokens-core): Open source authentication solution, similar to Auth0
+    [See Security/Authentication](/info/security#authentication)
   - Captcha
     - [hCaptcha](https:///www.hcaptcha.com/): More privacy focused Captcha
     - [mCaptcha](https://mcaptcha.org/): Open source PoW Captcha [mCaptcha Source](https://github.com/mCaptcha/mCaptcha)
