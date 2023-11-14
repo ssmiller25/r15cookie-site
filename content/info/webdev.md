@@ -10,7 +10,7 @@ tags: ["dev", "web"]
   - [Six tools for a Static E-commerce Site](https://www.netlify.com/blog/2015/08/25/a-great-fast-static-e-commerce-experience-with-6-easy-tools/)
   - [Walkthrough For a Subscription Email Site](https://trolley.link/2019/03/03/paid-email-newsletter.html)
   - Authentication
-    [See Security/Authentication](/info/security#authentication)
+    - [See Security/Authentication](/info/security#authentication)
   - Captcha
     - [hCaptcha](https:///www.hcaptcha.com/): More privacy focused Captcha
     - [mCaptcha](https://mcaptcha.org/): Open source PoW Captcha [mCaptcha Source](https://github.com/mCaptcha/mCaptcha)
