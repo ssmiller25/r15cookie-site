@@ -27,6 +27,8 @@ tags: ["dev", "web"]
   - E-commerce
     - [Trolley](https://trolley.link/)
     - [Snipcart](https://snipcart.com/)
+  - Icons
+    - [Iconify](https://icon-sets.iconify.design/): Open source icons useful for web development.
   - Image/Database Hosting
     - [Cloudinary](https://cloudinary.com/): Does on-the-fly image manipulation
   - Monitoring
