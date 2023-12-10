@@ -21,6 +21,7 @@ My preferred stack:  Prometheus, Grafana, Loki
   - [The Outage Mailing List](https://puck.nether.net/pipermail/outages/) - Network admins chatting about global issues
 - Internet Monitoring (locally)
   - [Open Speed Test](https://github.com/openspeedtest/Speed-Test): Browser based, no client login required.
+  - [Trippy](https://trippy.cli.rs/): More advance Traceroute
 
 ## Alternative Software I want to Look At Someday
 
