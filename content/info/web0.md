@@ -14,6 +14,7 @@ Recently have discovered a diverse community of individuals rejecting the curren
 
 ## Manifestos
 
+- [IndieWeb](https://indieweb.org/)
 - [Internet Manifesto by sadgrl.online](https://sadgrl.online/cyberspace/internet-manifesto.html)
 - [Web0 Manifesto](https://web0.small-web.org/)
 
