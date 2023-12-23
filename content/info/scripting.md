@@ -11,8 +11,9 @@ Captures ad-hoc scripting and process needs.  Also includes resources making the
 
 - [Minimally Safe Bash Shell Script Template](https://betterdev.blog/minimal-safe-bash-script-template/)
 - [Bash Style Guidelines](https://github.com/progrium/bashstyle)
-- [Gum - Pretty Shellscript Addon](https://github.com/charmbracelet/gum)
 - [Bash - Using Loops](https://itnext.io/bash-using-loops-for-while-until-with-examples-f519eda7f41b) - Nice example of several looping and conditional structures.
+- [Debugging Bash Like a Sire](https://blog.brujordet.no/post/bash/debugging_bash_like_a_sire/): A stacktrace like mechanism for Shell!
+- [Gum - Pretty Shellscript Addon](https://github.com/charmbracelet/gum)
 - [Testing Shell Scripts/CLI leveraging Go's Testing Framework](https://bitfieldconsulting.com/golang/test-scripts)
 
 ## Higher Level
