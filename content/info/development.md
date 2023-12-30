@@ -89,3 +89,6 @@ tags: [
 - [The End of Localhost](https://www.swyx.io/the-end-of-localhost/): Proposal for development in the cloud
 - [yagni - You Aren't Gonna Need It](https://martinfowler.com/bliki/Yagni.html): Could also easily apply to IaC code-bases
 
+## Future Research
+
+[Zeitgitter](https://github.com/zeitgitter/zeitgitterd): A timestamping service for git commits.  Interesting idea of using a git repo/chain as a form of "blockchain" with cryptographically ensured timestamps committed...
