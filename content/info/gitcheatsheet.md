@@ -85,6 +85,7 @@ git push --force-with-lease  #Force push rebased local branch
 
 - [Git Rebase: Don't be Afaird of Force Push](https://blog.verslu.is/git/git-rebase/)
 - [Force-with-lease: an alternative to Force Push](http://weiqingtoh.github.io/force-with-lease/)
+- [Why large companies and fast-moving startups are banning merge commits](https://graphite.dev/blog/why-ban-merge-commits) - although might be a little bit to push their tooling.
 
 ## Reset master to origin/master
 
