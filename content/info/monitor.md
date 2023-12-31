@@ -25,6 +25,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 
 ## Alternative Software I want to Look At Someday
 
+- [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
 - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
 - [BindplaneOP](https://observiq.com/solutions/bindplane-op/): Manage sources that are OpenTelementry Specific
 
