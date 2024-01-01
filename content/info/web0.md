@@ -32,6 +32,7 @@ Recently have discovered a diverse community of individuals rejecting the curren
 - [Curlie](Curlie) - A user-organized directory in the spirit of DMOZ (and Yahoo in the before-fore time)
 - [Duck Duck Go Search Engine](https://ddg.gg) - If you need to search, use an search engine that protects your privacy
 - [Tilde Town](https://tilde.town/) - A linux host providing web hosting and IRC, with SSH access.  Reminds me of "SSH/Telnet" servers of the 90s/00s, before you could spin up cloud hosting on demand.
+- [Tilde Verse](https://tildeverse.org/): A loose association of like-minded tilde communities.
 - [Status Cafe](https://status.cafe/) - A simple service to just display one's current status.
 - [Sadgrl's Webring Directory](https://sadgrl.online/cyberspace/webrings.html) - Webrings are an interesting way to discover new content, and glad to see there are many still around and maintained.
 - [NeoCities](https://neocities.org/) - The successor of Geocites.  Great if you want a basic web hosting environment.
