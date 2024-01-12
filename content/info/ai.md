@@ -38,3 +38,7 @@ With the Hype around ChatGPT, good to gather some resources
 - [OnPrem.LLM](https://github.com/amaiya/onprem): (although as of 9/8/2023, does NOT suport GGUF format models...)
 - [PrivateGPT](https://github.com/imartinez/privateGPT): Ask question of your documentation
 - [Slowllama](https://github.com/okuvshynov/slowllama): llama2-70b tuned for Macbook Air M1/M2
+
+## Operations
+
+- [2024 ML Deployment Models](https://www.axelmendoza.com/posts/ml-model-deployment/)
