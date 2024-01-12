@@ -39,8 +39,11 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [KubeCTL Trace](https://github.com/iovisor/kubectl-trace): Easily run eBFP from kubectl
 - [Pixie Labs](https://pixielabs.ai/): Troubleshoot K8S apps relatively easily, leveraging eBFP
 
-## Tuning
+## Performance/Tuning
 
+Purposely in the "monitor" phase of the DevOps cycle, as you do not want to prematurely optimize an architecture.
+
+- [How Cloudflare Was Able to Support 55 Million Requests per Second With Only 15 Postgres Clusters](https://newsletter.systemdesign.one/p/postgresql-scalability)
 - [Scaling Mastodon](https://hazelweakly.me/blog/scaling-mastodon/) - Also some great general tips for Rails, Sidekiq, and Redis.
 - [Scaling Mastodon to 128K Users](https://gist.github.com/Gargron/aa9341a49dc91d5a721019d9e0c9fd11)
 
