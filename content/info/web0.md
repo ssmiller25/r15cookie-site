@@ -21,6 +21,7 @@ Recently have discovered a diverse community of individuals rejecting the curren
 ## Articles
 
 - [Digital Wellbeing](https://omoulo.com/digitalwellbeing.html)
+- [I Miss Human Curation](https://blog.cassidoo.co/post/human-curation/)
 - [No to Web3](https://yesterweb.org/no-to-web3/)
 - [Smartphones Are the New Cigarettes](https://markmanson.net/smartphones)
 - [The Commoditization of Social Interaction and Other Progress](https://nathanieltravis.com/2022/09/14/the-commoditization-of-social-interaction-and-other-progress/)
