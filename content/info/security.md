@@ -47,6 +47,12 @@ Toward the top, as automated scanning of code and infrastructure is the first li
 - [OPNSense](https://opnsense.org/):  OpenBSD based firewall.  Prefer it architecturally to pfSense
 - [Snort](https://www.snort.org/): Open source intrusion detection system.
 
+## Secrets Management
+
+- [Github-to-SOPS](https://github.com/tarasglek/github-to-sops): Interesting method using SOPS and Github user SSH keys, and AGE to build a light-weight secrets management platform
+- [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets): My goto for secrets management in k8s with no cloud dependencies.
+- [External Secrets Operator](https://external-secrets.io/latest/): My goto for cloud-provided secrets management
+
 ## SSL/TLS Information
 
 - [Let's Encrypt](https://letsencrypt.org/):  Freely available certificates for websites.
