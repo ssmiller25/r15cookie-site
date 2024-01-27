@@ -2,8 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4dee8665-200d-43f2-8d9e-c1749b1e82ad/deploy-status)](https://app.netlify.com/sites/r15cookieblog/deploys)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://gitlab.com/ssmiller25/r15cookieblog/-/tree/main)
-
 ## GitLab Setup
 
 Transitioning to mostly a GitPod based workflow.  In order to use the GitLab extension
