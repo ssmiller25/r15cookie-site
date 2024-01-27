@@ -1,5 +1,5 @@
 git_hash = $(shell git rev-parse --short -q HEAD)
-version := 0.9.0
+version := 0.10.0
 release_date := $(shell date +%Y-%m-%d)
 alpine_version := 3.13.1
 nginx_version := 1.19.6
