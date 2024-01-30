@@ -24,6 +24,7 @@ Kubernetes(k8s) is the best modern approach for deploying and maintaining code.
   - [Terracognita](https://github.com/cycloidio/terracognita): Generate IaC from existing code.
   - [Terraformer](https://github.com/GoogleCloudPlatform/terraformer): Produce terraform from existing resources.
   - [Testing Terraform with pytest](https://betterprogramming.pub/terraform-resource-testing-101-c9da424faaf3) - an Interesting concept to directly test against the Terraform state file, versus something like [Terratest](https://terratest.gruntwork.io/) that actually builds out infrastructure.
+  - [Moving Away From CDK](https://sst.dev/blog/moving-away-from-cdk) - SST's reasoning for moving away from AWS SDK/CloudFormation
 - Cloud Instance Cost 
   - [AWS: Vantage Instance Cost](https://instances.vantage.sh/): Used to be EC2Instances.info, but Vantage is now hosting. [Source is still on Github](https://github.com/vantage-sh/ec2instances.info)
   - [Azure: Azureprice.net](https://azureprice.net/)
