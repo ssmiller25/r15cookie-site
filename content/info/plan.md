@@ -12,9 +12,11 @@ Planning for a DevOps Cycle
 - [Platform Engineering](https://platformengineering.org/): Home for Platform Engineers.  Includes a comprehensive tech library of stacks/solutions.
   - [Backstage](https://backstage.io/): Open source developer portal 
   - [Krato](https://krateo.io/): Potentially lighter-weight solution to Backstage, but also seems heavily tied into ArgoCD and Crossplane
+- [Keeping Code Simple](https://graphite.dev/blog/keeping-code-simple)
 - [Questions for a new technology]()
 - [Redhat Demo Central](https://gitlab.com/redhatdemocentral/portfolio-architecture-examples) - Architectures for a wide range of cloud infrastructures and problems.
 - [Who Cares If It Scales](https://betterprogramming.pub/who-cares-if-it-scales-1946adca8167) - Avoiding pre-mature optimization.
+
 
 ## Statistics
 
