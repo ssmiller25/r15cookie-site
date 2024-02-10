@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/hugo,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=hugo,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,hugo
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,hugo
 
 ### Hugo ###
 # Generated files by hugo
@@ -35,7 +35,7 @@ hugo.linux
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/hugo,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,hugo
 
 kubeconfig.*
 *kubeconfig
