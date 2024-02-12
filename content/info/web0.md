@@ -25,6 +25,7 @@ Recently have discovered a diverse community of individuals rejecting the curren
 - [No to Web3](https://yesterweb.org/no-to-web3/)
 - [Smartphones Are the New Cigarettes](https://markmanson.net/smartphones)
 - [The Commoditization of Social Interaction and Other Progress](https://nathanieltravis.com/2022/09/14/the-commoditization-of-social-interaction-and-other-progress/)
+- [The Unersonable Effectiveness of Simple Websites](https://fd93.me/simple-sites)
 - [Organizating the World's Information](https://dkb.blog/p/organize-the-world-information)
 
 ## Sites
