@@ -39,6 +39,10 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [KubeCTL Trace](https://github.com/iovisor/kubectl-trace): Easily run eBFP from kubectl
 - [Pixie Labs](https://pixielabs.ai/): Troubleshoot K8S apps relatively easily, leveraging eBFP
 
+## Data Visualization
+
+- [Observable Framework](https://observablehq.com/framework/): Code based data visualization framekwork.
+
 ## Performance/Tuning
 
 Purposely in the "monitor" phase of the DevOps cycle, as you do not want to prematurely optimize an architecture.
