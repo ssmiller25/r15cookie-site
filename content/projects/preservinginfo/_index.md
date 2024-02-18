@@ -15,3 +15,15 @@ Overall goal is to provide an build a framework for perserving information for f
 
 Starting as a [100 day project](https://www.the100dayproject.org/)
 
+## Standards
+
+### Data Format
+
+- Test: ASCII
+- Images: JPEG
+
+### Storage (metadata)
+
+- Text: Git
+- Images: git-lfs? (may move to something more accessible)
+

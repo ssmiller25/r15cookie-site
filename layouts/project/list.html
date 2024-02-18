@@ -11,10 +11,13 @@
   <h2>Project Log</h2>
   <ul>
     <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} | {{ .LinkTitle }}</a>
-      </li>
+    {{ $pages := .Pages }}
+    {{ range $pages.ByPublishDate.Reverse }}
+    <h3 class="post-list {{ if ne .Params.show_summary false }}summary{{ end }}">
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }} | {{ .Date.Format "2006-01-02" }}
+      </a>
+    </h3>
     {{ end }}
   </ul>
 </main>
