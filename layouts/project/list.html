@@ -13,11 +13,11 @@
     <!-- Ranges through content/posts/*.md -->
     {{ $pages := .Pages }}
     {{ range $pages.ByPublishDate.Reverse }}
-    <h3 class="post-list {{ if ne .Params.show_summary false }}summary{{ end }}">
+    <h4>
       <a href="{{ .RelPermalink }}">
         {{ .Title }} | {{ .Date.Format "2006-01-02" }}
       </a>
-    </h3>
+    </h4>
     {{ end }}
   </ul>
 </main>
