@@ -6,12 +6,12 @@ tags:
   - perservinginfo
   - overview
 date: "2024-02-18"
-layout: "single"
-meta: "false"
-title: "Weather Station Overview"
+type: "project"
+layout: "list"
+# meta: "false"
+title: "Preserving Info"
 ---
 Overall goal is to provide an build a framework for perserving information for future generations.
 
 Starting as a [100 day project](https://www.the100dayproject.org/)
-
 
