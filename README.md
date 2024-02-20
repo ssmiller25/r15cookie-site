@@ -2,19 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4dee8665-200d-43f2-8d9e-c1749b1e82ad/deploy-status)](https://app.netlify.com/sites/r15cookieblog/deploys)
 
-## GitLab Setup
-
-Transitioning to mostly a GitPod based workflow.  In order to use the GitLab extension
-
-1. Follow [these instructions](https://gitlab.com/gitlab-org/gitlab-vscode-extension#step-1-create-your-personal-access-token) to create a PAT
-2. Run the following
-
-```sh
-gp env GITLAB_WORKFLOW_INSTANCE_URL=https://gitlab.com
-gp env GITLAB_WORKFLOW_TOKEN=<token>
-```
-
-
 ## Local Env Work
 
 Make sure to run
