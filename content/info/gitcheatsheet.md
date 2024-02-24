@@ -21,6 +21,22 @@ git check-ignore --verbose <file>
 
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
 
+## Fixing Divereged Branches
+
+Also see [Git Rebase versus Git Merge](#git-rebase-versus-git-merge) below
+
+```sh
+# Rebase - preferred for cleaner history
+git merge --rebase
+git push
+# If failed, and pushing to a branch NO ONE ELSE HAS DOWN
+git push --
+```
+
+
+
+- [Great Overview From Julia Evans](https://wizardzines.com/comics/fixing-diverged-branches/?utmsource=newcomics)
+
 ## Accidently Committed to Wrong Branch!
 
 ```sh
@@ -73,15 +89,8 @@ git commit --allow-empty -m “Message”
 ```
 
 Source: <https://devdojo.com/kodewithchirag/learn-to-push-an-empty-commit>
-## Git Rebase
 
-TL;DR
-
-```sh
-git rebase master # or origin/master
-# Resolve merge conflicts
-git push --force-with-lease  #Force push rebased local branch
-```
+## Git Rebase versus Git Merge
 
 - [Git Rebase: Don't be Afaird of Force Push](https://blog.verslu.is/git/git-rebase/)
 - [Force-with-lease: an alternative to Force Push](http://weiqingtoh.github.io/force-with-lease/)
@@ -200,7 +209,6 @@ Two options (both assume you have a repo clones remotely)
 
 ## Advance Fixes
 
-- [https://ohshitgit.com/](https://ohshitgit.com/)
 - [10 Git tips we can't live without](https://opensource.com/article/22/4/git-tips)
 - [Git Mistakes You Can't Fix](https://wizardzines.com/comics/git-mistakes-cant-fix/)
 
