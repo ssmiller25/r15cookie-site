@@ -13,7 +13,9 @@ title: "Preserving Info"
 ---
 Overall goal is to provide an build a framework for perserving information for future generations.
 
-Starting as a [100 day project](https://www.the100dayproject.org/)
+Starting as a [100 day project](https://www.the100dayproject.org/). 
+- Start: Feb 18th, 2024
+- End: May 28, 2024
 
 ## Standards
 
