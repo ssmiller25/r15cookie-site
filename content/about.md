@@ -45,6 +45,11 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 Responsible for development and operation of production infrastructure and site reliability engineering at Tuition.io
 
+- AWS
+- Kubernetes
+- Terraform
+- Security and Compliance
+
 ### Plex Systems - Sr. Software Engineer (Dec 2019 - Dec 2021)
 
 Responsible for development and operation of production infrastructure and site reliability engineering for Plex's SaaS offering.
