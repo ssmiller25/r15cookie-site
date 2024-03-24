@@ -23,6 +23,9 @@ tags: [
 
 ## Windows Workstations
 
+![Ode To My Family](ode-to-my-family.png)
+[Source](https://turnoff.us/geek/ode-to-my-family/)
+
 - [Nitenite](https://ninite.com/): Simple installation wizard for new installs
 
 ## Remote Support 
