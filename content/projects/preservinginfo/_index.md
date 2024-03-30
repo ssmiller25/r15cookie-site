@@ -24,8 +24,20 @@ Starting as a [100 day project](https://www.the100dayproject.org/).
 - Test: ASCII
 - Images: JPEG
 
-### Storage (metadata)
+### Storage (data/metadata)
 
 - Text: Git
-- Images: git-lfs? (may move to something more accessible)
+- Images: Plain Objects, sorted by general date/topic in directories
 
+### Backup
+
+Broad concept is that backups are still readable if directly accessed, to the best of our abilities
+
+- Rclone for most items.  Ensure that 
+- Local Backups - External drive 
+- Remote Object Store Backups
+  - Amazon S3
+  - Backblaze B2
+  - Cloudflare R2
+
+Document in main journal and bjournal all locations, and where credentials are located.
