@@ -19,7 +19,7 @@ Generic career resources
 
 ## Day in a Life
 
-- [Day in the life of a BoxBoat DevOps Engineer](https://boxboat.com/2021/03/11/day-in-the-life-boxboat-devops-engineer/)
+- [Day in the life of a BoxBoat DevOps Engineer](/info/day-in-the-life-boxboat-devops-eng/)
 
 ## Management
 
