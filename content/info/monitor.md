@@ -13,7 +13,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [Node Exporter](https://github.com/prometheus/node_exporter): Prometheus exporter for server/OS statistics 
 - [Elk Stack for Log Monitoring](https://www.elastic.co/webinars/elk-stack-devops-environment): ELK tends to be a bit heavy, but keeping this around just in case
 - [Changd](https://github.com/paschmann/changd): Notify if WebUI changes.
-- Performance related articles at [http://www.brendangregg.com/index.html](/var/www/html/data/pages/info/sysadmin.txt)
+- Performance related articles at <https://www.brendangregg.com>
 - Internet Monitoring (globally)
   - [Pingdom's State of the Internet](https://livemap.pingdom.com/)
   - [Down Detector](https://downdetector.com/)
@@ -25,9 +25,11 @@ My preferred stack:  Prometheus, Grafana, Loki
 
 ## Alternative Software I want to Look At Someday
 
+- [One Uptime](https://github.com/OneUptime/oneuptime): Open source observability platform - uptime monitoring, incident maganement, oncall alerts, logs, traces, etc (and **maybe** metrics, but not widely advertised)
 - [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
 - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
 - [BindplaneOP](https://observiq.com/solutions/bindplane-op/): Manage sources that are OpenTelementry Specific
+
 
 
 ## Advance Debugging
