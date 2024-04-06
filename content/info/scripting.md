@@ -109,7 +109,14 @@ parse_params() {
   return 0
 }
 
+required_programs() {
+  if ! command -v "envsubst" &> /dev/null; then
+    die "envsubst not found.  Please install the gettext package"
+  fi
+}
+
 parse_params "$@"
+required_programs
 setup_colors
 
 # script logic here
