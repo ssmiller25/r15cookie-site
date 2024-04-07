@@ -27,7 +27,7 @@ Starting as a [100 day project](https://www.the100dayproject.org/).
 ### Storage (data/metadata)
 
 - Text: Git
-- Images: Plain Objects, sorted by general date/topic in directories
+- Images: Plain Objects, sorted by general date/topic in directories.  Potentially use [exiftool](https://github.com/exiftool/exiftool)
 
 ### Backup
 
