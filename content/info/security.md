@@ -48,6 +48,10 @@ Toward the top, as automated scanning of code and infrastructure is the first li
 - [OPNSense](https://opnsense.org/):  OpenBSD based firewall.  Prefer it architecturally to pfSense
 - [Snort](https://www.snort.org/): Open source intrusion detection system.
 
+## Randomness
+
+- [League of Entropy](https://www.cloudflare.com/leagueofentropy/) and [drand](https://github.com/drand/drand): A distributed, crytographically verifiby source of entropy.
+
 ## Secrets Management
 
 - [Github-to-SOPS](https://github.com/tarasglek/github-to-sops): Interesting method using SOPS and Github user SSH keys, and AGE to build a light-weight secrets management platform
