@@ -32,7 +32,6 @@ Various resources on working remotely.
 - [On Messing Up Your Remote Team...and Then Getting It Right](https://angel.co/blog/on-messing-up-your-remote-team-and-then-getting-it-right?utm_source=platform-newsletter&utm_medium=email&utm_campaign=platform-newsletter-20191219&alla[source]=platform)
 - [Remote work: Lessons from a remote-first company](https://enterprisersproject.com/article/2020/3/remote-work-lessons)
 - [Things to Know Before Joining a Startup](https://foretecher.hashnode.dev/should-you-join-a-startup)
-- [Twitter Tread - How to Maintain Connections](https://twitter.com/rothgar/status/1440828264822435848?s=19): Great strategy to maintain connections across a remote company
 
 ## Sites
 

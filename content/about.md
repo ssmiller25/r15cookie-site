@@ -8,7 +8,7 @@ menu: main
 
 This is the personal website of Steve Miller.  
 
-[Github](https://www.github.com/ssmiller25) / [Gitlab](https://www.gitlab.com/ssmiller25) / [Twitter](https://twitter.com/scubbasteve25) / [LinkedIn](https://www.linkedin.com/in/steve-miller-9936632) / [Email Form](/contact)
+[Github](https://www.github.com/ssmiller25) / [Gitlab](https://www.gitlab.com/ssmiller25) / [Mastodon](https://cloud-native.social/@ssmiller25) / [LinkedIn](https://www.linkedin.com/in/steve-miller-9936632) / [Email Form](/contact)
 
 ## Personal Summary
 
