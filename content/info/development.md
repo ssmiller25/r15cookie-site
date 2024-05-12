@@ -49,6 +49,7 @@ tags: [
 
 - [GitOps Best Practices](https://www.permit.io/blog/gitops-today-why-and-how): Slightly heavy on the policy-as-code front (not surprising given the source), but otherwise some really good best practices.
 - [How atomic Git commits dramatically increased my productivity - and will increase yours too](https://dev.to/samuelfaure/how-atomic-git-commits-dramatically-increased-my-productivity-and-will-increase-yours-too-4a84)
+- [How Refactoring Almost Ruined My Marriage](https://zaidesanton.substack.com/p/how-refactoring-almost-ruined-my): Summary is that older code-bases have accumulated bug fixes and business domain knowledge that isn't obvious, so take caution refactoring older code.
 - [Reverse Pull Request](https://dzone.com/articles/reverse-pull-requests): A way to review code in rapid-release cycles.
 - [The Secret to Clean Code](https://craftbettersoftware.com/p/the-secret-to-clean-code)
 
