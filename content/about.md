@@ -68,7 +68,7 @@ architectures.
 Responsible for providing enterprise-level infrastructure and resources to the sales and engineering teams, both on-premise and remote.
 
 - Primary DevOps Engineer on the SaaS application platform, Bindplane.  This involved management of a Kubernetes cluster in Amazon AWS, and a build pipeline leveraging TravisCI and Jenkins.  Migrated the SaaS application to Google Cloud platform, leveraging Terraform for infrastructure management.
-- Developed a custom Python utility, [vROpsCLI](https://github.com/BlueMedoraPublic/vropscli), that leverages a REST API interface to enable larger customers an easier method to manage their environments.
+- Developed a custom Python utility, [vROpsCLI](https://github.com/ssmiller25/vropscli), that leverages a REST API interface to enable larger customers an easier method to manage their environments.
 - Built out an on-prem OS deployment system leveraging Foreman to deploy systems on a vCenter/ESXi cluster.  Included integrations to DNS, Active Directory, and Chef.  This system enabled rapid deployment of environments based on developer and project demands, leveraging both image and PXE based builds
 - Built and supported the demo environments for use by sales and partners.  Later migrated to Amazon AWS in order to improve uptime and availability to our worldwide sales teams.
 - Offered direct assistance to the Sales team for several larger deals.  This included enhancing documentation as well as providing custom-compiled utilities in order to diagnose and support more complex configurations, such as Kerberos against Active Directory within a Java application.
@@ -200,9 +200,6 @@ endpoints to query data that was used in custom front-end code.
 
 - [Azure Security Best Practices](/assets/about/azurckae-sec-certificate.pdf)
 
-### Badges
-
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="3e8fe644-dfda-45db-973e-1593d3dd2d64" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 ## Education
 

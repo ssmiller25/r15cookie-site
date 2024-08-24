@@ -32,7 +32,7 @@ Generic career resources
 
 ## Tools
 
-- [Github Business Card](https://crd.so/) [Source](https://github.com/scastiel/github-business-card)
+- [Business Card Generator](https://business-card-generator.vercel.app/) [Source](https://github.com/rclement/business-card-generator)
 - [Time Zone Converter](https://mlocati.github.io/timezone-converter/) - Open source web timezone converter [Source](https://github.com/mlocati/timezone-converter)
 - [World Time Buddy](https://www.worldtimebuddy.com/) - Great site to quickly track local time. 
 
