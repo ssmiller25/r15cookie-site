@@ -96,12 +96,12 @@ Source: <https://devdojo.com/kodewithchirag/learn-to-push-an-empty-commit>
 - [Force-with-lease: an alternative to Force Push](http://weiqingtoh.github.io/force-with-lease/)
 - [Why large companies and fast-moving startups are banning merge commits](https://graphite.dev/blog/why-ban-merge-commits) - although might be a little bit to push their tooling.
 
-## Reset master to origin/master
+## Reset main to origin/main
 
-Say...accidentally commit a change to the master branch that I did not intent too...
+Say...accidentally commit a change to the master branch that I did not indend too...
 
 ```sh
-git checkout -B master origin/master
+git checkout -B main origin/main
 ```
 
 ## Reset branch to a specific commit
@@ -117,14 +117,14 @@ git push --force
 
 ## Sync local with upstream
 
-Recording this as my previous method (`git checkout master; git pull upstream/master)` resulted in extra commits I didn't want...
+Recording this as my previous method (`git checkout main; git pull upstream/main)` resulted in extra commits I didn't want...
 
 Assume you already have an [upstream configured](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork)
 
 ```sh
 git fetch upstream
-git checkout master
-git merge upstream/master
+git checkout main
+git merge upstream/main
 ```
 
 Source: [Github](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
@@ -134,7 +134,7 @@ Source: [Github](https://docs.github.com/en/free-pro-team@latest/github/collabor
 ```sh
 # Since I don't usually enable pull merged
 git fetch origin
-git merge origin master --allow-unrelated-histories
+git merge origin main --allow-unrelated-histories
 ```
 
 From <https://www.educative.io/answers/the-fatal-refusing-to-merge-unrelated-histories-git-error>
@@ -157,7 +157,7 @@ From <https://www.educative.io/answers/the-fatal-refusing-to-merge-unrelated-his
 
   ```sh
   cd <submodule dir>
-  git checkout master
+  git checkout main
   git pull
   ```
 
@@ -206,6 +206,34 @@ Two options (both assume you have a repo clones remotely)
    ```
 
    Once done, should be able to recommit any changes.
+
+## HTTPS Auth Errors
+
+Received the following errors
+
+```sh
+$ git push -u origin main
+Enumerating objects: 63, done.
+Counting objects: 100% (62/62), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (48/48), done.
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+send-pack: unexpected disconnect while reading sideband packet
+Writing objects: 100% (51/51), 3.40 MiB | 6.68 MiB/s, done.
+Total 51 (delta 8), reused 0 (delta 0), pack-reused 0
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+$
+```
+
+HTTPS auth failing with 400 message from Github
+
+```sh
+git config http.postBuffer 524288000
+```
+
+[Stackoverflow Source (with Explaination)](https://stackoverflow.com/a/6849424)
+
 
 ## Advance Fixes
 
