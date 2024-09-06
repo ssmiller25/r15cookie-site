@@ -52,6 +52,7 @@ Post mortums are the basis of planning for future improvements.
 ### 2024
 
 - [Resend Outage](https://resend.com/blog/incident-report-for-february-21-2024): Developer performed local migraiton while pointed to production database, taking site down for about 12 hours.
+- [Crowdstrike Falcon Content Update](https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/) - The outage of the year (so far). Untested content pack update overflowed the number of parameters expected in an IPC check. Caused Windows systems to blue screen.
 
 ### 2023
 
