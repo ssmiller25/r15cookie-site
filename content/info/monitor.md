@@ -15,6 +15,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [Changd](https://github.com/paschmann/changd): Notify if WebUI changes.
 - Performance related articles at <https://www.brendangregg.com>
 - Internet Monitoring (globally)
+  - [AWS CloudWatch Internet Weather Map](https://aws.amazon.com/blogs/aws/amazon-cloudwatch-internet-weather-map-view-and-analyze-internet-health/)
   - [Pingdom's State of the Internet](https://livemap.pingdom.com/)
   - [Down Detector](https://downdetector.com/)
   - [Oracle Internet Intelligence](https://map.internetintel.oracle.com/)
