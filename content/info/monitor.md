@@ -16,6 +16,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 - Performance related articles at <https://www.brendangregg.com>
 - Internet Monitoring (globally)
   - [AWS CloudWatch Internet Weather Map](https://aws.amazon.com/blogs/aws/amazon-cloudwatch-internet-weather-map-view-and-analyze-internet-health/)
+  - [Contrack talkes - one thousand and one flows](https://blog.cloudflare.com/conntrack-tales-one-thousand-and-one-flows/) - Interesting article on monitoring the maximum number of entries in the Linux Contrack table, used for statefile firewall setup
   - [Pingdom's State of the Internet](https://livemap.pingdom.com/)
   - [Down Detector](https://downdetector.com/)
   - [Oracle Internet Intelligence](https://map.internetintel.oracle.com/)
@@ -30,8 +31,6 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
 - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
 - [BindplaneOP](https://observiq.com/solutions/bindplane-op/): Manage sources that are OpenTelementry Specific
-
-
 
 ## Advance Debugging
 
