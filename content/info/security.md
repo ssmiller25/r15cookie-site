@@ -33,6 +33,10 @@ Toward the top, as automated scanning of code and infrastructure is the first li
 - [OpenSCAP](http://www.open-scap.org/page/Main_Page): Open source tool to read and evaluate system security based on SCAP standards
 - [Lynis](https://cisofy.com/lynis/):  Another security scanner for Linux/Unix systems, focusing around common standards and best practices.  Seems far easier to install and configure than OpenSCAP.
 
+## Cloud Scanning
+
+- [Leonidas](https://github.com/WithSecureLabs/leonidas) - Automated cloud security scanning
+
 ## General Info
 
 - [Free CyberSecurity Services and Tools - CISA](https://www.cisa.gov/free-cybersecurity-services-and-tools)
