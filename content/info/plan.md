@@ -53,6 +53,7 @@ Post mortums are the basis of planning for future improvements.
 
 - [Resend Outage](https://resend.com/blog/incident-report-for-february-21-2024): Developer performed local migraiton while pointed to production database, taking site down for about 12 hours.
 - [Crowdstrike Falcon Content Update](https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/) - The outage of the year (so far). Untested content pack update overflowed the number of parameters expected in an IPC check. Caused Windows systems to blue screen.
+- [Stoli Ransomware Attach And Bankruptcy](https://therecord.media/stoli-group-usa-bankruptcy-filing-ransomware) and [raw bankruptcy filing](https://cases.stretto.com/public/x388/13367/PLEADINGS/1336711292480000000024.pdf). Took out ERP system until Q1 of 2025. A **huge** case of proactive security measures and DR practices.
 
 ### 2023
 
