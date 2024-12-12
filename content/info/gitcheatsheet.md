@@ -243,3 +243,4 @@ git config http.postBuffer 524288000
 ## General Understanding
 
 - [Undertstanding git through images](https://dev.to/nopenoshishi/understanding-git-through-images-4an1)
+- [Wizardzine - inside .git](https://wizardzines.com/comics/inside-git/?utmsource=satcomics)
