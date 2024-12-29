@@ -12,6 +12,7 @@ tags: [
 - [The Platform Engineer](https://engineering.razorpay.com/the-platform-engineer-db2b21434911)
 - Example Applications
   - [Open Telemetry Demo](https://github.com/open-telemetry/opentelemetry-demo): A modification of Google's Online Boutique, but with more integrations with Open Telementry
+  - [Retail Demo Store](https://github.com/aws-samples/retail-demo-store/tree/master): An AWS Serverless Centric application
   - [RealWorld](https://github.com/gothinkster/realworld) - The ultimate demo app, with multiple frontend and backend frameworks
   - [Google's Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo) - True Microservice e-commerce app, written as a pologot style service covering most modern development languages today (Node, Go, Python, C#, Java)
   - [Google's Bank of Anthos](https://github.com/GoogleCloudPlatform/bank-of-anthos) - A lighter microservice example app - only Python and Java.  Both referencing PostgreSQL databases for persistence.
