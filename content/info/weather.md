@@ -37,4 +37,4 @@ In Approximate Order of what I check:
 ## Blogs
 
 - ~~JohnDee.com~~:  A private meteorologist from Michigan's Upper Peninsula.  Unfortunately [John Dee passed away on  November 14, 2023](https://snowgoer.com/news/remembering-famed-snowmobiling-meteorologist-john-dee/31922/)
-- [Bill's Blog](https://www.woodtv.com/weather/bills-blog/):  A blog from a local meteorologist from Grand Rapids.
+- [Bill's Blog](https://www.billsteffen.com/):  A blog from a local meteorologist from Grand Rapids.
