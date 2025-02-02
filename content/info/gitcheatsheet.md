@@ -90,6 +90,14 @@ git commit --allow-empty -m “Message”
 
 Source: <https://devdojo.com/kodewithchirag/learn-to-push-an-empty-commit>
 
+## Search for deleted files
+
+```sh
+git log --all --full-history -- "**/thefile.*"
+```
+
+Source: <https://stackoverflow.com/questions/7203515/how-to-find-a-deleted-file-in-the-project-commit-history>
+
 ## Git Rebase versus Git Merge
 
 - [Git Rebase: Don't be Afaird of Force Push](https://blog.verslu.is/git/git-rebase/)
