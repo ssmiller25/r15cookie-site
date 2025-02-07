@@ -11,6 +11,7 @@ tags: [
 
 - [The Platform Engineer](https://engineering.razorpay.com/the-platform-engineer-db2b21434911)
 - Example Applications
+  - [Furever](https://github.com/stripe/stripe-connect-furever-demo)
   - [Open Telemetry Demo](https://github.com/open-telemetry/opentelemetry-demo): A modification of Google's Online Boutique, but with more integrations with Open Telementry
   - [Retail Demo Store](https://github.com/aws-samples/retail-demo-store/tree/master): An AWS Serverless Centric application
   - [RealWorld](https://github.com/gothinkster/realworld) - The ultimate demo app, with multiple frontend and backend frameworks
@@ -18,6 +19,7 @@ tags: [
   - [Google's Bank of Anthos](https://github.com/GoogleCloudPlatform/bank-of-anthos) - A lighter microservice example app - only Python and Java.  Both referencing PostgreSQL databases for persistence.
   - [PodInfo](https://github.com/stefanprodan/podinfo) - Lightweigth pod with common endpoints - useful for testing other services
   - [Hello Kubernetes](https://github.com/paulbouwer/hello-kubernetes) - Hello world, but for Kubernetes
+
 
 ## Cloud Development Environment
 
