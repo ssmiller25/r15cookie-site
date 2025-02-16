@@ -30,7 +30,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 - [One Uptime](https://github.com/OneUptime/oneuptime): Open source observability platform - uptime monitoring, incident maganement, oncall alerts, logs, traces, etc (and **maybe** metrics, but not widely advertised)
 - [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
 - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
-- [BindplaneOP](https://observiq.com/solutions/bindplane-op/): Manage sources that are OpenTelementry Specific
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma): Self-hosted site monitoring and metrics
 
 ## Advance Debugging
 
