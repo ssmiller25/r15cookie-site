@@ -27,10 +27,16 @@ My preferred stack:  Prometheus, Grafana, Loki
 
 ## Alternative Software I want to Look At Someday
 
-- [One Uptime](https://github.com/OneUptime/oneuptime): Open source observability platform - uptime monitoring, incident maganement, oncall alerts, logs, traces, etc (and **maybe** metrics, but not widely advertised)
-- [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
-- [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
-- [Uptime Kuma](https://github.com/louislam/uptime-kuma): Self-hosted site monitoring and metrics
+- Lightweight
+  - [MinMon](https://github.com/flo-at/minmon?tab=readme-ov-file): Basic system level monitor and alerting.
+    - Maybe TOO lightweight. Also, my not just use [OLTP Host Receiver](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/hostmetricsreceiver) and some solution to graph/collect that information.
+  - [One Uptime](https://github.com/OneUptime/oneuptime): Open source observability platform - uptime monitoring, incident maganement, oncall alerts, logs, traces, etc (and **maybe** metrics, but not widely advertised)
+  - [Uptime Kuma](https://github.com/louislam/uptime-kuma): Self-hosted site monitoring and metrics
+- Full Featured
+  - [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
+  - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
+
+
 
 ## Advance Debugging
 
