@@ -43,6 +43,7 @@ production runtime, but I have used a majority of these services successfully.
 - [ArgoCD](https://argoproj.github.io/cd/)
   - [Using Kustomize to Post-Render Helm Charts in ArgoCD](https://dev.to/camptocamp-ops/use-kustomize-to-post-render-helm-charts-in-argocd-2ml6)
 - [Deploy Docker Register in K8S](https://medium.com/swlh/deploy-your-private-docker-registry-as-a-pod-in-kubernetes-f6a489bf0180)
+  - Maybe combine with [CNCF Distribution](https://distribution.github.io/distribution/about/configuration/)
 - [Kubernetes Anti-Patterns](https://codefresh.io/kubernetes-tutorial/kubernetes-antipatterns-1/),[k8s Anti-Patterns #2](https://codefresh.io/kubernetes-tutorial/kubernetes-antipatterns-2/), and [k8s Anti-Patterns #3](https://codefresh.io/kubernetes-tutorial/kubernetes-antipatterns-3/)
 
 ## Development/Testing
