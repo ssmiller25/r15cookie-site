@@ -17,9 +17,11 @@ Growing up in a rural community, the weather was always a hot topic.  If you nee
 
 In Approximate Order of what I check:
 
-- [MerrySky](https://merrysky.net): A clean interface, an alternative to DarkSky.  Based on the [PirateWeather](http://pirateweather.net/en/latest/) Open Source API
+
 - [NWS Weather Site](http://www.weather.gov):  The National Weather Service's primary site.  Pretty basic layout, but gets the job done.  I especially enjoy the "graph" view the lays out precipitation predictions on an hourly basis.  Also there are a lot of really intereesting specific  tools:
   - [Extreme Winter Storm Severity Index](https://www.wpc.ncep.noaa.gov/wwd/wssi/wssi.php?id=GRR): An automated way to rate winter weather severity.
+- [BriefSky](https://briefsky.app/): An open-source version of MerrySky, below. [Source](https://github.com/vsergeev/briefsky)
+- [MerrySky](https://merrysky.net): A clean interface, an alternative to DarkSky.  Based on the [PirateWeather](http://pirateweather.net/en/latest/) Open Source API
 - [Michigan Storm Chasers](https://www.michiganstormchasers.com/) and [Michigan Storm Chasers Facebook](https://www.facebook.com/MIStormChasers/)
 - [WUnderground](http://www.wunderground.com/):  A site I've always followed since the 90's, when they provided a telnet service for getting weather info.  
 - [OpenWeatherMap](http://openweathermap.org/):  Another interesting service that probably has the most open API other than the NWS...and OpenWeatherMap has a far cleaner API.
