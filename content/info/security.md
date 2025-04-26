@@ -37,6 +37,10 @@ Toward the top, as automated scanning of code and infrastructure is the first li
 
 - [Leonidas](https://github.com/WithSecureLabs/leonidas) - Automated cloud security scanning
 
+## Compliance/Audit
+
+- [DevOps Audit Defense Toolkit (PDF)](/assets/info/DevOps_Audit_Defense_Toolkit_v1.0.pdf): A tad older (2015), but great strategies to assist in completing audit with modern tooling in place.
+
 ## General Info
 
 - [Free CyberSecurity Services and Tools - CISA](https://www.cisa.gov/free-cybersecurity-services-and-tools)
