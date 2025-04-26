@@ -8,7 +8,7 @@ menu: main
 
 This is the personal website of Steve Miller.  
 
-[Github](https://www.github.com/ssmiller25) / [Gitlab](https://www.gitlab.com/ssmiller25) / [Mastodon](https://cloud-native.social/@ssmiller25) / [LinkedIn](https://www.linkedin.com/in/steve-miller-9936632) / [Email Form](/contact)
+[Github](https://www.github.com/ssmiller25) / [Gitlab](https://www.gitlab.com/ssmiller25) / [LinkedIn](https://www.linkedin.com/in/steve-miller-9936632) / [Email Form](/contact)
 
 ## Personal Summary
 
@@ -26,8 +26,8 @@ to put a cookie on the R15 resistor"
 
 ## Professional Publications
 
-- [Introducing vROpsCLI from Blue Medora](https://bluemedora.com/introducing-vropscli-from-blue-medora/) - [Local Copy](/publications/intro-vropscli/)
-- [SOC2 Compliance In A Code Driven Infrastructure](https://bluemedora.com/soc-2-compliance-in-a-code-driven-infrastructure-blue-medora/) - [Local Copy](/publications/soc2-code-driven-infrastructure/)
+- Introducing vROpsCLI from Blue Medora - [Local Copy](/publications/intro-vropscli/)
+- SOC2 Compliance In A Code Driven Infrastructure - [Local Copy](/publications/soc2-code-driven-infrastructure/)
 
 ## Speaking Engagements
 
@@ -41,7 +41,12 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 ## Professional Experience
 
-### Tuition.io - Sr. DevOps Engineer (Dec 2021 - Present)
+### Tuition.io - DevOps Engineering Manager  (March 2025 - Present)
+
+Responsible for DevOps and QA at Tuition.io
+
+
+### Tuition.io - Sr. DevOps Engineer (Dec 2021 - March 2025)
 
 Responsible for development and operation of production infrastructure and site reliability engineering at Tuition.io
 
