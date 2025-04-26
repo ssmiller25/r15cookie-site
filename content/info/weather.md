@@ -17,7 +17,6 @@ Growing up in a rural community, the weather was always a hot topic.  If you nee
 
 In Approximate Order of what I check:
 
-
 - [NWS Weather Site](http://www.weather.gov):  The National Weather Service's primary site.  Pretty basic layout, but gets the job done.  I especially enjoy the "graph" view the lays out precipitation predictions on an hourly basis.  Also there are a lot of really intereesting specific  tools:
   - [Extreme Winter Storm Severity Index](https://www.wpc.ncep.noaa.gov/wwd/wssi/wssi.php?id=GRR): An automated way to rate winter weather severity.
 - [BriefSky](https://briefsky.app/): An open-source version of MerrySky, below. [Source](https://github.com/vsergeev/briefsky)
@@ -27,6 +26,11 @@ In Approximate Order of what I check:
 - [OpenWeatherMap](http://openweathermap.org/):  Another interesting service that probably has the most open API other than the NWS...and OpenWeatherMap has a far cleaner API.
 - [Weatherstar](https://weatherstar.netbymatt.com): Emualation of the 90s era WeatherStar 4000 (think old-school Weather Channel display).  [Source](https://github.com/netbymatt/ws4kp)
 
+## Live Camera Sites
+
+- [Holland, MI Live WebCam](https://www.cityofholland.com/645/MIHollandCAM)
+- [Michigan MDOT Camera Site](https://mdotjboss.state.mi.us/MiDrive/map#): Nice way to see current weather/road conditions.
+
 ### CLI Forecast Sites
 
 - [wttr.in](http://wttr.in/):  A great way to get the weather from the command line - or anywhere (such as this page)  Also [open source](https://github.com/chubin/wttr.in)
@@ -34,7 +38,6 @@ In Approximate Order of what I check:
 ## Other Interesting Sites
 
 - [AirNow](https://www.airnow.gov/): Government site on air quality.
-- [Michigan MDOT Camera Site](https://mdotjboss.state.mi.us/MiDrive/map#): Nice way to see current weather/road conditions.
 
 ## Blogs
 
