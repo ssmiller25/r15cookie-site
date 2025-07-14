@@ -35,6 +35,7 @@ My preferred stack:  Prometheus, Grafana, Loki
 - Full Featured
   - [OpenObserve](https://github.com/openobserve/openobserve): Open source, lightweight, single binary, drop in replacement for Elisticsearch, support OpenTelementry/OTEL
   - [Signoz](https://signoz.io/): Open source, lightweight, log, metrics, traces, all working with OpenTelementry
+  - [Grafana's LGTM Stack](https://github.com/grafana/intro-to-mltp) - Loki, Grafana, Temp, and Mimir
 
 
 
