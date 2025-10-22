@@ -29,6 +29,7 @@ tags: ["dev", "web"]
     - [Snipcart](https://snipcart.com/)
   - Icons
     - [Iconify](https://icon-sets.iconify.design/): Open source icons useful for web development.
+    - [Phosphor Icons](https://phosphoricons.com/): Another open source licsed icone set.
   - Image/Database Hosting
     - [Cloudinary](https://cloudinary.com/): Does on-the-fly image manipulation
   - Monitoring
