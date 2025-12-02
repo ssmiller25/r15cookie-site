@@ -15,6 +15,7 @@ Planning for a DevOps Cycle
 - [Keeping Code Simple](https://graphite.dev/blog/keeping-code-simple)
 - [Questions for a new technology]()
 - [Redhat Demo Central](https://gitlab.com/redhatdemocentral/portfolio-architecture-examples) - Architectures for a wide range of cloud infrastructures and problems.
+- [The Architecture of Open Source Applications](https://aosabook.org/en/) - Overview of well known open source applications, and why they made the decisions they did.
 - [Who Cares If It Scales](https://betterprogramming.pub/who-cares-if-it-scales-1946adca8167) - Avoiding pre-mature optimization.
 
 
