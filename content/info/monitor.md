@@ -18,6 +18,7 @@ My preferred stack:  Prometheus, Grafana, Loki
   - [AWS CloudWatch Internet Weather Map](https://aws.amazon.com/blogs/aws/amazon-cloudwatch-internet-weather-map-view-and-analyze-internet-health/)
   - [CloudFlare Radar](https://radar.cloudflare.com/)- Cloudflare Overall Internet and statistic monitor.
   - [Contrack talkes - one thousand and one flows](https://blog.cloudflare.com/conntrack-tales-one-thousand-and-one-flows/) - Interesting article on monitoring the maximum number of entries in the Linux Contrack table, used for statefile firewall setup
+  - [Datadog Updog Outage Tracker](https://updog.ai/) - Public API based tracking from Datadog
   - [Pingdom's State of the Internet](https://livemap.pingdom.com/)
   - [Down Detector](https://downdetector.com/)
   - [Oracle Internet Intelligence](https://map.internetintel.oracle.com/)
