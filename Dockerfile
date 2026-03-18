@@ -19,8 +19,8 @@ RUN apk add --no-cache \
     openssh-client \
     rsync
 
-# Updated to match version in Netlify
-ENV HUGOVERSION 0.92.2
+# Keep Docker build Hugo version aligned with GitHub Actions Pages workflow.
+ENV HUGOVERSION 0.125.7
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \
     && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGOVERSION}/hugo_${HUGOVERSION}_Linux-64bit.tar.gz | tar -xz \
