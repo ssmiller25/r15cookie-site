@@ -16,8 +16,19 @@ KUBECONFIG=kubeconfig.$(CLUSTER_NAME)
 KUBECTL=kubectl --kubeconfig=$(KUBECONFIG)
 
 
+.PHONY: smoke-check
+smoke-check:
+	@test -f AGENTS.md
+	@test -f README.md
+	@test -f config.yaml
+	@test -d content
+	@test -d manifests
+	@git status -s >/dev/null
+	@echo "r15cookieblog smoke checks passed"
+
+
 .PHONY: build
-build: 
+build:
 	@docker build . -t ${DOCKER_REPO}/r15cookieblog:${git_hash} \
 		$(docker_extra_param) \
 		--build-arg GIT_HASH=${git_hash} \
@@ -34,7 +45,7 @@ build-nocache: build
 
 .PHONY: run
 run:
-	@docker run -d --rm -p 8080:80 --name r15cookieblog ${DOCKER_REPO}/r15cookieblog:latest 
+	@docker run -d --rm -p 8080:80 --name r15cookieblog ${DOCKER_REPO}/r15cookieblog:latest
 	@echo "Local running.  Go to http://localhost:8080/ to view"
 
 .PHONY: stop
@@ -50,11 +61,11 @@ push:
 # Pull and cache dependent images
 .PHONY: cache-upstream
 cache-upstream:
-	docker pull alpine:${alpine_version} 
+	docker pull alpine:${alpine_version}
 	docker pull nginx:${nginx_version}
 	docker tag alpine:${alpine_version} $(DOCKER_REPO)/alpine:${alpine_version}
 	docker tag nginx:${nginx_version} $(DOCKER_REPO)/nginx:${nginx_version}
-	docker push $(DOCKER_REPO)/alpine:${alpine_version} 
+	docker push $(DOCKER_REPO)/alpine:${alpine_version}
 	docker push $(DOCKER_REPO)/nginx:${nginx_version}
 
 
