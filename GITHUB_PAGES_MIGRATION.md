@@ -12,28 +12,9 @@ This runbook migrates deployment from Netlify to GitHub Pages for this repositor
 ## 1) GitHub repository prerequisites
 
 1. Ensure this repository is hosted in GitHub under your account/org.
-2. If the repo is private, confirm your plan supports GitHub Pages for private repositories.
-3. In repo settings, do not set Pages source to a branch; use **GitHub Actions** (set in step 4).
+2. In repo settings, do not set Pages source to a branch; use **GitHub Actions** (set in step 3).
 
-## 2) DNS setup for apex canonical
-
-At your DNS provider for `r15cookie.com`:
-
-1. Create apex `A` records:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-2. (Recommended) Add apex `AAAA` records:
-   - `2606:50c0:8000::153`
-   - `2606:50c0:8001::153`
-   - `2606:50c0:8002::153`
-   - `2606:50c0:8003::153`
-3. Configure `www` host to redirect to apex canonical:
-   - Preferred: HTTP 301 redirect `www.r15cookie.com` -> `https://r15cookie.com`
-   - If your DNS host cannot redirect at DNS level, use a forwarding/URL redirect feature.
-
-## 3) Add GitHub Actions workflow (pipeline sketch)
+## 2) Add GitHub Actions workflow (pipeline sketch)
 
 Create `.github/workflows/deploy-hugo-pages.yml`:
 
@@ -99,25 +80,51 @@ Notes:
 - `submodules: recursive` is required because the theme is a Git submodule.
 - Since `static/CNAME` is committed, no extra workflow step is needed to write `public/CNAME`.
 
-## 4) Configure Pages in GitHub
+## 3) Configure Pages in GitHub
 
 1. Go to **Settings -> Pages**.
 2. Set **Source** to **GitHub Actions**.
 3. Trigger workflow by pushing to `main`.
-4. After first successful deploy, verify custom domain shows as `r15cookie.com`.
-5. Enable **Enforce HTTPS** after certificate issuance completes.
+4. After first successful deploy, verify the GitHub Pages URL loads successfully.
 
-## 5) Migration cutover checklist
+## 4) Pre-cutover validation (before DNS changes)
+
+1. Confirm latest workflow run succeeded on `main`.
+2. Confirm generated site content looks correct at the GitHub Pages URL.
+3. In **Settings -> Pages**, set custom domain to `r15cookie.com` and save.
+4. Confirm `static/CNAME` exists in repo so build artifacts include `public/CNAME`.
+
+## 5) DNS setup for apex canonical (cutover step)
+
+At your DNS provider for `r15cookie.com`:
+
+1. Create apex `A` records:
+  - `185.199.108.153`
+  - `185.199.109.153`
+  - `185.199.110.153`
+  - `185.199.111.153`
+2. (Recommended) Add apex `AAAA` records:
+  - `2606:50c0:8000::153`
+  - `2606:50c0:8001::153`
+  - `2606:50c0:8002::153`
+  - `2606:50c0:8003::153`
+3. Configure `www` host to redirect to apex canonical:
+  - Preferred: HTTP 301 redirect `www.r15cookie.com` -> `https://r15cookie.com`
+  - If your DNS host cannot redirect at DNS level, use a forwarding/URL redirect feature.
+
+## 6) Migration cutover checklist
 
 1. Merge workflow to `main`.
 2. Wait for successful Pages deployment.
-3. Confirm DNS records are live (`dig r15cookie.com +short`).
-4. Verify content and links on:
+3. Apply DNS changes from step 5.
+4. Confirm DNS records are live (`dig r15cookie.com +short`).
+5. Verify content and links on:
    - `https://r15cookie.com`
    - `https://www.r15cookie.com` (should redirect to apex)
-5. Disable Netlify auto-deploy and remove stale Netlify DNS/redirect rules to avoid split traffic.
+6. In **Settings -> Pages**, confirm custom domain remains `r15cookie.com` and enable **Enforce HTTPS** when available.
+7. Disable Netlify auto-deploy and remove stale Netlify DNS/redirect rules to avoid split traffic.
 
-## 6) Validation and troubleshooting
+## 7) Validation and troubleshooting
 
 1. If theme/layout is missing in build output:
    - Check workflow uses submodules recursively.
@@ -128,7 +135,7 @@ Notes:
 4. If canonical URL is wrong in generated metadata:
    - Confirm `baseURL` in `config.yaml` is `https://r15cookie.com`.
 
-## 7) Optional cleanup
+## 8) Optional cleanup
 
 1. Remove Netlify badge/config references from `README.md`.
 2. Remove `netlify.toml` once migration is fully complete.
