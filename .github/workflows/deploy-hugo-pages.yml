@@ -23,20 +23,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true
+      - name: Init theme submodule
+        run: |
+          git submodule update --init --recursive
+          if [ ! -f themes/r15-papercss-hugo-theme/theme.toml ]; then
+            echo "::error::Theme submodule is missing after checkout"
+            exit 1
+          fi
+          echo "Theme submodule OK"
+
+      - name: Install Hugo (manual)
+        run: |
+          set -euo pipefail
+          curl -sSL -o /tmp/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          tar -xzf /tmp/hugo.tar.gz -C /tmp hugo
+          sudo install -m 0755 /tmp/hugo /usr/local/bin/hugo
+          hugo version
 
       - name: Build site
         run: hugo --minify
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

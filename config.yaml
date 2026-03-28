@@ -32,8 +32,7 @@ params:
   dateFormat: Jan 2, 2006
   navTitleLink: /
   mainSections: post
-  #github_corner_url: "https://github.com/ssmiller25/r15cookieblog"
-  gitlab_corner_url: "https://gitlab.com/ssmiller25/r15cookieblog"
+  github_corner_url: "https://github.com/ssmiller25/r15cookie-site"
   footer: true
 
 menu:
