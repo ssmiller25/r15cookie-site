@@ -1,7 +1,5 @@
 # Steve Miller's Personal Blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4dee8665-200d-43f2-8d9e-c1749b1e82ad/deploy-status)](https://app.netlify.com/sites/r15cookieblog/deploys)
-
 ## Local Env Work
 
 Make sure to run
