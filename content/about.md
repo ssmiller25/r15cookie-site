@@ -43,7 +43,9 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 ### Tuition.io - DevOps Engineering Manager  (March 2025 - Present)
 
-Responsible for DevOps and QA at Tuition.io
+Responsible for DevOps and QA at Tuition.io.
+
+- AI based security and operational integration.
 
 
 ### Tuition.io - Sr. DevOps Engineer (Dec 2021 - March 2025)
