@@ -1,5 +1,7 @@
 # Steve Miller's Personal Blog
 
+![GitHub last commit](https://img.shields.io/github/last-commit/ssmiller25/r15cookie-site)
+
 ## Local Env Work
 
 Make sure to run
