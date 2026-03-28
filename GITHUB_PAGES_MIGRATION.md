@@ -118,9 +118,9 @@ At your DNS provider for `r15cookie.com`:
   - `2606:50c0:8001::153`
   - `2606:50c0:8002::153`
   - `2606:50c0:8003::153`
-3. Configure `www` host to redirect to apex canonical:
-  - Preferred: HTTP 301 redirect `www.r15cookie.com` -> `https://r15cookie.com`
-  - If your DNS host cannot redirect at DNS level, use a forwarding/URL redirect feature.
+3. Add a `www` CNAME record:
+  - `www  CNAME  ssmiller25.github.io`
+  - GitHub Pages will recognise the custom domain and redirect `www` to the apex automatically.
 
 ## 6) Migration cutover checklist
 
