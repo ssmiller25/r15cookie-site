@@ -8,16 +8,7 @@ meta: "false"
 <div id="contact-success" class="alert alert-success" hidden>
   Thanks. Your message was sent successfully.
 </div>
-<script>
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-    if (params.get("sent") === "1") {
-      var msg = document.getElementById("contact-success");
-      if (msg) msg.hidden = false;
-    }
-  })();
-</script>
-<form action="https://formspree.io/f/meepevqd" method="POST">
+<form id="contact-form" action="https://formspree.io/f/meepevqd" method="POST">
 
   <p>
     <label>Name: <br/><input type="text" name="name" /></label>   
@@ -30,7 +21,29 @@ meta: "false"
   </p>
   <p>
     <input type="text" name="_gotcha" style="display:none">
-    <input type="hidden" name="_next" value="https://r15cookie.com/contact/?sent=1">
     <button type="submit">Send</button>
   </p>
 </form>
+<script>
+  (function () {
+    var form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      }).then(function (response) {
+        if (response.ok) {
+          document.getElementById("contact-success").hidden = false;
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      }).catch(function () {
+        alert("Something went wrong. Please try again.");
+      });
+    });
+  })();
+</script>
