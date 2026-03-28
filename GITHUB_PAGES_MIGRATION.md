@@ -44,14 +44,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true
+      - name: Init theme submodule
+        run: |
+          git submodule update --init --recursive
+          if [ ! -f themes/r15-papercss-hugo-theme/theme.toml ]; then
+            echo "::error::Theme submodule is missing after checkout"
+            exit 1
+          fi
+          echo "Theme submodule OK"
+
+      - name: Install Hugo (manual)
+        run: |
+          set -euo pipefail
+          curl -sSL -o /tmp/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          tar -xzf /tmp/hugo.tar.gz -C /tmp hugo
+          sudo install -m 0755 /tmp/hugo /usr/local/bin/hugo
+          hugo version
 
       - name: Build site
         run: hugo --minify
@@ -77,7 +87,7 @@ jobs:
 ```
 
 Notes:
-- `submodules: recursive` is required because the theme is a Git submodule.
+- The theme is a Git submodule; an explicit `git submodule update --init --recursive` step ensures reliable checkout and fails fast if the theme is missing.
 - Since `static/CNAME` is committed, no extra workflow step is needed to write `public/CNAME`.
 
 ## 3) Configure Pages in GitHub
@@ -127,7 +137,7 @@ At your DNS provider for `r15cookie.com`:
 ## 7) Validation and troubleshooting
 
 1. If theme/layout is missing in build output:
-   - Check workflow uses submodules recursively.
+   - Confirm the "Init theme submodule" step succeeds and prints "Theme submodule OK".
 2. If domain is not attached:
    - Confirm `public/CNAME` exists in build artifact (from `static/CNAME`).
 3. If TLS is pending:
