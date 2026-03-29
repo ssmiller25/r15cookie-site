@@ -28,6 +28,7 @@ tags: [
   - [Coder versus Codespaces (and why self-hosted cloud env)](https://coder.com/blog/github-codespaces-coder-and-enterprise-customers)
 - [GitPod](https://gitpod.io/)
 - [DevPod](https://devpod.sh/) - Local tool that will spin up enviornments, based on [DevContainers](https://containers.dev/)
+- [Exe.dev](https://exe.dev/) - Quick on-demand dev VM service
 
 
 ## Development
