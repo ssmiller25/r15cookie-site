@@ -15,7 +15,9 @@ tags: ["dev", "web"]
     - [hCaptcha](https:///www.hcaptcha.com/): More privacy focused Captcha
     - [mCaptcha](https://mcaptcha.org/): Open source PoW Captcha [mCaptcha Source](https://github.com/mCaptcha/mCaptcha)
   - CMS
-    - [NetlifyCMS](https://github.com/netlify/netlify-cms): SPA that allows for committing markdown changes to version control
+    - [DeCap CMS](https://github.com/decaporg/decap-cms): SPA that allows for committing markdown changes to version control
+  - Content
+    - [Claude-SEO](https://github.com/AgricIDaniel/claude-seo): Open source plugin to optimize content for LLMs
   - Communication
     - [Disqus](https://disqus.com/): Emable comments on any webpage
     - [Twilio](https://www.twilio.com/): Interact with customer via web UI, SMS, What's App, etc
