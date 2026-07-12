@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.125.7
+      HUGO_VERSION: 0.131.0
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,6 +33,12 @@ jobs:
             exit 1
           fi
           echo "Theme submodule OK"
+
+      - name: Generate commits data
+        run: |
+          python3 scripts/generate-commits-data.py
+          echo "Generated commits data:"
+          head -20 data/commits.json
 
       - name: Install Hugo (manual)
         run: |

@@ -1,91 +1,85 @@
-git_hash = $(shell git rev-parse --short -q HEAD)
-version := 0.10.0
-release_date := $(shell date +%Y-%m-%d)
-alpine_version := 3.13.1
-nginx_version := 1.19.6
+HUGO_VERSION := 0.131.0
 
-DOCKER_REPO=quay.io/ssmiller25
+# Detect OS and Architecture
+OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
+ARCH := $(shell uname -m)
 
-CIVO_CMD="civo"
-# For Dockerize CIVO
-#CIVO_CMD=docker run -it --rm -v /home/steve/.civo.json:/.civo.json civo/cli:latest
+# Set Hugo package based on OS and ARCH
+ifeq ($(OS),darwin)
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz
+else ifneq (,$(findstring mingw,$(OS))$(findstring msys,$(OS))$(findstring cygwin,$(OS)))
+  # Native Windows (Git Bash/MSYS/Cygwin) isn't supported: uname reports a Windows
+  # kernel name here, but the linux-* Hugo tarballs below won't execute on Windows.
+  HUGO_PKG := UNSUPPORTED
+else ifeq ($(ARCH),aarch64)
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
+else ifeq ($(ARCH),arm64)
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
+else
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
+endif
 
-CLUSTER_NAME=blog
-CIVO_SIZE=g2.small
-KUBECONFIG=kubeconfig.$(CLUSTER_NAME)
-KUBECTL=kubectl --kubeconfig=$(KUBECONFIG)
+help:           ## Show this help.
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
+.PHONY: run
+run: .bin/hugo generate-commits  ## Run site locally with Hugo server
+	@.bin/hugo server --buildFuture -D --cleanDestinationDir
+
+.PHONY: build
+build: .bin/hugo generate-commits  ## Build the site
+	@.bin/hugo --minify
 
 .PHONY: smoke-check
-smoke-check:
+smoke-check: ## Run lightweight repository smoke checks
 	@test -f AGENTS.md
 	@test -f README.md
 	@test -f config.yaml
 	@test -d content
-	@test -d manifests
+	@test -d themes/r15-papercss-hugo-theme
 	@git status -s >/dev/null
 	@echo "r15cookieblog smoke checks passed"
 
+.PHONY: generate-commits
+generate-commits:   ## Generate commits data for home page
+	uv run scripts/generate-commits-data.py
 
-.PHONY: build
-build:
-	@docker build . -t ${DOCKER_REPO}/r15cookieblog:${git_hash} \
-		$(docker_extra_param) \
-		--build-arg GIT_HASH=${git_hash} \
-		--build-arg VERSION=${version} \
-		--build-arg RELEASE_DATE=${release_date} \
-		--build-arg ALPINE_VERSION=${alpine_version} \
-		--build-arg NGINX_VERSION=${nginx_version}
-	@docker tag ${DOCKER_REPO}/r15cookieblog:${git_hash} ${DOCKER_REPO}/r15cookieblog:latest
+.PHONY: update-theme
+update-theme:   ## Update the Hugo theme from remote repo
+	@./update-theme.sh feature/git-commits-support
 
-.PHONY: build-nocache
-build-nocache: docker_extra_param=--no-cache
-build-nocache: build
+.PHONY: clean
+clean:           ## Clean build artifacts
+	@rm -rf public/
+	@rm -rf .bin/
+	@echo "Cleaned."
 
+.PHONY: newcontent
+# TODO: implement based on parameter
+# hugo new content post/my-new-post.md
+# and can auto-open in codespaces with
+# `code <filename>`
 
-.PHONY: run
-run:
-	@docker run -d --rm -p 8080:80 --name r15cookieblog ${DOCKER_REPO}/r15cookieblog:latest
-	@echo "Local running.  Go to http://localhost:8080/ to view"
+.bin/hugo:
+	@mkdir -p .bin
+	@if [ "$(HUGO_PKG)" = "UNSUPPORTED" ]; then \
+		echo "ERROR: Native Windows (Git Bash/MSYS/Cygwin) is not supported by this Makefile."; \
+		echo "The Linux Hugo binary this Makefile downloads will not run on Windows."; \
+		echo "Use the DevContainer (.devcontainer/) or WSL instead."; \
+		exit 1; \
+	fi
+	@echo "Platform detected: $(OS)/$(ARCH)"
+	@echo "Downloading: $(HUGO_PKG)"
+	@curl -fL -o ".bin/$(HUGO_PKG)" "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
+	@curl -fL -o .bin/hugo_checksums.txt "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_checksums.txt"
+	@grep -F "  $(HUGO_PKG)" .bin/hugo_checksums.txt > .bin/hugo.sha256
+	@if [ ! -s .bin/hugo.sha256 ]; then echo "ERROR: no checksum entry found for $(HUGO_PKG)"; exit 1; fi
+	@(cd .bin && sha256sum -c hugo.sha256)
+	@tar -xzf ".bin/$(HUGO_PKG)" -C .bin
+	@rm -f ".bin/$(HUGO_PKG)" .bin/hugo_checksums.txt .bin/hugo.sha256
+	@# Binary is extracted as 'hugo' in .bin/ directory
+	@if [ ! -f .bin/hugo ]; then echo "ERROR: Hugo binary not found after extraction"; exit 1; fi
+	@chmod +x .bin/hugo
+	@echo "Hugo ready: $$(.bin/hugo version)"
 
-.PHONY: stop
-stop:
-	@echo "Stopping r15cookieblog - should shelf-cleanup"
-	@docker stop r15cookieblog
-
-.PHONY: push
-push:
-	@docker push ${DOCKER_REPO}/r15cookieblog:$(git_hash)
-	@docker push ${DOCKER_REPO}/r15cookieblog:latest
-
-# Pull and cache dependent images
-.PHONY: cache-upstream
-cache-upstream:
-	docker pull alpine:${alpine_version}
-	docker pull nginx:${nginx_version}
-	docker tag alpine:${alpine_version} $(DOCKER_REPO)/alpine:${alpine_version}
-	docker tag nginx:${nginx_version} $(DOCKER_REPO)/nginx:${nginx_version}
-	docker push $(DOCKER_REPO)/alpine:${alpine_version}
-	docker push $(DOCKER_REPO)/nginx:${nginx_version}
-
-
-.PHONY: civo-up
-civo-up: $(KUBECONFIG)
-
-$(KUBECONFIG):
-	@echo "Creating $(CLUSTER_NAME)"
-	@$(CIVO_CMD) k3s list | grep -q $(CLUSTER_NAME) || $(CIVO_CMD) k3s create $(CLUSTER_NAME) -n 1 --size $(CIVO_SIZE) --wait
-	@$(CIVO_CMD) k3s config $(CLUSTER_NAME) > $(KUBECONFIG)
-
-.PHONY: civo-down
-civo-down:
-	@echo "Removing $(CLUSTER_NAME)"
-	@$(CIVO_CMD) k3s remove $(CLUSTER_NAME) || true
-	@rm $(KUBECONFIG)
-
-.PHONY: civo-deploy
-civo-deploy: $(KUBECONFIG)
-	@$(KUBECTL) apply -k ./
-
-civo-env: $(KUBECONFIG)
-	export KUBECONFIG=$(KUBECONFIG)
+# Help Source: https://gist.github.com/prwhite/8168133
