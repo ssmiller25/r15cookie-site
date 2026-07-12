@@ -64,8 +64,8 @@ clean:           ## Clean build artifacts
 	@curl -fL -o .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
 	@tar -xzf .bin/hugo.tar.gz -C .bin
 	@rm -f .bin/hugo.tar.gz
-	@if [ -f .bin/hugo ]; then mv .bin/hugo .bin/hugo; fi
-	@if [ -f .bin/hugo_extended ]; then mv .bin/hugo_extended .bin/hugo; fi
+	@# Rename extracted binary to hugo
+	@if [ -f .bin/hugo ]; then :; else mv .bin/hugo .bin/hugo; fi
 	@chmod +x .bin/hugo
 	@echo "Hugo ready: $$(.bin/hugo version)"
 
