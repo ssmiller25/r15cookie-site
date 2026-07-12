@@ -37,15 +37,17 @@ def run_git_command(args: list[str], cwd: Path = None) -> str:
             print(f"Git error: {e.stderr}", file=sys.stderr)
         sys.exit(1)
 
-def get_commits(limit: int = 100) -> list[dict]:
+def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
     """Get recent commits with their details."""
     format_str = "%H%n%h%n%an%n%ae%n%ai%n%s%n%b%n---COMMIT_SEPARATOR---%n"
     
-    log_output = run_git_command([
-        "log",
-        f"-{limit}",
-        f"--format={format_str}"
-    ])
+    # Filter to only commits that touch content/ directory
+    git_args = ["log", f"-{limit}", f"--format={format_str}"]
+    if content_only:
+        git_args.append("--")  # Separator for paths
+        git_args.append("content/")  # Only commits touching content/
+    
+    log_output = run_git_command(git_args)
     
     commits = []
     commit_blocks = log_output.split("---COMMIT_SEPARATOR---")
