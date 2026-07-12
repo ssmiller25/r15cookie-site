@@ -4,11 +4,11 @@ help:           ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 .PHONY: run
-run: .bin/hugo   ## Run site locally with Hugo server
+run: .bin/hugo generate-commits  ## Run site locally with Hugo server
 	@.bin/hugo server --buildFuture -D --cleanDestinationDir
 
 .PHONY: build
-build: .bin/hugo   ## Build the site
+build: .bin/hugo generate-commits  ## Build the site
 	@.bin/hugo --minify
 
 .PHONY: smoke-check
