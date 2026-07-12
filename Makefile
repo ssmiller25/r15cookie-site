@@ -5,15 +5,14 @@ OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 ARCH := $(shell uname -m)
 
 # Set Hugo package based on OS and ARCH
-# Logic: if Darwin, use darwin-universal; if Linux + ARM, use linux-arm64; else linux-amd64
-ifneq (,$(findstring darwin,$(OS)))
+ifeq ($(OS),darwin)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz
+else ifeq ($(ARCH),aarch64)
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
+else ifeq ($(ARCH),arm64)
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
 else
-  ifneq (,$(findstring aarch64,$(ARCH))$(findstring arm64,$(ARCH)))
-    HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
-  else
-    HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
-  endif
+  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
 endif
 
 help:           ## Show this help.
@@ -64,8 +63,8 @@ clean:           ## Clean build artifacts
 	@curl -fL -o .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
 	@tar -xzf .bin/hugo.tar.gz -C .bin
 	@rm -f .bin/hugo.tar.gz
-	@# Binary is extracted as 'hugo', rename to 'hugo'
-	@if [ -f .bin/hugo ]; then mv .bin/hugo .bin/hugo; fi
+	@# Binary is extracted as 'hugo' in .bin/ directory
+	@if [ ! -f .bin/hugo ]; then echo "ERROR: Hugo binary not found after extraction"; exit 1; fi
 	@chmod +x .bin/hugo
 	@echo "Hugo ready: $$(.bin/hugo version)"
 
