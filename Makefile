@@ -7,6 +7,10 @@ ARCH := $(shell uname -m)
 # Set Hugo package based on OS and ARCH
 ifeq ($(OS),darwin)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz
+else ifneq (,$(findstring mingw,$(OS))$(findstring msys,$(OS))$(findstring cygwin,$(OS)))
+  # Native Windows (Git Bash/MSYS/Cygwin) isn't supported: uname reports a Windows
+  # kernel name here, but the linux-* Hugo tarballs below won't execute on Windows.
+  HUGO_PKG := UNSUPPORTED
 else ifeq ($(ARCH),aarch64)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
 else ifeq ($(ARCH),arm64)
@@ -58,11 +62,21 @@ clean:           ## Clean build artifacts
 
 .bin/hugo:
 	@mkdir -p .bin
+	@if [ "$(HUGO_PKG)" = "UNSUPPORTED" ]; then \
+		echo "ERROR: Native Windows (Git Bash/MSYS/Cygwin) is not supported by this Makefile."; \
+		echo "The Linux Hugo binary this Makefile downloads will not run on Windows."; \
+		echo "Use the DevContainer (.devcontainer/) or WSL instead."; \
+		exit 1; \
+	fi
 	@echo "Platform detected: $(OS)/$(ARCH)"
 	@echo "Downloading: $(HUGO_PKG)"
-	@curl -fL -o .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
-	@tar -xzf .bin/hugo.tar.gz -C .bin
-	@rm -f .bin/hugo.tar.gz
+	@curl -fL -o ".bin/$(HUGO_PKG)" "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
+	@curl -fL -o .bin/hugo_checksums.txt "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_checksums.txt"
+	@grep -F "  $(HUGO_PKG)" .bin/hugo_checksums.txt > .bin/hugo.sha256
+	@if [ ! -s .bin/hugo.sha256 ]; then echo "ERROR: no checksum entry found for $(HUGO_PKG)"; exit 1; fi
+	@(cd .bin && sha256sum -c hugo.sha256)
+	@tar -xzf ".bin/$(HUGO_PKG)" -C .bin
+	@rm -f ".bin/$(HUGO_PKG)" .bin/hugo_checksums.txt .bin/hugo.sha256
 	@# Binary is extracted as 'hugo' in .bin/ directory
 	@if [ ! -f .bin/hugo ]; then echo "ERROR: Hugo binary not found after extraction"; exit 1; fi
 	@chmod +x .bin/hugo
