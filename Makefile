@@ -43,9 +43,15 @@ clean:           ## Clean build artifacts
 
 .bin/hugo:
 	@mkdir -p .bin || true
-	@curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_linux-amd64.tar.gz"
+	@echo "Downloading Hugo..."
+	@if [ "$$(uname -s)" = "Darwin" ]; then \
+		curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz"; \
+	else \
+		curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz"; \
+	fi
 	@tar -xzf .bin/hugo.tar.gz -C .bin
-	@rm .bin/hugo.tar.gz
+	@rm -f .bin/hugo.tar.gz
 	@chmod +x .bin/hugo
+	@echo "Hugo binary downloaded and ready."
 
 # Help Source: https://gist.github.com/prwhite/8168133
