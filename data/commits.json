@@ -1,5 +1,97 @@
 [
   {
+    "full_hash": "3836320e8736a67ab3688c376fd7ec2332fc5638",
+    "short_hash": "3836320",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:59:49-04:00",
+    "subject": "fix: Use uv run for Python script execution",
+    "body": "- Update generate-commits target to use 'uv run'\n- Leverage uv for Python script execution\n- Consistent with uv script metadata in generate-commits-data.py",
+    "changed_files": [
+      "Makefile"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
+        "type": "github",
+        "file_path": "Makefile"
+      }
+    ]
+  },
+  {
+    "full_hash": "9bd5c84a450f1be3211b162d6bb1080257ee515c",
+    "short_hash": "9bd5c84",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:59:32-04:00",
+    "subject": "feat: Add Python and uv to devcontainer",
+    "body": "- Install Python3 and uv in devcontainer\n- Add uv script metadata to generate-commits-data.py\n- Enable running script with: uv run scripts/generate-commits-data.py",
+    "changed_files": [
+      ".devcontainer/Dockerfile",
+      "scripts/generate-commits-data.py"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/Dockerfile",
+        "type": "github",
+        "file_path": ".devcontainer/Dockerfile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      }
+    ]
+  },
+  {
+    "full_hash": "31446b8c555f3e39ee1f1d6cb3efb6d3e6b7495c",
+    "short_hash": "31446b8",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:41:50-04:00",
+    "subject": "feat: Add github_repo parameter for commit links",
+    "body": "- Add github_repo to params for dynamic URL construction\n- Enables theme to work with any GitHub repository\n- No more hard-coded URLs in theme",
+    "changed_files": [
+      "config.yaml"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/config.yaml",
+        "type": "github",
+        "file_path": "config.yaml"
+      }
+    ]
+  },
+  {
+    "full_hash": "f91d664fc4b913780188dacde2a2a1eec6fdcb52",
+    "short_hash": "f91d664",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:34:47-04:00",
+    "subject": "fix: Generate 100 commits for pagination",
+    "body": "- Update main() to call get_commits(limit=100)\n- Regenerate commits data with 100 commits\n- Enable proper pagination for commit history",
+    "changed_files": [
+      "data/commits.json",
+      "scripts/generate-commits-data.py"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/data/commits.json",
+        "type": "github",
+        "file_path": "data/commits.json"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      }
+    ]
+  },
+  {
     "full_hash": "40937158a96549417c6f90140315bf5ef0db431a",
     "short_hash": "4093715",
     "author_name": "Steve Miller",
@@ -2170,157 +2262,5 @@
     "body": "Papercss refactor\n\nSee merge request ssmiller25/r15cookieblog!67",
     "changed_files": [],
     "changed_files_mapped": []
-  },
-  {
-    "full_hash": "90e29d08543444f1a936173536279104f2f8924c",
-    "short_hash": "90e29d0",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "January 27, 2024",
-    "iso_date": "2024-01-27T22:42:37+00:00",
-    "subject": "Papercss refactor",
-    "body": "",
-    "changed_files": [
-      ".gitignore",
-      ".gitmodules",
-      ".gitpod.Dockerfile",
-      ".gitpod.yml",
-      "Dockerfile",
-      "Makefile",
-      "README.md",
-      "config.yaml",
-      "layouts/_default/baseof.html",
-      "layouts/partials/head.html",
-      "netlify.toml",
-      "themes/papercss-hugo-theme",
-      "themes/r15-papercss-hugo-theme"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitignore",
-        "type": "github",
-        "file_path": ".gitignore"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
-        "type": "github",
-        "file_path": ".gitmodules"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitpod.Dockerfile",
-        "type": "github",
-        "file_path": ".gitpod.Dockerfile"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitpod.yml",
-        "type": "github",
-        "file_path": ".gitpod.yml"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Dockerfile",
-        "type": "github",
-        "file_path": "Dockerfile"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
-        "type": "github",
-        "file_path": "Makefile"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/README.md",
-        "type": "github",
-        "file_path": "README.md"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/config.yaml",
-        "type": "github",
-        "file_path": "config.yaml"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/_default/baseof.html",
-        "type": "github",
-        "file_path": "layouts/_default/baseof.html"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/partials/head.html",
-        "type": "github",
-        "file_path": "layouts/partials/head.html"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/netlify.toml",
-        "type": "github",
-        "file_path": "netlify.toml"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/papercss-hugo-theme",
-        "type": "github",
-        "file_path": "themes/papercss-hugo-theme"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
-        "type": "github",
-        "file_path": "themes/r15-papercss-hugo-theme"
-      }
-    ]
-  },
-  {
-    "full_hash": "f9ead8ed3436b0679256103d75aaa838386e70a5",
-    "short_hash": "f9ead8e",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "January 22, 2024",
-    "iso_date": "2024-01-22T20:25:53-05:00",
-    "subject": "Add IANA list",
-    "body": "",
-    "changed_files": [
-      "content/info/security.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/security/",
-        "type": "page",
-        "file_path": "content/info/security.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "fa9a8378999ab91c0f4577e1f260ca715a8cfd6a",
-    "short_hash": "fa9a837",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "January 17, 2024",
-    "iso_date": "2024-01-17T15:38:03+00:00",
-    "subject": "Secrets management",
-    "body": "",
-    "changed_files": [
-      "content/info/security.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/security/",
-        "type": "page",
-        "file_path": "content/info/security.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "8e3817e927713db618136869ac75bc624e316397",
-    "short_hash": "8e3817e",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "January 14, 2024",
-    "iso_date": "2024-01-14T12:01:19-05:00",
-    "subject": "Interesting article",
-    "body": "",
-    "changed_files": [
-      "content/info/web0.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/web0/",
-        "type": "page",
-        "file_path": "content/info/web0.md"
-      }
-    ]
   }
 ]
