@@ -20,7 +20,7 @@ def run_git_command(args: list[str]) -> str:
     )
     return result.stdout.strip()
 
-def get_commits(limit: int = 10) -> list[dict]:
+def get_commits(limit: int = 100) -> list[dict]:
     """Get recent commits with their details."""
     # Format: %H%n%h%n%an%n%ae%n%ai%n%s%n%b%n---COMMIT_SEPARATOR---%n
     # %H: full hash
