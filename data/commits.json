@@ -1,5 +1,25 @@
 [
   {
+    "full_hash": "40937158a96549417c6f90140315bf5ef0db431a",
+    "short_hash": "4093715",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:34:03-04:00",
+    "subject": "fix: Correctly generate 100 commits",
+    "body": "- Fix git log command to use limit parameter\n- Regenerate commits data with 100 commits\n- Enable better pagination experience",
+    "changed_files": [
+      "data/commits.json"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/data/commits.json",
+        "type": "github",
+        "file_path": "data/commits.json"
+      }
+    ]
+  },
+  {
     "full_hash": "33808cccfbd93b7edfc274d619cd19ab0e1d8596",
     "short_hash": "33808cc",
     "author_name": "Steve Miller",
@@ -1168,6 +1188,1138 @@
         "url": "/info/monitor/",
         "type": "page",
         "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "97507239bbfac71f91efdf8d7a8b3e5986256229",
+    "short_hash": "9750723",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 06, 2024",
+    "iso_date": "2024-09-06T23:30:03+00:00",
+    "subject": "Crowdstrike incident",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "1e309e07340fff373cc6c24b90a3450b3b9c98b4",
+    "short_hash": "1e309e0",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 02, 2024",
+    "iso_date": "2024-09-02T15:13:23+00:00",
+    "subject": "Git https auth fix",
+    "body": "",
+    "changed_files": [
+      "content/info/gitcheatsheet.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/gitcheatsheet/",
+        "type": "page",
+        "file_path": "content/info/gitcheatsheet.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "64aea6a177c68a97600449a0c0e4bc4330854606",
+    "short_hash": "64aea6a",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "August 24, 2024",
+    "iso_date": "2024-08-24T12:35:06+00:00",
+    "subject": "Business card generator update, other cleanup",
+    "body": "",
+    "changed_files": [
+      "content/about.md",
+      "content/info/career.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      },
+      {
+        "url": "/info/career/",
+        "type": "page",
+        "file_path": "content/info/career.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "a7505ad95ef5309d709c9c118e388032cc5cecf7",
+    "short_hash": "a7505ad",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "August 18, 2024",
+    "iso_date": "2024-08-18T13:58:52+00:00",
+    "subject": "Adding mint",
+    "body": "",
+    "changed_files": [
+      "content/info/k8s.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/k8s/",
+        "type": "page",
+        "file_path": "content/info/k8s.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "8d89b5b0ee709057a0dc07c0d159fcfa61654f20",
+    "short_hash": "8d89b5b",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "July 19, 2024",
+    "iso_date": "2024-07-19T11:48:32+00:00",
+    "subject": "Remove CKA",
+    "body": "",
+    "changed_files": [
+      "content/about.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "6018c671213048a27398f2f351b79aacd5c1b9a5",
+    "short_hash": "6018c67",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "June 15, 2024",
+    "iso_date": "2024-06-15T09:10:45-04:00",
+    "subject": "Perserving info wrapup",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-06-15-wrapup.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-06-15-wrapup/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-06-15-wrapup.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "68f551005a73f2e1622122d48f1d3025e3aff073",
+    "short_hash": "68f5510",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "May 12, 2024",
+    "iso_date": "2024-05-12T10:54:48-04:00",
+    "subject": "Refactor article",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "bef32f637b9a917565bdd42a6175f1a68ff1e0dc",
+    "short_hash": "bef32f6",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "May 05, 2024",
+    "iso_date": "2024-05-05T10:06:54-04:00",
+    "subject": "Twitter to mastodon - also cleanup",
+    "body": "",
+    "changed_files": [
+      "content/about.md",
+      "content/info/remote.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      },
+      {
+        "url": "/info/remote/",
+        "type": "page",
+        "file_path": "content/info/remote.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "1ec732a0f255ca992017916c66a2c12b285d13ae",
+    "short_hash": "1ec732a",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "April 09, 2024",
+    "iso_date": "2024-04-09T08:26:03-04:00",
+    "subject": "Adding entropy info",
+    "body": "",
+    "changed_files": [
+      "content/info/security.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/security/",
+        "type": "page",
+        "file_path": "content/info/security.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "e73b6e2da923e2fcd1d858464e168d63512f2f51",
+    "short_hash": "e73b6e2",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "April 07, 2024",
+    "iso_date": "2024-04-07T10:32:37-04:00",
+    "subject": "exiftool work, etc.",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-04-07-longtermarchive.md",
+      "content/projects/preservinginfo/_index.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-04-07-longtermarchive/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-04-07-longtermarchive.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "3481e8d8cbbbd5200e0a308a5729d979ae327c59",
+    "short_hash": "3481e8d",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "April 06, 2024",
+    "iso_date": "2024-04-06T09:14:17-04:00",
+    "subject": "Example of testing for available depedent commands",
+    "body": "",
+    "changed_files": [
+      "content/info/scripting.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/scripting/",
+        "type": "page",
+        "file_path": "content/info/scripting.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "0b09bd0f9fd74245114e759655ddf82e76b11921",
+    "short_hash": "0b09bd0",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "April 04, 2024",
+    "iso_date": "2024-04-04T08:02:41-04:00",
+    "subject": "Addition monitor/fix link",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "477734db8f76233a19460f8a7bd1cd82c29af097",
+    "short_hash": "477734d",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "March 31, 2024",
+    "iso_date": "2024-03-31T02:16:10+00:00",
+    "subject": "Merge branch 'day-life-devops-boatbox' into 'main'",
+    "body": "Day In Life Archive\n\nSee merge request ssmiller25/r15cookieblog!70",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "2b810c489375474868447978ea3861042653de0b",
+    "short_hash": "2b810c4",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 30, 2024",
+    "iso_date": "2024-03-30T20:51:10-04:00",
+    "subject": "Fix link",
+    "body": "",
+    "changed_files": [
+      "content/info/career.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/career/",
+        "type": "page",
+        "file_path": "content/info/career.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "dbcc3dd9d6f6925bcd6b0c6ce309cd4f1d2f4a29",
+    "short_hash": "dbcc3dd",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 30, 2024",
+    "iso_date": "2024-03-30T11:40:54-04:00",
+    "subject": "Day In Life Archive",
+    "body": "",
+    "changed_files": [
+      "content/info/career.md",
+      "content/info/day-in-the-life-boxboat-devops-eng.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/career/",
+        "type": "page",
+        "file_path": "content/info/career.md"
+      },
+      {
+        "url": "/info/day-in-the-life-boxboat-devops-eng/",
+        "type": "page",
+        "file_path": "content/info/day-in-the-life-boxboat-devops-eng.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "902ea1f714c44a0d49d9dffc0182f32c99314430",
+    "short_hash": "902ea1f",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 30, 2024",
+    "iso_date": "2024-03-30T08:44:55-04:00",
+    "subject": "Image preservation thoughts",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-03-30-image-preservation.md",
+      "content/projects/preservinginfo/_index.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-03-30-image-preservation/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-03-30-image-preservation.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "c0d2008271f97fd15e8bb298d44e32d9cca84fef",
+    "short_hash": "c0d2008",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2024",
+    "iso_date": "2024-03-28T07:22:15-04:00",
+    "subject": "Resend outage",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "57582db5ee272d6994c740a04798c02ee3f7bf46",
+    "short_hash": "57582db",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2024",
+    "iso_date": "2024-03-28T07:02:17-04:00",
+    "subject": "Github actions dynamic matrix",
+    "body": "",
+    "changed_files": [
+      "content/info/package.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/package/",
+        "type": "page",
+        "file_path": "content/info/package.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "c6e6eac87b1a33b6eec50b0904e1d0e630387ec3",
+    "short_hash": "c6e6eac",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 24, 2024",
+    "iso_date": "2024-03-24T21:32:32-04:00",
+    "subject": "Recipe site up!",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-03-24-recipe-deployed.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-03-24-recipe-deployed/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-03-24-recipe-deployed.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "6c64fc3f4da984eaf4cf8e3bf721ae9888c8c838",
+    "short_hash": "6c64fc3",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "March 25, 2024",
+    "iso_date": "2024-03-25T01:08:54+00:00",
+    "subject": "Merge branch 'ode-to-family' into 'main'",
+    "body": "Ode to Family Graphic\n\nSee merge request ssmiller25/r15cookieblog!69",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "386eea6604fb57ba67bf47bc1cedd36fe434d5c2",
+    "short_hash": "386eea6",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 24, 2024",
+    "iso_date": "2024-03-24T09:34:18-04:00",
+    "subject": "Reorg desktop for pic",
+    "body": "",
+    "changed_files": [
+      "content/info/desktop.md",
+      "content/info/desktop/_index.md",
+      "content/info/desktop/ode-to-my-family.png"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/desktop/",
+        "type": "page",
+        "file_path": "content/info/desktop.md"
+      },
+      {
+        "url": "/info/desktop/",
+        "type": "section",
+        "file_path": "content/info/desktop/_index.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/content/info/desktop/ode-to-my-family.png",
+        "type": "github",
+        "file_path": "content/info/desktop/ode-to-my-family.png"
+      }
+    ]
+  },
+  {
+    "full_hash": "5da537e745e42ecadd8d8a2dd520001ccf260556",
+    "short_hash": "5da537e",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 23, 2024",
+    "iso_date": "2024-03-23T18:56:26+00:00",
+    "subject": "Hugo template completed, more comentary",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-03-23-templatefinished.md",
+      "content/projects/preservinginfo/_index.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-03-23-templatefinished/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-03-23-templatefinished.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "ddd5c7f62e0e3fdabd38c37fb7489fcf9a6e33a1",
+    "short_hash": "ddd5c7f",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 23, 2024",
+    "iso_date": "2024-03-23T13:25:54-04:00",
+    "subject": "Tuition.io development",
+    "body": "",
+    "changed_files": [
+      "content/about.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "a1ae0dde7e9788200abeedbddd1b3eb4c14a1635",
+    "short_hash": "a1ae0dd",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 19, 2024",
+    "iso_date": "2024-03-19T07:01:18-04:00",
+    "subject": "Development Update",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "198b3113c2c590723213be8f311622fef8c7290d",
+    "short_hash": "198b311",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "March 13, 2024",
+    "iso_date": "2024-03-13T20:44:32-04:00",
+    "subject": "TemplateHost1",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-03-13-templatehost1.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-03-13-templatehost1/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-03-13-templatehost1.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "ba91031bdf9e9a465ece3fd92dd92c7fb9908e8d",
+    "short_hash": "ba91031",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 24, 2024",
+    "iso_date": "2024-02-24T21:26:11-05:00",
+    "subject": "Template work",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-02-24-templatedemo.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-02-24-templatedemo/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-24-templatedemo.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "7f4bde01efdcf8ee8f77f124574f5ee2f7de505f",
+    "short_hash": "7f4bde0",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 23, 2024",
+    "iso_date": "2024-02-23T20:03:15-05:00",
+    "subject": "Git cheatsheet update",
+    "body": "",
+    "changed_files": [
+      "content/info/gitcheatsheet.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/gitcheatsheet/",
+        "type": "page",
+        "file_path": "content/info/gitcheatsheet.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "aef89e20b739c2e77ba4134285b8516536badcd6",
+    "short_hash": "aef89e2",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 20, 2024",
+    "iso_date": "2024-02-20T21:40:05-05:00",
+    "subject": "2/20 update",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-02-20-updatemainblog.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-02-20-updatemainblog/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-20-updatemainblog.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "6d971826c38070a92fcf75cfc0ab10b0ee9e19d4",
+    "short_hash": "6d97182",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 20, 2024",
+    "iso_date": "2024-02-20T10:57:56-05:00",
+    "subject": "Update template",
+    "body": "",
+    "changed_files": [
+      "README.md",
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/README.md",
+        "type": "github",
+        "file_path": "README.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "9bcfd6abf5b669887165762acf4c72599c38162b",
+    "short_hash": "9bcfd6a",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 20, 2024",
+    "iso_date": "2024-02-20T07:33:59-05:00",
+    "subject": "The secret to clean code",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d8243ccc4063f6711e0c227ea41b2bdcf14314df",
+    "short_hash": "d8243cc",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 20, 2024",
+    "iso_date": "2024-02-20T06:49:36-05:00",
+    "subject": "Merge branch '2024-02-18-preserving-info'",
+    "body": "",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "7075aa6c8423050252e46bb66cd31189752c60d3",
+    "short_hash": "7075aa6",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 20, 2024",
+    "iso_date": "2024-02-20T06:49:04-05:00",
+    "subject": "Template article",
+    "body": "",
+    "changed_files": [
+      "content/projects/preservinginfo/2024-02-19-templateadjustments.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/preservinginfo/2024-02-19-templateadjustments/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-19-templateadjustments.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "3e17da211ba049d20f00c8dc3b720c2c2c934d26",
+    "short_hash": "3e17da2",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T23:08:31+00:00",
+    "subject": "Merge branch '2024-02-18-preserving-info' into 'main'",
+    "body": "Perserving Info Kickoff!\n\nSee merge request ssmiller25/r15cookieblog!68",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "084724485c5bbfcea2743108317f2b717392c8c2",
+    "short_hash": "0847244",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T17:56:27-05:00",
+    "subject": "Add link in project page, fix list",
+    "body": "",
+    "changed_files": [
+      "content/projects/_index.md",
+      "layouts/project/list.html"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/projects/",
+        "type": "section",
+        "file_path": "content/projects/_index.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
+        "type": "github",
+        "file_path": "layouts/project/list.html"
+      }
+    ]
+  },
+  {
+    "full_hash": "f459146882d85d50f7ab71098a9662ee3cea0125",
+    "short_hash": "f459146",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T17:48:00-05:00",
+    "subject": "Tag updates",
+    "body": "",
+    "changed_files": [
+      "content/post/2024-02-18-perserving-info-kickoff.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/post/2024-02-18-perserving-info-kickoff/",
+        "type": "page",
+        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "35cc4c469b7540ad67419edb39b2a1e7cf5021fb",
+    "short_hash": "35cc4c4",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T17:47:14-05:00",
+    "subject": "Final update on post",
+    "body": "",
+    "changed_files": [
+      "content/post/2024-02-18-perserving-info-kickoff.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/post/2024-02-18-perserving-info-kickoff/",
+        "type": "page",
+        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d521add31ac4ea9b27e3987db366fd5c08ecc1cb",
+    "short_hash": "d521add",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T08:57:56-05:00",
+    "subject": "Finish blog article, prep for review",
+    "body": "",
+    "changed_files": [
+      "content/post/2024-02-18-perserving-info-kickoff.md",
+      "content/projects/preservinginfo/2024-02-18-firstday.md",
+      "content/projects/preservinginfo/_index.md",
+      "layouts/project/list.html"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/post/2024-02-18-perserving-info-kickoff/",
+        "type": "page",
+        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
+      },
+      {
+        "url": "/projects/preservinginfo/2024-02-18-firstday/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
+        "type": "github",
+        "file_path": "layouts/project/list.html"
+      }
+    ]
+  },
+  {
+    "full_hash": "b2df6eb05ca8b7db0482d24ed10953984bd5fff5",
+    "short_hash": "b2df6eb",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T08:45:43-05:00",
+    "subject": "Minimally working project log",
+    "body": "",
+    "changed_files": [
+      "content/post/2024-02-18-perserving-info-kickoff.md",
+      "content/projects/preservinginfo/2024-02-18-firstday.md",
+      "content/projects/preservinginfo/_index.md",
+      "layouts/project/list.html"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/post/2024-02-18-perserving-info-kickoff/",
+        "type": "page",
+        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
+      },
+      {
+        "url": "/projects/preservinginfo/2024-02-18-firstday/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
+        "type": "github",
+        "file_path": "layouts/project/list.html"
+      }
+    ]
+  },
+  {
+    "full_hash": "01aab61b7093effb0d755c0b31be4ce701c4af0e",
+    "short_hash": "01aab61",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 18, 2024",
+    "iso_date": "2024-02-18T08:29:44-05:00",
+    "subject": "Initial sketchout of perserving info blog",
+    "body": "",
+    "changed_files": [
+      "content/post/2024-02-18-perserving-info-kickoff.md",
+      "content/projects/preservinginfo/2024-02-18-firstday.md",
+      "content/projects/preservinginfo/_index.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/post/2024-02-18-perserving-info-kickoff/",
+        "type": "page",
+        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
+      },
+      {
+        "url": "/projects/preservinginfo/2024-02-18-firstday/",
+        "type": "page",
+        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
+      },
+      {
+        "url": "/projects/preservinginfo/",
+        "type": "section",
+        "file_path": "content/projects/preservinginfo/_index.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d4745760db7dd5ca80834b6e408fcf451f71dc55",
+    "short_hash": "d474576",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 16, 2024",
+    "iso_date": "2024-02-16T07:35:51-05:00",
+    "subject": "Add data vis framework",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "06b8f3011eafd4e01fd782a691223262d3bbf50d",
+    "short_hash": "06b8f30",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 12, 2024",
+    "iso_date": "2024-02-12T08:22:41-05:00",
+    "subject": "Unresonable effectiveness of websites",
+    "body": "",
+    "changed_files": [
+      "content/info/web0.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/web0/",
+        "type": "page",
+        "file_path": "content/info/web0.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "43259118e80f3a8467595ba62a29e1dd83d893d1",
+    "short_hash": "4325911",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 10, 2024",
+    "iso_date": "2024-02-10T14:39:55+00:00",
+    "subject": "Rename article title",
+    "body": "",
+    "changed_files": [
+      ".gitignore",
+      "content/post/2010-01-07-githubarchive.md",
+      "content/post/2020-01-07-githubarchive.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitignore",
+        "type": "github",
+        "file_path": ".gitignore"
+      },
+      {
+        "url": "/post/2010-01-07-githubarchive/",
+        "type": "page",
+        "file_path": "content/post/2010-01-07-githubarchive.md"
+      },
+      {
+        "url": "/post/2020-01-07-githubarchive/",
+        "type": "page",
+        "file_path": "content/post/2020-01-07-githubarchive.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "ea23fc46322773c447e4d520b670ef7886266ede",
+    "short_hash": "ea23fc4",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "February 07, 2024",
+    "iso_date": "2024-02-07T10:33:13-05:00",
+    "subject": "Benefits to keeping code simple",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "9763777b683d382a5d5fe6b2f0d6aad7938702f8",
+    "short_hash": "9763777",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "January 30, 2024",
+    "iso_date": "2024-01-30T08:36:00-05:00",
+    "subject": "CDK article",
+    "body": "",
+    "changed_files": [
+      "content/info/configure.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/configure/",
+        "type": "page",
+        "file_path": "content/info/configure.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "9bcf931cd7231b407ef1d62c6d2b8ef97dd2584e",
+    "short_hash": "9bcf931",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "January 27, 2024",
+    "iso_date": "2024-01-27T22:42:37+00:00",
+    "subject": "Merge branch 'papercss-refactor' into 'main'",
+    "body": "Papercss refactor\n\nSee merge request ssmiller25/r15cookieblog!67",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "90e29d08543444f1a936173536279104f2f8924c",
+    "short_hash": "90e29d0",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "January 27, 2024",
+    "iso_date": "2024-01-27T22:42:37+00:00",
+    "subject": "Papercss refactor",
+    "body": "",
+    "changed_files": [
+      ".gitignore",
+      ".gitmodules",
+      ".gitpod.Dockerfile",
+      ".gitpod.yml",
+      "Dockerfile",
+      "Makefile",
+      "README.md",
+      "config.yaml",
+      "layouts/_default/baseof.html",
+      "layouts/partials/head.html",
+      "netlify.toml",
+      "themes/papercss-hugo-theme",
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitignore",
+        "type": "github",
+        "file_path": ".gitignore"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitpod.Dockerfile",
+        "type": "github",
+        "file_path": ".gitpod.Dockerfile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitpod.yml",
+        "type": "github",
+        "file_path": ".gitpod.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Dockerfile",
+        "type": "github",
+        "file_path": "Dockerfile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
+        "type": "github",
+        "file_path": "Makefile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/README.md",
+        "type": "github",
+        "file_path": "README.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/config.yaml",
+        "type": "github",
+        "file_path": "config.yaml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/_default/baseof.html",
+        "type": "github",
+        "file_path": "layouts/_default/baseof.html"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/partials/head.html",
+        "type": "github",
+        "file_path": "layouts/partials/head.html"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/netlify.toml",
+        "type": "github",
+        "file_path": "netlify.toml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/papercss-hugo-theme"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "f9ead8ed3436b0679256103d75aaa838386e70a5",
+    "short_hash": "f9ead8e",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "January 22, 2024",
+    "iso_date": "2024-01-22T20:25:53-05:00",
+    "subject": "Add IANA list",
+    "body": "",
+    "changed_files": [
+      "content/info/security.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/security/",
+        "type": "page",
+        "file_path": "content/info/security.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "fa9a8378999ab91c0f4577e1f260ca715a8cfd6a",
+    "short_hash": "fa9a837",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "January 17, 2024",
+    "iso_date": "2024-01-17T15:38:03+00:00",
+    "subject": "Secrets management",
+    "body": "",
+    "changed_files": [
+      "content/info/security.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/security/",
+        "type": "page",
+        "file_path": "content/info/security.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "8e3817e927713db618136869ac75bc624e316397",
+    "short_hash": "8e3817e",
+    "author_name": "ssmiller25",
+    "author_email": "me@r15cookie.com",
+    "date": "January 14, 2024",
+    "iso_date": "2024-01-14T12:01:19-05:00",
+    "subject": "Interesting article",
+    "body": "",
+    "changed_files": [
+      "content/info/web0.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/web0/",
+        "type": "page",
+        "file_path": "content/info/web0.md"
       }
     ]
   }
