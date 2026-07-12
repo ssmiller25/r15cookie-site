@@ -16,7 +16,7 @@ RUN sudo apt-get update && \
 
 # Install uv for Python package management
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
-    sudo mv /root/.cargo/bin/uv /usr/local/bin/uv
+    sudo mv /root/.local/bin/uv /usr/local/bin/uv
 
 # Install Hugo for Github Releases Page
 RUN mkdir -p /tmp/hugo && \
