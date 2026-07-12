@@ -1,0 +1,1156 @@
+[
+  {
+    "full_hash": "84fb980768e1a596a01b2db93ca3156588f23a93",
+    "short_hash": "84fb980",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "June 05, 2026",
+    "iso_date": "2026-06-05T21:00:50+00:00",
+    "subject": "[no ci] Merge remote-tracking branch 'origin/main'",
+    "body": "",
+    "changed_files": [],
+    "changed_files_mapped": []
+  },
+  {
+    "full_hash": "83bed44b39d6f6b3194979fa10f88c3e1fdea28e",
+    "short_hash": "83bed44",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "June 05, 2026",
+    "iso_date": "2026-06-05T21:00:18+00:00",
+    "subject": "[no ci] LifeOS alignment",
+    "body": "",
+    "changed_files": [
+      ".aider.conf.yml",
+      ".github/copilot-instructions.md",
+      ".github/instructions/blog-content.instructions.md",
+      ".github/instructions/blog-site.instructions.md",
+      "AGENTS.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.aider.conf.yml",
+        "type": "github",
+        "file_path": ".aider.conf.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/copilot-instructions.md",
+        "type": "github",
+        "file_path": ".github/copilot-instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/instructions/blog-content.instructions.md",
+        "type": "github",
+        "file_path": ".github/instructions/blog-content.instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/instructions/blog-site.instructions.md",
+        "type": "github",
+        "file_path": ".github/instructions/blog-site.instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/AGENTS.md",
+        "type": "github",
+        "file_path": "AGENTS.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "7d9bcf023af012a0cf7d30b43331c2f3336a83f1",
+    "short_hash": "7d9bcf0",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "May 31, 2026",
+    "iso_date": "2026-05-31T07:43:27-04:00",
+    "subject": "Add Plugin to optimize page content for SEO",
+    "body": "",
+    "changed_files": [
+      "content/info/webdev.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/webdev/",
+        "type": "page",
+        "file_path": "content/info/webdev.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "0f152f5a5c2a1d4b46698d35ca63f5078156d7d6",
+    "short_hash": "0f152f5",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 29, 2026",
+    "iso_date": "2026-03-29T12:54:25+00:00",
+    "subject": "Adding exe.ev",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "f3aa353b467d9fae317126429e0149a1da5b2954",
+    "short_hash": "f3aa353",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T22:13:58+00:00",
+    "subject": "[no ci] Adding shields to readme",
+    "body": "",
+    "changed_files": [
+      "README.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/README.md",
+        "type": "github",
+        "file_path": "README.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "aa1f112e88681892e1095a75b0ffb3d004795683",
+    "short_hash": "aa1f112",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T21:54:13+00:00",
+    "subject": "Cleanup, other updates",
+    "body": "",
+    "changed_files": [
+      "GITHUB_PAGES_MIGRATION.md",
+      "content/about.md",
+      "netlify.toml"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/GITHUB_PAGES_MIGRATION.md",
+        "type": "github",
+        "file_path": "GITHUB_PAGES_MIGRATION.md"
+      },
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/netlify.toml",
+        "type": "github",
+        "file_path": "netlify.toml"
+      }
+    ]
+  },
+  {
+    "full_hash": "6fdb2176035fa8a9254ec095a403087450273115",
+    "short_hash": "6fdb217",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T21:54:04+00:00",
+    "subject": "Update contact form",
+    "body": "",
+    "changed_files": [
+      "content/contact.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/contact/",
+        "type": "page",
+        "file_path": "content/contact.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "547391ff9d1e42ad9730b83a5b88c5bb2d492974",
+    "short_hash": "547391f",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T19:21:26+00:00",
+    "subject": "Minor revisions to DNS update",
+    "body": "",
+    "changed_files": [
+      "GITHUB_PAGES_MIGRATION.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/GITHUB_PAGES_MIGRATION.md",
+        "type": "github",
+        "file_path": "GITHUB_PAGES_MIGRATION.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "325bbaf8ad0b6e3e85a39c74e8a8f039b1b09a30",
+    "short_hash": "325bbaf",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T19:14:18+00:00",
+    "subject": "Update migration runbook to match deployed workflow",
+    "body": "",
+    "changed_files": [
+      "GITHUB_PAGES_MIGRATION.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/GITHUB_PAGES_MIGRATION.md",
+        "type": "github",
+        "file_path": "GITHUB_PAGES_MIGRATION.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "1288c336b6fe814f5b580f097986c35f752da536",
+    "short_hash": "1288c33",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T17:17:50+00:00",
+    "subject": "Submodule fix, swap corner",
+    "body": "",
+    "changed_files": [
+      ".github/workflows/deploy-hugo-pages.yml",
+      "config.yaml"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/workflows/deploy-hugo-pages.yml",
+        "type": "github",
+        "file_path": ".github/workflows/deploy-hugo-pages.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/config.yaml",
+        "type": "github",
+        "file_path": "config.yaml"
+      }
+    ]
+  },
+  {
+    "full_hash": "e496ecca57dfab7e2daaf22d221e29d85618cf1b",
+    "short_hash": "e496ecc",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T09:02:20-04:00",
+    "subject": "Finish refinement of instructions",
+    "body": "",
+    "changed_files": [
+      "GITHUB_PAGES_MIGRATION.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/GITHUB_PAGES_MIGRATION.md",
+        "type": "github",
+        "file_path": "GITHUB_PAGES_MIGRATION.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "7ad7c5d0f30c9eb59a950aa59920ccd51b224039",
+    "short_hash": "7ad7c5d",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T08:55:48-04:00",
+    "subject": "Upate contact form to Formspree",
+    "body": "",
+    "changed_files": [
+      "content/contact.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/contact/",
+        "type": "page",
+        "file_path": "content/contact.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "1eefb3ae7e2ce740a9090bbd221f2173c885ed60",
+    "short_hash": "1eefb3a",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 28, 2026",
+    "iso_date": "2026-03-28T12:32:57+00:00",
+    "subject": "Remove Nelify badge",
+    "body": "",
+    "changed_files": [
+      "README.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/README.md",
+        "type": "github",
+        "file_path": "README.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "4a7f46fced8add8f5c412988edc8a89b09344357",
+    "short_hash": "4a7f46f",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 22, 2026",
+    "iso_date": "2026-03-22T16:07:21+00:00",
+    "subject": "LifeOS: Commit",
+    "body": "",
+    "changed_files": [
+      ".aider.conf.yml",
+      ".github/copilot-instructions.md",
+      ".github/instructions/blog-content.instructions.md",
+      ".github/instructions/blog-site.instructions.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONVENTIONS.md",
+      "Makefile",
+      "agents/README.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.aider.conf.yml",
+        "type": "github",
+        "file_path": ".aider.conf.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/copilot-instructions.md",
+        "type": "github",
+        "file_path": ".github/copilot-instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/instructions/blog-content.instructions.md",
+        "type": "github",
+        "file_path": ".github/instructions/blog-content.instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/instructions/blog-site.instructions.md",
+        "type": "github",
+        "file_path": ".github/instructions/blog-site.instructions.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/AGENTS.md",
+        "type": "github",
+        "file_path": "AGENTS.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/CLAUDE.md",
+        "type": "github",
+        "file_path": "CLAUDE.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/CONVENTIONS.md",
+        "type": "github",
+        "file_path": "CONVENTIONS.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
+        "type": "github",
+        "file_path": "Makefile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/README.md",
+        "type": "github",
+        "file_path": "agents/README.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "77f1d8c953b22d4703c777ad79360f9627855644",
+    "short_hash": "77f1d8c",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 18, 2026",
+    "iso_date": "2026-03-18T21:51:04-04:00",
+    "subject": "Add curation-focused agent guidance",
+    "body": "",
+    "changed_files": [
+      "AGENTS.md",
+      "agents/README.md",
+      "agents/personas/curation.md",
+      "agents/personas/distribution.md",
+      "agents/personas/editorial.md",
+      "agents/personas/release.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/AGENTS.md",
+        "type": "github",
+        "file_path": "AGENTS.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/README.md",
+        "type": "github",
+        "file_path": "agents/README.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/personas/curation.md",
+        "type": "github",
+        "file_path": "agents/personas/curation.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/personas/distribution.md",
+        "type": "github",
+        "file_path": "agents/personas/distribution.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/personas/editorial.md",
+        "type": "github",
+        "file_path": "agents/personas/editorial.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/agents/personas/release.md",
+        "type": "github",
+        "file_path": "agents/personas/release.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "6de1536dc38b704227854d0e514da5052619eb95",
+    "short_hash": "6de1536",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "March 18, 2026",
+    "iso_date": "2026-03-18T01:34:49+00:00",
+    "subject": "Initial draft to move site to Github Pages",
+    "body": "",
+    "changed_files": [
+      ".github/workflows/deploy-hugo-pages.yml",
+      "Dockerfile",
+      "GITHUB_PAGES_MIGRATION.md",
+      "config.yaml",
+      "static/CNAME"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/workflows/deploy-hugo-pages.yml",
+        "type": "github",
+        "file_path": ".github/workflows/deploy-hugo-pages.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Dockerfile",
+        "type": "github",
+        "file_path": "Dockerfile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/GITHUB_PAGES_MIGRATION.md",
+        "type": "github",
+        "file_path": "GITHUB_PAGES_MIGRATION.md"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/config.yaml",
+        "type": "github",
+        "file_path": "config.yaml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/static/CNAME",
+        "type": "github",
+        "file_path": "static/CNAME"
+      }
+    ]
+  },
+  {
+    "full_hash": "70e62f6a59444135732fa237c3141481569bac36",
+    "short_hash": "70e62f6",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 02, 2026",
+    "iso_date": "2026-02-02T14:15:27+00:00",
+    "subject": "Additional monitoring",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "7527fa55a1771d58d2ccd61940f464ad3c0b8c26",
+    "short_hash": "7527fa5",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "December 02, 2025",
+    "iso_date": "2025-12-02T11:34:23+00:00",
+    "subject": "Open source architecture book",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d822d573f08dac18def4d15a23fa3d2b087588bb",
+    "short_hash": "d822d57",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "October 22, 2025",
+    "iso_date": "2025-10-22T20:14:38+00:00",
+    "subject": "Icon set update",
+    "body": "",
+    "changed_files": [
+      "content/info/webdev.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/webdev/",
+        "type": "page",
+        "file_path": "content/info/webdev.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "fc90e627c42f46276d86573a6534ed4f93123b85",
+    "short_hash": "fc90e62",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 01, 2025",
+    "iso_date": "2025-09-01T23:09:10+00:00",
+    "subject": "Monitor update",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "823bd7b6b4a7b1d0ebafdc4c51807f06f0036996",
+    "short_hash": "823bd7b",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "August 17, 2025",
+    "iso_date": "2025-08-17T00:27:26+00:00",
+    "subject": "Updated link",
+    "body": "",
+    "changed_files": [
+      "content/info/random.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/random/",
+        "type": "page",
+        "file_path": "content/info/random.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "df7407c0c8969efd1115d4baa43fc459fc6becb6",
+    "short_hash": "df7407c",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "July 14, 2025",
+    "iso_date": "2025-07-14T02:47:04+00:00",
+    "subject": "LGTM Stack",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "41b2fd93c39e36e4a59c5e406b01960bd4e64193",
+    "short_hash": "41b2fd9",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 13, 2025",
+    "iso_date": "2025-07-13T15:37:59-04:00",
+    "subject": "Update theme",
+    "body": "",
+    "changed_files": [
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "9e89cf9d9390bb546fde579e2a05a1c122e81c6f",
+    "short_hash": "9e89cf9",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "June 17, 2025",
+    "iso_date": "2025-06-17T01:02:15+00:00",
+    "subject": "Bash performance",
+    "body": "",
+    "changed_files": [
+      "content/info/scripting.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/scripting/",
+        "type": "page",
+        "file_path": "content/info/scripting.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "cbf2a9245401097bd8a802c1cab2c33d023febca",
+    "short_hash": "cbf2a92",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "June 13, 2025",
+    "iso_date": "2025-06-13T11:44:51+00:00",
+    "subject": "First major post-mortem of 2025!",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "8964661d6560f8dbab9ebfe1e5cab37fdc1695b6",
+    "short_hash": "8964661",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "April 26, 2025",
+    "iso_date": "2025-04-26T13:21:48+00:00",
+    "subject": "Adding audit defense toolkit",
+    "body": "",
+    "changed_files": [
+      "content/assets/info/DevOps_Audit_Defense_Toolkit_v1.0.pdf",
+      "content/info/security.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/content/assets/info/DevOps_Audit_Defense_Toolkit_v1.0.pdf",
+        "type": "github",
+        "file_path": "content/assets/info/DevOps_Audit_Defense_Toolkit_v1.0.pdf"
+      },
+      {
+        "url": "/info/security/",
+        "type": "page",
+        "file_path": "content/info/security.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "48d0ef17b8ebeb226613a8ffffc21887177642f4",
+    "short_hash": "48d0ef1",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "April 26, 2025",
+    "iso_date": "2025-04-26T13:10:37+00:00",
+    "subject": "Add Holland live web cams",
+    "body": "",
+    "changed_files": [
+      "content/info/weather.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/weather/",
+        "type": "page",
+        "file_path": "content/info/weather.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "df7f4772167783eab614eab672b8b32135927724",
+    "short_hash": "df7f477",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "April 26, 2025",
+    "iso_date": "2025-04-26T12:52:33+00:00",
+    "subject": "Cleanup links/about page",
+    "body": "",
+    "changed_files": [
+      "content/about.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "a26cfdcf435aafa1fb591a807ddb33a14bdf58c6",
+    "short_hash": "a26cfdc",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "April 26, 2025",
+    "iso_date": "2025-04-26T12:45:55+00:00",
+    "subject": "Adding BriefSky",
+    "body": "",
+    "changed_files": [
+      "content/info/weather.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/weather/",
+        "type": "page",
+        "file_path": "content/info/weather.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "451b3af9396e91ce90788d553e36183fce77d75a",
+    "short_hash": "451b3af",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "April 19, 2025",
+    "iso_date": "2025-04-19T12:00:31+00:00",
+    "subject": "Charles Darwin Quote",
+    "body": "",
+    "changed_files": [
+      "content/info/quotes.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/quotes/",
+        "type": "page",
+        "file_path": "content/info/quotes.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d4b8a323dc657c20433acf48740e05a27b656048",
+    "short_hash": "d4b8a32",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "April 05, 2025",
+    "iso_date": "2025-04-05T11:00:16-04:00",
+    "subject": "Minor update",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "5015e9a440ac6e90726147e4e16a0e8f74f08e13",
+    "short_hash": "5015e9a",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "April 05, 2025",
+    "iso_date": "2025-04-05T10:59:22-04:00",
+    "subject": "Crowdstrike additional updates",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "98ed4ec3ccfc3d3296cb62a28d0a49ed14f24813",
+    "short_hash": "98ed4ec",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "February 17, 2025",
+    "iso_date": "2025-02-17T15:36:36+00:00",
+    "subject": "Add CNCF Registry for docker",
+    "body": "",
+    "changed_files": [
+      "content/info/k8s.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/k8s/",
+        "type": "page",
+        "file_path": "content/info/k8s.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "566aa345b01e2e396de8717cbe7e1724c1d823a4",
+    "short_hash": "566aa34",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 16, 2025",
+    "iso_date": "2025-02-16T22:56:54+00:00",
+    "subject": "More monitoring tools",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "027f19492820b7099b5de9d47c26846de1efbc60",
+    "short_hash": "027f194",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 16, 2025",
+    "iso_date": "2025-02-16T15:40:38+00:00",
+    "subject": "Monitoring maintenance",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "cef7725a6f9652b6b3bc254fe83847763a748783",
+    "short_hash": "cef7725",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 07, 2025",
+    "iso_date": "2025-02-07T16:10:20+00:00",
+    "subject": "Stripe demo app",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "caa120d11544a4a6d50ad3a8dfbb65a01169b719",
+    "short_hash": "caa120d",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "February 02, 2025",
+    "iso_date": "2025-02-02T00:38:42+00:00",
+    "subject": "Searching for deleted files in git history",
+    "body": "",
+    "changed_files": [
+      "content/info/gitcheatsheet.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/gitcheatsheet/",
+        "type": "page",
+        "file_path": "content/info/gitcheatsheet.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "4dfd9f5276b44eb8a8669602dc84794c3a2315dc",
+    "short_hash": "4dfd9f5",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "February 01, 2025",
+    "iso_date": "2025-02-01T09:43:25-05:00",
+    "subject": "Hugo dev containier",
+    "body": "",
+    "changed_files": [
+      ".devcontainer/Dockerfile",
+      ".devcontainer/devcontainer.json"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/Dockerfile",
+        "type": "github",
+        "file_path": ".devcontainer/Dockerfile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/devcontainer.json",
+        "type": "github",
+        "file_path": ".devcontainer/devcontainer.json"
+      }
+    ]
+  },
+  {
+    "full_hash": "d328b144afccd15b0682e655c7ad5d768b311e19",
+    "short_hash": "d328b14",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "January 12, 2025",
+    "iso_date": "2025-01-12T13:08:59+00:00",
+    "subject": "Updated weather blog",
+    "body": "",
+    "changed_files": [
+      "content/info/weather.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/weather/",
+        "type": "page",
+        "file_path": "content/info/weather.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d0a968520284a3f308ea735277b11b89f9347406",
+    "short_hash": "d0a9685",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "December 29, 2024",
+    "iso_date": "2024-12-29T14:38:24+00:00",
+    "subject": "Add retail demo store",
+    "body": "",
+    "changed_files": [
+      "content/info/development.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/development/",
+        "type": "page",
+        "file_path": "content/info/development.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "3b18e4472a30e17b1d94547f0cc02558beddc1ec",
+    "short_hash": "3b18e44",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "December 12, 2024",
+    "iso_date": "2024-12-12T13:51:50+00:00",
+    "subject": "More git understanding",
+    "body": "",
+    "changed_files": [
+      "content/info/gitcheatsheet.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/gitcheatsheet/",
+        "type": "page",
+        "file_path": "content/info/gitcheatsheet.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "729e266b62c3f5dbe479c5fced120bc5c25fdade",
+    "short_hash": "729e266",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "December 11, 2024",
+    "iso_date": "2024-12-11T22:38:12+00:00",
+    "subject": "Add michigan storm chasers",
+    "body": "",
+    "changed_files": [
+      "content/info/weather.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/weather/",
+        "type": "page",
+        "file_path": "content/info/weather.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "8f131c3fdc48da4cfecd3750af997864f9746a37",
+    "short_hash": "8f131c3",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "December 06, 2024",
+    "iso_date": "2024-12-06T12:05:32+00:00",
+    "subject": "Post-Mortem ransomware",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "d40cda6ce3935a60c500c90b1473590ff415256e",
+    "short_hash": "d40cda6",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "November 16, 2024",
+    "iso_date": "2024-11-16T15:23:54+00:00",
+    "subject": "Cloud Scanner",
+    "body": "",
+    "changed_files": [
+      "content/info/security.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/security/",
+        "type": "page",
+        "file_path": "content/info/security.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "6fd5ca07bd5d2b6e5c2e5ecb3b9dea2eb26cf0dc",
+    "short_hash": "6fd5ca0",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 28, 2024",
+    "iso_date": "2024-09-28T12:37:40+00:00",
+    "subject": "Update file monitor.md",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "77651dcf1e520b523a76c997bd095db3156f8471",
+    "short_hash": "77651dc",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 22, 2024",
+    "iso_date": "2024-09-22T13:57:18+00:00",
+    "subject": "Cloudwatch Internet map",
+    "body": "",
+    "changed_files": [
+      "content/info/monitor.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/monitor/",
+        "type": "page",
+        "file_path": "content/info/monitor.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "97507239bbfac71f91efdf8d7a8b3e5986256229",
+    "short_hash": "9750723",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 06, 2024",
+    "iso_date": "2024-09-06T23:30:03+00:00",
+    "subject": "Crowdstrike incident",
+    "body": "",
+    "changed_files": [
+      "content/info/plan.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/plan/",
+        "type": "page",
+        "file_path": "content/info/plan.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "1e309e07340fff373cc6c24b90a3450b3b9c98b4",
+    "short_hash": "1e309e0",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "September 02, 2024",
+    "iso_date": "2024-09-02T15:13:23+00:00",
+    "subject": "Git https auth fix",
+    "body": "",
+    "changed_files": [
+      "content/info/gitcheatsheet.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/gitcheatsheet/",
+        "type": "page",
+        "file_path": "content/info/gitcheatsheet.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "64aea6a177c68a97600449a0c0e4bc4330854606",
+    "short_hash": "64aea6a",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "August 24, 2024",
+    "iso_date": "2024-08-24T12:35:06+00:00",
+    "subject": "Business card generator update, other cleanup",
+    "body": "",
+    "changed_files": [
+      "content/about.md",
+      "content/info/career.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/about/",
+        "type": "page",
+        "file_path": "content/about.md"
+      },
+      {
+        "url": "/info/career/",
+        "type": "page",
+        "file_path": "content/info/career.md"
+      }
+    ]
+  },
+  {
+    "full_hash": "a7505ad95ef5309d709c9c118e388032cc5cecf7",
+    "short_hash": "a7505ad",
+    "author_name": "Steven Miller",
+    "author_email": "steve@r15cookie.com",
+    "date": "August 18, 2024",
+    "iso_date": "2024-08-18T13:58:52+00:00",
+    "subject": "Adding mint",
+    "body": "",
+    "changed_files": [
+      "content/info/k8s.md"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "/info/k8s/",
+        "type": "page",
+        "file_path": "content/info/k8s.md"
+      }
+    ]
+  }
+]
