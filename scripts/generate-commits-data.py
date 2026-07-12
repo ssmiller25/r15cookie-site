@@ -1,7 +1,15 @@
+# /// script
+# requires-python = ">=3.8"
+# dependencies = []
+# ///
+
 #!/usr/bin/env python3
 """
 Generate commits data JSON file for Hugo site.
 Extracts git commits and formats them for use in the home page template.
+
+Run with uv:
+    uv run scripts/generate-commits-data.py
 """
 
 import json
