@@ -8,8 +8,22 @@
 Generate commits data JSON file for Hugo site.
 Extracts git commits and formats them for use in the home page template.
 
+This script is designed to work with the r15-papercss-hugo-theme when
+it displays git commits on the home page instead of blog posts.
+
 Run with uv:
     uv run scripts/generate-commits-data.py
+
+Configuration (in Hugo config.yaml):
+    params:
+      github_repo: "username/repo-name"  # For commit links
+
+The script will:
+1. Extract git commits (optionally filtered to content/ directory)
+2. Generate data/commits.json with commit details
+3. Map changed files to site URLs for linking
+
+Based on: https://github.com/ssmiller25/r15cookie-site
 """
 
 import json
@@ -72,14 +86,31 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
         changed_files_output = run_git_command([
             "diff-tree",
             "--no-commit-id",
-            "--name-only",
+            "--name-status",
             "-r",
             full_hash
         ])
         
-        changed_files = [
-            f.strip() for f in changed_files_output.split("\n") if f.strip()
-        ]
+        # Parse name-status output: lines like "M\tfile.md" or "A\tfile.md"
+        changed_files = []
+        for line in changed_files_output.split("\n"):
+            if not line.strip():
+                continue
+            parts = line.split("\t")
+            if len(parts) >= 2:
+                status = parts[0].strip()
+                file_path = parts[1].strip()
+                changed_files.append({
+                    "path": file_path,
+                    "status": status  # A=Added, D=Deleted, M=Modified, R=Renamed
+                })
+        
+        # Only include commits that actually touch content/
+        if content_only:
+            content_files = [f for f in changed_files if f["path"].startswith("content/")]
+            if not content_files:
+                continue  # Skip this commit
+            changed_files = content_files  # Only show content files
         
         # Parse date
         try:
@@ -90,6 +121,15 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
             formatted_date = author_date
             iso_date = author_date
         
+        # Map status to human-readable and icon
+        status_map = {
+            "A": {"label": "Added", "icon": "➕"},
+            "D": {"label": "Deleted", "icon": "❌"},
+            "M": {"label": "Modified", "icon": "✏️"},
+            "R": {"label": "Renamed", "icon": "🔄"},
+            "C": {"label": "Copied", "icon": "📋"}
+        }
+        
         commits.append({
             "full_hash": full_hash,
             "short_hash": short_hash,
@@ -99,12 +139,13 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
             "iso_date": iso_date,
             "subject": subject,
             "body": body,
-            "changed_files": changed_files
+            "changed_files": changed_files,
+            "status_map": status_map
         })
     
     return commits
 
-def map_file_to_site_url(file_path: str) -> dict | None:
+def map_file_to_site_url(file_path: str, base_url: str = "") -> dict | None:
     """Map a git file path to a site URL."""
     path = Path(file_path)
     
@@ -128,8 +169,10 @@ def map_file_to_site_url(file_path: str) -> dict | None:
             url = "/" + "/".join(dir_parts) + "/"
             return {"url": url, "type": "page"}
     
+    # For non-content files, link to GitHub
+    github_repo = base_url.replace("https://github.com/", "").rstrip("/")
     return {
-        "url": f"https://github.com/ssmiller25/r15cookie-site/blob/main/{file_path}",
+        "url": f"https://github.com/{github_repo}/blob/main/{file_path}",
         "type": "github"
     }
 
@@ -154,22 +197,42 @@ def main():
     
     data_dir.mkdir(exist_ok=True)
     
-    commits = get_commits(limit=100)
+    # Get commits (filtered to content/ by default)
+    commits = get_commits(limit=100, content_only=True)
     
+    # Get GitHub repo from config (if available)
+    github_repo = ""
+    config_file = repo_root / "config.yaml"
+    if config_file.exists():
+        with open(config_file, "r") as f:
+            for line in f:
+                if "github_repo:" in line:
+                    github_repo = line.split(":", 1)[1].strip().strip('"').strip("'")
+                    break
+    
+    # Process commits and map file paths to URLs
     for commit in commits:
         mapped_files = []
-        for file_path in commit["changed_files"]:
-            mapped = map_file_to_site_url(file_path)
+        for file_info in commit["changed_files"]:
+            file_path = file_info["path"]
+            status = file_info["status"]
+            mapped = map_file_to_site_url(file_path, github_repo)
             if mapped:
                 mapped["file_path"] = file_path
+                mapped["status"] = status
+                mapped["status_info"] = commit["status_map"].get(status, {"label": status, "icon": "📄"})
                 mapped_files.append(mapped)
         
         commit["changed_files_mapped"] = mapped_files
     
+    # Write JSON output
     with open(output_file, "w") as f:
         json.dump(commits, f, indent=2)
     
     print(f"Generated {len(commits)} commits data at {output_file}")
+    if len(commits) == 0:
+        print("NOTE: No commits found that touch content/ directory.")
+        print("To include all commits, edit this script and set content_only=False")
 
 if __name__ == "__main__":
     main()
