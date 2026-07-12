@@ -1,97 +1,51 @@
-git_hash = $(shell git rev-parse --short -q HEAD)
-version := 0.10.0
-release_date := $(shell date +%Y-%m-%d)
-alpine_version := 3.13.1
-nginx_version := 1.19.6
+HUGO_VERSION := 0.131.0
 
-DOCKER_REPO=quay.io/ssmiller25
+help:           ## Show this help.
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-CIVO_CMD="civo"
-# For Dockerize CIVO
-#CIVO_CMD=docker run -it --rm -v /home/steve/.civo.json:/.civo.json civo/cli:latest
+.PHONY: run
+run: .bin/hugo   ## Run site locally with Hugo server
+	@.bin/hugo server --buildFuture -D --cleanDestinationDir
 
-CLUSTER_NAME=blog
-CIVO_SIZE=g2.small
-KUBECONFIG=kubeconfig.$(CLUSTER_NAME)
-KUBECTL=kubectl --kubeconfig=$(KUBECONFIG)
-
+.PHONY: build
+build: .bin/hugo   ## Build the site
+	@.bin/hugo --minify
 
 .PHONY: smoke-check
-
-smoke-check:
+smoke-check: ## Run lightweight repository smoke checks
 	@test -f AGENTS.md
 	@test -f README.md
 	@test -f config.yaml
 	@test -d content
-	@test -d manifests
+	@test -d themes/r15-papercss-hugo-theme
 	@git status -s >/dev/null
 	@echo "r15cookieblog smoke checks passed"
 
-
-.PHONY: build
-build:
-	@docker build . -t ${DOCKER_REPO}/r15cookieblog:${git_hash} \
-		$(docker_extra_param) \
-		--build-arg GIT_HASH=${git_hash} \
-		--build-arg VERSION=${version} \
-		--build-arg RELEASE_DATE=${release_date} \
-		--build-arg ALPINE_VERSION=${alpine_version} \
-		--build-arg NGINX_VERSION=${nginx_version}
-	@docker tag ${DOCKER_REPO}/r15cookieblog:${git_hash} ${DOCKER_REPO}/r15cookieblog:latest
-
-.PHONY: build-nocache
-build-nocache: docker_extra_param=--no-cache
-build-nocache: build
-
-
-.PHONY: run
-run:
-	@docker run -d --rm -p 8080:80 --name r15cookieblog ${DOCKER_REPO}/r15cookieblog:latest
-	@echo "Local running.  Go to http://localhost:8080/ to view"
-
-.PHONY: stop
-stop:
-	@echo "Stopping r15cookieblog - should shelf-cleanup"
-	@docker stop r15cookieblog
-
-.PHONY: push
-push:
-	@docker push ${DOCKER_REPO}/r15cookieblog:$(git_hash)
-	@docker push ${DOCKER_REPO}/r15cookieblog:latest
-
-# Pull and cache dependent images
-.PHONY: cache-upstream
-cache-upstream:
-	docker pull alpine:${alpine_version}
-	docker pull nginx:${nginx_version}
-	docker tag alpine:${alpine_version} $(DOCKER_REPO)/alpine:${alpine_version}
-	docker tag nginx:${nginx_version} $(DOCKER_REPO)/nginx:${nginx_version}
-	docker push $(DOCKER_REPO)/alpine:${alpine_version}
-	docker push $(DOCKER_REPO)/nginx:${nginx_version}
-
-
-.PHONY: civo-up
-civo-up: $(KUBECONFIG)
-
-$(KUBECONFIG):
-	@echo "Creating $(CLUSTER_NAME)"
-	@$(CIVO_CMD) k3s list | grep -q $(CLUSTER_NAME) || $(CIVO_CMD) k3s create $(CLUSTER_NAME) -n 1 --size $(CIVO_SIZE) --wait
-	@$(CIVO_CMD) k3s config $(CLUSTER_NAME) > $(KUBECONFIG)
-
-.PHONY: civo-down
-civo-down:
-	@echo "Removing $(CLUSTER_NAME)"
-	@$(CIVO_CMD) k3s remove $(CLUSTER_NAME) || true
-	@rm $(KUBECONFIG)
-
-.PHONY: civo-deploy
-civo-deploy: $(KUBECONFIG)
-	@$(KUBECTL) apply -k ./
-
-civo-env: $(KUBECONFIG)
-	export KUBECONFIG=$(KUBECONFIG)
-
-
 .PHONY: generate-commits
-generate-commits:
+generate-commits:   ## Generate commits data for home page
 	uv run scripts/generate-commits-data.py
+
+.PHONY: update-theme
+update-theme:   ## Update the Hugo theme from remote repo
+	@./update-theme.sh feature/git-commits-support
+
+.PHONY: clean
+clean:           ## Clean build artifacts
+	@rm -rf public/
+	@rm -rf .bin/
+	@echo "Cleaned."
+
+.PHONY: newcontent
+# TODO: implement based on parameter
+# hugo new content post/my-new-post.md
+# and can auto-open in codespaces with
+# `code <filename>`
+
+.bin/hugo:
+	@mkdir -p .bin || true
+	@curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_linux-amd64.tar.gz"
+	@tar -xzf .bin/hugo.tar.gz -C .bin
+	@rm .bin/hugo.tar.gz
+	@chmod +x .bin/hugo
+
+# Help Source: https://gist.github.com/prwhite/8168133
