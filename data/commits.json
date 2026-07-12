@@ -1,5 +1,301 @@
 [
   {
+    "full_hash": "5d96bc3c4630227274ac8ea403c2c046ec382334",
+    "short_hash": "5d96bc3",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:42:49-04:00",
+    "subject": "fix: Update postCreateCommand with force checkout",
+    "body": "- Use 'git checkout -f' to force overwrite existing files\n- Fix untracked files error during devcontainer build\n- Ensure clean git configuration in devcontainer",
+    "changed_files": [
+      ".devcontainer/devcontainer.json"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/devcontainer.json",
+        "type": "github",
+        "file_path": ".devcontainer/devcontainer.json"
+      }
+    ]
+  },
+  {
+    "full_hash": "19d4fef0097c1cb70684cc9560fd8eda6ec8935a",
+    "short_hash": "19d4fef",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:26:53-04:00",
+    "subject": "fix: Update postCreateCommand to fix git config",
+    "body": "- Check if .git is a file pointing to wrong path (submodule issue)\n- If so, remove it and re-initialize git properly\n- Ensure devcontainer has correct git configuration\n- Fix 'not a git repository' error from nested submodule paths",
+    "changed_files": [
+      ".devcontainer/devcontainer.json"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/devcontainer.json",
+        "type": "github",
+        "file_path": ".devcontainer/devcontainer.json"
+      }
+    ]
+  },
+  {
+    "full_hash": "598fc913d5c12fb3c806da4d161fab7e9a2eb690",
+    "short_hash": "598fc91",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:23:18-04:00",
+    "subject": "fix: Improve git script for devcontainer compatibility",
+    "body": "- Simplify script to change to repo root directory\n- Add git repository verification\n- Better error handling and debugging\n- Ensure script works in devcontainer environment",
+    "changed_files": [
+      "scripts/generate-commits-data.py"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      }
+    ]
+  },
+  {
+    "full_hash": "b7762495cf1f754d8263a710178a96bcff1f406f",
+    "short_hash": "b776249",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:22:52-04:00",
+    "subject": "fix: Add debugging and error handling to git script",
+    "body": "- Add detailed error messages for git command failures\n- Check for .git directory existence before running\n- Print debug info about script location and repo root\n- Help diagnose why git commands fail in devcontainer",
+    "changed_files": [
+      "scripts/generate-commits-data.py"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      }
+    ]
+  },
+  {
+    "full_hash": "734e3f7b5f6baaaffcecbb2fed2239333d4add93",
+    "short_hash": "734e3f7",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:16:59-04:00",
+    "subject": "fix: Update postCreateCommand to use theme script",
+    "body": "- Replace submodule commands with ./update-theme.sh\n- Avoid nested git/submodule path issues\n- Simplify devcontainer initialization",
+    "changed_files": [
+      ".devcontainer/devcontainer.json"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/devcontainer.json",
+        "type": "github",
+        "file_path": ".devcontainer/devcontainer.json"
+      }
+    ]
+  },
+  {
+    "full_hash": "46eb30e3497946b29dfe5f37e9dc5f51a7a6c786",
+    "short_hash": "46eb30e",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:16:29-04:00",
+    "subject": "feat: Add theme files directly (no submodule)",
+    "body": "- Remove submodule configuration to avoid nested git issues\n- Add theme files directly to repo\n- Add update-theme.sh script for theme updates\n- Simplify devcontainer setup",
+    "changed_files": [
+      ".gitignore",
+      ".gitmodules",
+      "update-theme.sh"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitignore",
+        "type": "github",
+        "file_path": ".gitignore"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/update-theme.sh",
+        "type": "github",
+        "file_path": "update-theme.sh"
+      }
+    ]
+  },
+  {
+    "full_hash": "5c8e512b5f729123fe0a7e77cd27c1cebc5b8193",
+    "short_hash": "5c8e512",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:15:59-04:00",
+    "subject": "chore: Remove theme submodule",
+    "body": "- Remove nested submodule to avoid path issues\n- Will clone theme directly instead",
+    "changed_files": [
+      ".gitmodules"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      }
+    ]
+  },
+  {
+    "full_hash": "e0fe28ff4614042d9b4eb1a1571e30b7731321a8",
+    "short_hash": "e0fe28f",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:14:48-04:00",
+    "subject": "fix: Re-add submodule with correct gitdir path",
+    "body": "- Remove broken submodule reference\n- Re-add submodule properly with correct configuration\n- Fixes devcontainer submodule initialization\n- Update postCreateCommand for proper submodule handling",
+    "changed_files": [
+      ".devcontainer/devcontainer.json",
+      ".gitmodules",
+      "data/commits.json",
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/devcontainer.json",
+        "type": "github",
+        "file_path": ".devcontainer/devcontainer.json"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/data/commits.json",
+        "type": "github",
+        "file_path": "data/commits.json"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "559b099b729bb46f82bd5ca81ca783134492d3c8",
+    "short_hash": "559b099",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:14:22-04:00",
+    "subject": "chore: Reset .gitmodules for clean submodule add",
+    "body": "",
+    "changed_files": [
+      ".gitmodules",
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "5e3ee2ed336e630a18573ea4d8bc8386a06a93fb",
+    "short_hash": "5e3ee2e",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:14:12-04:00",
+    "subject": "chore: Clean up broken submodule reference",
+    "body": "",
+    "changed_files": [
+      ".gitmodules"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      }
+    ]
+  },
+  {
+    "full_hash": "e356ab1d0215a039377b9235827e0dcec0f62db0",
+    "short_hash": "e356ab1",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:09:56-04:00",
+    "subject": "feat: Add branch tracking for submodule",
+    "body": "- Add branch = feature/git-commits-support to .gitmodules\n- Enable proper submodule initialization in devcontainer\n- Fix postCreateCommand failure",
+    "changed_files": [
+      ".gitmodules"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitmodules",
+        "type": "github",
+        "file_path": ".gitmodules"
+      }
+    ]
+  },
+  {
+    "full_hash": "aa82c484e031920e5d9ec28ce52ebb1126829cb5",
+    "short_hash": "aa82c48",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:09:50-04:00",
+    "subject": "fix: Update submodule to track feature branch",
+    "body": "- Update submodule pointer to latest feature/git-commits-support\n- Ensure devcontainer can properly initialize submodule\n- Fix postCreateCommand failure",
+    "changed_files": [
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
+    "full_hash": "d8074927c3d649902b5c87f36fb2ece6f03df859",
+    "short_hash": "d807492",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T11:04:53-04:00",
+    "subject": "fix: Correct uv installation path in Dockerfile",
+    "body": "- uv installs to /root/.local/bin/uv (not /root/.cargo/bin/uv)\n- Update mv command to use correct source path\n- Fixes devcontainer build error",
+    "changed_files": [
+      ".devcontainer/Dockerfile"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.devcontainer/Dockerfile",
+        "type": "github",
+        "file_path": ".devcontainer/Dockerfile"
+      }
+    ]
+  },
+  {
     "full_hash": "3836320e8736a67ab3688c376fd7ec2332fc5638",
     "short_hash": "3836320",
     "author_name": "Steve Miller",
@@ -1952,315 +2248,5 @@
         "file_path": "content/projects/preservinginfo/2024-02-19-templateadjustments.md"
       }
     ]
-  },
-  {
-    "full_hash": "3e17da211ba049d20f00c8dc3b720c2c2c934d26",
-    "short_hash": "3e17da2",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T23:08:31+00:00",
-    "subject": "Merge branch '2024-02-18-preserving-info' into 'main'",
-    "body": "Perserving Info Kickoff!\n\nSee merge request ssmiller25/r15cookieblog!68",
-    "changed_files": [],
-    "changed_files_mapped": []
-  },
-  {
-    "full_hash": "084724485c5bbfcea2743108317f2b717392c8c2",
-    "short_hash": "0847244",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T17:56:27-05:00",
-    "subject": "Add link in project page, fix list",
-    "body": "",
-    "changed_files": [
-      "content/projects/_index.md",
-      "layouts/project/list.html"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/projects/",
-        "type": "section",
-        "file_path": "content/projects/_index.md"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
-        "type": "github",
-        "file_path": "layouts/project/list.html"
-      }
-    ]
-  },
-  {
-    "full_hash": "f459146882d85d50f7ab71098a9662ee3cea0125",
-    "short_hash": "f459146",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T17:48:00-05:00",
-    "subject": "Tag updates",
-    "body": "",
-    "changed_files": [
-      "content/post/2024-02-18-perserving-info-kickoff.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/post/2024-02-18-perserving-info-kickoff/",
-        "type": "page",
-        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "35cc4c469b7540ad67419edb39b2a1e7cf5021fb",
-    "short_hash": "35cc4c4",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T17:47:14-05:00",
-    "subject": "Final update on post",
-    "body": "",
-    "changed_files": [
-      "content/post/2024-02-18-perserving-info-kickoff.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/post/2024-02-18-perserving-info-kickoff/",
-        "type": "page",
-        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "d521add31ac4ea9b27e3987db366fd5c08ecc1cb",
-    "short_hash": "d521add",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T08:57:56-05:00",
-    "subject": "Finish blog article, prep for review",
-    "body": "",
-    "changed_files": [
-      "content/post/2024-02-18-perserving-info-kickoff.md",
-      "content/projects/preservinginfo/2024-02-18-firstday.md",
-      "content/projects/preservinginfo/_index.md",
-      "layouts/project/list.html"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/post/2024-02-18-perserving-info-kickoff/",
-        "type": "page",
-        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
-      },
-      {
-        "url": "/projects/preservinginfo/2024-02-18-firstday/",
-        "type": "page",
-        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
-      },
-      {
-        "url": "/projects/preservinginfo/",
-        "type": "section",
-        "file_path": "content/projects/preservinginfo/_index.md"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
-        "type": "github",
-        "file_path": "layouts/project/list.html"
-      }
-    ]
-  },
-  {
-    "full_hash": "b2df6eb05ca8b7db0482d24ed10953984bd5fff5",
-    "short_hash": "b2df6eb",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T08:45:43-05:00",
-    "subject": "Minimally working project log",
-    "body": "",
-    "changed_files": [
-      "content/post/2024-02-18-perserving-info-kickoff.md",
-      "content/projects/preservinginfo/2024-02-18-firstday.md",
-      "content/projects/preservinginfo/_index.md",
-      "layouts/project/list.html"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/post/2024-02-18-perserving-info-kickoff/",
-        "type": "page",
-        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
-      },
-      {
-        "url": "/projects/preservinginfo/2024-02-18-firstday/",
-        "type": "page",
-        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
-      },
-      {
-        "url": "/projects/preservinginfo/",
-        "type": "section",
-        "file_path": "content/projects/preservinginfo/_index.md"
-      },
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/layouts/project/list.html",
-        "type": "github",
-        "file_path": "layouts/project/list.html"
-      }
-    ]
-  },
-  {
-    "full_hash": "01aab61b7093effb0d755c0b31be4ce701c4af0e",
-    "short_hash": "01aab61",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 18, 2024",
-    "iso_date": "2024-02-18T08:29:44-05:00",
-    "subject": "Initial sketchout of perserving info blog",
-    "body": "",
-    "changed_files": [
-      "content/post/2024-02-18-perserving-info-kickoff.md",
-      "content/projects/preservinginfo/2024-02-18-firstday.md",
-      "content/projects/preservinginfo/_index.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/post/2024-02-18-perserving-info-kickoff/",
-        "type": "page",
-        "file_path": "content/post/2024-02-18-perserving-info-kickoff.md"
-      },
-      {
-        "url": "/projects/preservinginfo/2024-02-18-firstday/",
-        "type": "page",
-        "file_path": "content/projects/preservinginfo/2024-02-18-firstday.md"
-      },
-      {
-        "url": "/projects/preservinginfo/",
-        "type": "section",
-        "file_path": "content/projects/preservinginfo/_index.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "d4745760db7dd5ca80834b6e408fcf451f71dc55",
-    "short_hash": "d474576",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 16, 2024",
-    "iso_date": "2024-02-16T07:35:51-05:00",
-    "subject": "Add data vis framework",
-    "body": "",
-    "changed_files": [
-      "content/info/monitor.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/monitor/",
-        "type": "page",
-        "file_path": "content/info/monitor.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "06b8f3011eafd4e01fd782a691223262d3bbf50d",
-    "short_hash": "06b8f30",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 12, 2024",
-    "iso_date": "2024-02-12T08:22:41-05:00",
-    "subject": "Unresonable effectiveness of websites",
-    "body": "",
-    "changed_files": [
-      "content/info/web0.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/web0/",
-        "type": "page",
-        "file_path": "content/info/web0.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "43259118e80f3a8467595ba62a29e1dd83d893d1",
-    "short_hash": "4325911",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 10, 2024",
-    "iso_date": "2024-02-10T14:39:55+00:00",
-    "subject": "Rename article title",
-    "body": "",
-    "changed_files": [
-      ".gitignore",
-      "content/post/2010-01-07-githubarchive.md",
-      "content/post/2020-01-07-githubarchive.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.gitignore",
-        "type": "github",
-        "file_path": ".gitignore"
-      },
-      {
-        "url": "/post/2010-01-07-githubarchive/",
-        "type": "page",
-        "file_path": "content/post/2010-01-07-githubarchive.md"
-      },
-      {
-        "url": "/post/2020-01-07-githubarchive/",
-        "type": "page",
-        "file_path": "content/post/2020-01-07-githubarchive.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "ea23fc46322773c447e4d520b670ef7886266ede",
-    "short_hash": "ea23fc4",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "February 07, 2024",
-    "iso_date": "2024-02-07T10:33:13-05:00",
-    "subject": "Benefits to keeping code simple",
-    "body": "",
-    "changed_files": [
-      "content/info/plan.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/plan/",
-        "type": "page",
-        "file_path": "content/info/plan.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "9763777b683d382a5d5fe6b2f0d6aad7938702f8",
-    "short_hash": "9763777",
-    "author_name": "ssmiller25",
-    "author_email": "me@r15cookie.com",
-    "date": "January 30, 2024",
-    "iso_date": "2024-01-30T08:36:00-05:00",
-    "subject": "CDK article",
-    "body": "",
-    "changed_files": [
-      "content/info/configure.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/configure/",
-        "type": "page",
-        "file_path": "content/info/configure.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "9bcf931cd7231b407ef1d62c6d2b8ef97dd2584e",
-    "short_hash": "9bcf931",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "January 27, 2024",
-    "iso_date": "2024-01-27T22:42:37+00:00",
-    "subject": "Merge branch 'papercss-refactor' into 'main'",
-    "body": "Papercss refactor\n\nSee merge request ssmiller25/r15cookieblog!67",
-    "changed_files": [],
-    "changed_files_mapped": []
   }
 ]
