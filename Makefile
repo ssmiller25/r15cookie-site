@@ -44,20 +44,22 @@ clean:           ## Clean build artifacts
 .bin/hugo:
 	@mkdir -p .bin || true
 	@echo "Downloading Hugo..."
-	$(eval OS := $(shell uname -s | tr '[:upper:]' '[:lower:'))
-	$(eval ARCH := $(shell uname -m))
-	@if [ "$(OS)" = "darwin" ]; then \
-		HUGO_PKG=hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz; \
-	elif [ "$(ARCH)" = "aarch64" ] || [ "$(ARCH)" = "arm64" ]; then \
-		HUGO_PKG=hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz; \
+	@OS=$$(uname -s | tr '[:upper:]' '[:lower:]'); \
+	ARCH=$$(uname -m); \
+	if [ "$$OS" = "darwin" ]; then \
+		HUGO_PKG="hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz"; \
+	elif [ "$$ARCH" = "aarch64" ] || [ "$$ARCH" = "arm64" ]; then \
+		HUGO_PKG="hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz"; \
 	else \
-		HUGO_PKG=hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz; \
-	fi
-	@echo "Downloading $${HUGO_PKG}..."
-	@curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$${HUGO_PKG}"
-	@tar -xzf .bin/hugo.tar.gz -C .bin
-	@rm -f .bin/hugo.tar.gz
-	@chmod +x .bin/hugo
-	@echo "Hugo binary downloaded and ready."
+		HUGO_PKG="hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz"; \
+	fi; \
+	echo "Downloading $${HUGO_PKG}..."; \
+	curl -Lo .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$${HUGO_PKG}"; \
+	tar -xzf .bin/hugo.tar.gz -C .bin; \
+	rm -f .bin/hugo.tar.gz; \
+	if [ -f .bin/hugo ]; then mv .bin/hugo .bin/hugo; fi; \
+	if [ -f .bin/hugo_extended ]; then mv .bin/hugo_extended .bin/hugo; fi; \
+	chmod +x .bin/hugo; \
+	echo "Hugo binary downloaded and ready."
 
 # Help Source: https://gist.github.com/prwhite/8168133
