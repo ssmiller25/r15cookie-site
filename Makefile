@@ -5,17 +5,15 @@ OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 ARCH := $(shell uname -m)
 
 # Set Hugo package based on OS and ARCH
-ifeq ($(OS),darwin)
+# Logic: if Darwin, use darwin-universal; if Linux + ARM, use linux-arm64; else linux-amd64
+ifneq (,$(findstring darwin,$(OS)))
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz
-endif
-ifeq ($(ARCH),aarch64)
-  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
-endif
-ifeq ($(ARCH),arm64)
-  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
-endif
-ifndef HUGO_PKG
-  HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
+else
+  ifneq (,$(findstring aarch64,$(ARCH))$(findstring arm64,$(ARCH)))
+    HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
+  else
+    HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
+  endif
 endif
 
 help:           ## Show this help.
