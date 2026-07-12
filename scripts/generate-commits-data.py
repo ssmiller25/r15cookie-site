@@ -20,13 +20,24 @@ from pathlib import Path
 
 def run_git_command(args: list[str]) -> str:
     """Run a git command and return stdout."""
-    result = subprocess.run(
-        ["git"] + args,
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    return result.stdout.strip()
+    try:
+        result = subprocess.run(
+            ["git"] + args,
+            capture_output=True,
+            text=True,
+            check=True,
+            cwd=Path(__file__).parent.parent
+        )
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        print(f"Error running git command: {' '.join(args)}", file=sys.stderr)
+        print(f"Return code: {e.returncode}", file=sys.stderr)
+        print(f"stdout: {e.stdout}", file=sys.stderr)
+        print(f"stderr: {e.stderr}", file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print(f"Unexpected error: {e}", file=sys.stderr)
+        sys.exit(1)
 
 def get_commits(limit: int = 100) -> list[dict]:
     """Get recent commits with their details."""
@@ -144,6 +155,21 @@ def main():
     """Generate commits data JSON file."""
     # Get the repo root directory
     repo_root = Path(__file__).parent.parent
+    
+    # Debug: Print current directory and check for .git
+    print(f"Script location: {Path(__file__).absolute()}", file=sys.stderr)
+    print(f"Repo root (calculated): {repo_root.absolute()}", file=sys.stderr)
+    print(f"Current working directory: {Path.cwd().absolute()}", file=sys.stderr)
+    
+    # Check if .git exists
+    git_dir = repo_root / ".git"
+    if not git_dir.exists():
+        print(f"ERROR: .git directory not found at {git_dir}", file=sys.stderr)
+        print("Make sure you're running this from a git repository", file=sys.stderr)
+        sys.exit(1)
+    else:
+        print(f"Found .git directory at {git_dir}", file=sys.stderr)
+    
     data_dir = repo_root / "data"
     output_file = data_dir / "commits.json"
     
