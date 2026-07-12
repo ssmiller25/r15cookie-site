@@ -18,7 +18,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-def run_git_command(args: list[str]) -> str:
+def run_git_command(args: list[str], cwd: Path = None) -> str:
     """Run a git command and return stdout."""
     try:
         result = subprocess.run(
@@ -26,29 +26,19 @@ def run_git_command(args: list[str]) -> str:
             capture_output=True,
             text=True,
             check=True,
-            cwd=Path(__file__).parent.parent
+            cwd=cwd
         )
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
-        print(f"Error running git command: {' '.join(args)}", file=sys.stderr)
+        print(f"Error running git command: git {' '.join(args)}", file=sys.stderr)
+        print(f"Working directory: {cwd or Path.cwd()}", file=sys.stderr)
         print(f"Return code: {e.returncode}", file=sys.stderr)
-        print(f"stdout: {e.stdout}", file=sys.stderr)
-        print(f"stderr: {e.stderr}", file=sys.stderr)
-        sys.exit(1)
-    except Exception as e:
-        print(f"Unexpected error: {e}", file=sys.stderr)
+        if e.stderr:
+            print(f"Git error: {e.stderr}", file=sys.stderr)
         sys.exit(1)
 
 def get_commits(limit: int = 100) -> list[dict]:
     """Get recent commits with their details."""
-    # Format: %H%n%h%n%an%n%ae%n%ai%n%s%n%b%n---COMMIT_SEPARATOR---%n
-    # %H: full hash
-    # %h: short hash
-    # %an: author name
-    # %ae: author email
-    # %ai: author date (ISO 8601)
-    # %s: subject
-    # %b: body
     format_str = "%H%n%h%n%an%n%ae%n%ai%n%s%n%b%n---COMMIT_SEPARATOR---%n"
     
     log_output = run_git_command([
@@ -113,39 +103,29 @@ def get_commits(limit: int = 100) -> list[dict]:
     return commits
 
 def map_file_to_site_url(file_path: str) -> dict | None:
-    """
-    Map a git file path to a site URL.
-    Returns dict with 'url' and 'type' or None if not a content file.
-    """
+    """Map a git file path to a site URL."""
     path = Path(file_path)
     
-    # Content files in content/ directory
     if path.parts[0] == "content":
-        # Remove 'content/' prefix and handle index.md files
         relative = str(path.relative_to("content"))
         
-        # Handle _index.md files (section pages)
         if path.name == "_index.md":
             section = str(path.parent.relative_to("content"))
             url = f"/{section}/" if section else "/"
             return {"url": url, "type": "section"}
         
-        # Handle regular content files
         if path.suffix in [".md", ".html"]:
-            # Remove extension and _index suffix
             name = path.stem
             if name == "_index":
                 name = ""
             
-            # Build URL based on directory structure
-            dir_parts = list(path.parent.parts[1:])  # Skip 'content'
+            dir_parts = list(path.parent.parts[1:])
             if name:
                 dir_parts.append(name)
             
             url = "/" + "/".join(dir_parts) + "/"
             return {"url": url, "type": "page"}
     
-    # Non-content files - link to GitHub blob
     return {
         "url": f"https://github.com/ssmiller25/r15cookie-site/blob/main/{file_path}",
         "type": "github"
@@ -156,30 +136,24 @@ def main():
     # Get the repo root directory
     repo_root = Path(__file__).parent.parent
     
-    # Debug: Print current directory and check for .git
-    print(f"Script location: {Path(__file__).absolute()}", file=sys.stderr)
-    print(f"Repo root (calculated): {repo_root.absolute()}", file=sys.stderr)
-    print(f"Current working directory: {Path.cwd().absolute()}", file=sys.stderr)
+    # Change to repo root directory
+    import os
+    os.chdir(repo_root)
     
-    # Check if .git exists
-    git_dir = repo_root / ".git"
-    if not git_dir.exists():
-        print(f"ERROR: .git directory not found at {git_dir}", file=sys.stderr)
-        print("Make sure you're running this from a git repository", file=sys.stderr)
+    # Verify we're in a git repo
+    try:
+        run_git_command(["rev-parse", "--git-dir"])
+    except SystemExit:
+        print("ERROR: Not a git repository!", file=sys.stderr)
         sys.exit(1)
-    else:
-        print(f"Found .git directory at {git_dir}", file=sys.stderr)
     
     data_dir = repo_root / "data"
     output_file = data_dir / "commits.json"
     
-    # Ensure data directory exists
     data_dir.mkdir(exist_ok=True)
     
-    # Get commits
-    commits = get_commits(limit=100)  # Get more for pagination
+    commits = get_commits(limit=100)
     
-    # Process commits and map file paths to URLs
     for commit in commits:
         mapped_files = []
         for file_path in commit["changed_files"]:
@@ -190,7 +164,6 @@ def main():
         
         commit["changed_files_mapped"] = mapped_files
     
-    # Write JSON output
     with open(output_file, "w") as f:
         json.dump(commits, f, indent=2)
     
