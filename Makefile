@@ -17,6 +17,7 @@ KUBECTL=kubectl --kubeconfig=$(KUBECONFIG)
 
 
 .PHONY: smoke-check
+
 smoke-check:
 	@test -f AGENTS.md
 	@test -f README.md
@@ -89,3 +90,11 @@ civo-deploy: $(KUBECONFIG)
 
 civo-env: $(KUBECONFIG)
 	export KUBECONFIG=$(KUBECONFIG)
+
+.PHONY: generate-commits
+generate-commits:
+	python3 scripts/generate-commits-data.py
+
+.PHONY: generate-commits
+generate-commits:
+	python3 scripts/generate-commits-data.py

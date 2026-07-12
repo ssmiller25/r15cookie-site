@@ -34,6 +34,12 @@ jobs:
           fi
           echo "Theme submodule OK"
 
+      - name: Generate commits data
+        run: |
+          python3 scripts/generate-commits-data.py
+          echo "Generated commits data:"
+          head -20 data/commits.json
+
       - name: Install Hugo (manual)
         run: |
           set -euo pipefail
