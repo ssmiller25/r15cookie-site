@@ -1,5 +1,5 @@
 # /// script
-# requires-python = ">=3.8"
+# requires-python = ">=3.11"
 # dependencies = []
 # ///
 
@@ -32,6 +32,14 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+STATUS_MAP = {
+    "A": {"label": "Added", "icon": "➕"},
+    "D": {"label": "Deleted", "icon": "❌"},
+    "M": {"label": "Modified", "icon": "✏️"},
+    "R": {"label": "Renamed", "icon": "🔄"},
+    "C": {"label": "Copied", "icon": "📋"}
+}
+
 def run_git_command(args: list[str], cwd: Path = None) -> str:
     """Run a git command and return stdout."""
     try:
@@ -39,6 +47,7 @@ def run_git_command(args: list[str], cwd: Path = None) -> str:
             ["git"] + args,
             capture_output=True,
             text=True,
+            errors="replace",
             check=True,
             cwd=cwd
         )
@@ -83,26 +92,30 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
         body = "\n".join(lines[6:]).strip() if len(lines) > 6 else ""
         
         # Get changed files for this commit
+        # -M enables rename detection so renames arrive as a single "Rxxx\told\tnew"
+        # line instead of being split into a separate Delete + Add.
         changed_files_output = run_git_command([
             "diff-tree",
             "--no-commit-id",
             "--name-status",
+            "-M",
             "-r",
             full_hash
         ])
-        
-        # Parse name-status output: lines like "M\tfile.md" or "A\tfile.md"
+
+        # Parse name-status output: lines like "M\tfile.md", "A\tfile.md", or
+        # "R091\told/path.md\tnew/path.md" for detected renames/copies.
         changed_files = []
         for line in changed_files_output.split("\n"):
             if not line.strip():
                 continue
             parts = line.split("\t")
             if len(parts) >= 2:
-                status = parts[0].strip()
-                file_path = parts[1].strip()
+                status = parts[0].strip()[0]  # drop the similarity % suffix, e.g. "R091" -> "R"
+                file_path = parts[2].strip() if status in ("R", "C") and len(parts) >= 3 else parts[1].strip()
                 changed_files.append({
                     "path": file_path,
-                    "status": status  # A=Added, D=Deleted, M=Modified, R=Renamed
+                    "status": status  # A=Added, D=Deleted, M=Modified, R=Renamed, C=Copied
                 })
         
         # Only include commits that actually touch content/
@@ -121,15 +134,6 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
             formatted_date = author_date
             iso_date = author_date
         
-        # Map status to human-readable and icon
-        status_map = {
-            "A": {"label": "Added", "icon": "➕"},
-            "D": {"label": "Deleted", "icon": "❌"},
-            "M": {"label": "Modified", "icon": "✏️"},
-            "R": {"label": "Renamed", "icon": "🔄"},
-            "C": {"label": "Copied", "icon": "📋"}
-        }
-        
         commits.append({
             "full_hash": full_hash,
             "short_hash": short_hash,
@@ -139,8 +143,7 @@ def get_commits(limit: int = 100, content_only: bool = True) -> list[dict]:
             "iso_date": iso_date,
             "subject": subject,
             "body": body,
-            "changed_files": changed_files,
-            "status_map": status_map
+            "changed_files": changed_files
         })
     
     return commits
@@ -220,7 +223,7 @@ def main():
             if mapped:
                 mapped["file_path"] = file_path
                 mapped["status"] = status
-                mapped["status_info"] = commit["status_map"].get(status, {"label": status, "icon": "📄"})
+                mapped["status_info"] = STATUS_MAP.get(status, {"label": status, "icon": "📄"})
                 mapped_files.append(mapped)
         
         commit["changed_files_mapped"] = mapped_files
