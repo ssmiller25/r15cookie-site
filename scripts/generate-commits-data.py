@@ -143,7 +143,7 @@ def main():
     data_dir.mkdir(exist_ok=True)
     
     # Get commits
-    commits = get_commits(limit=50)  # Get more for pagination
+    commits = get_commits(limit=100)  # Get more for pagination
     
     # Process commits and map file paths to URLs
     for commit in commits:
