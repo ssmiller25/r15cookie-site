@@ -5,7 +5,7 @@
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
-.bin/hugo
+.bin/
 .history
 .history/
 .ionide
