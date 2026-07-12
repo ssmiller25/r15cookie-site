@@ -35,3 +35,4 @@ hugo.darwin
 hugo.exe
 hugo.linux
 kubeconfig.*
+.bin/hugo
