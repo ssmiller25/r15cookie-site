@@ -94,4 +94,4 @@ civo-env: $(KUBECONFIG)
 
 .PHONY: generate-commits
 generate-commits:
-	python3 scripts/generate-commits-data.py
+	uv run scripts/generate-commits-data.py
