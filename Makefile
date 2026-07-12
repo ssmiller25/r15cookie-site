@@ -1,17 +1,20 @@
 HUGO_VERSION := 0.131.0
 
-# Detect OS and Architecture at Makefile parse time
+# Detect OS and Architecture
 OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 ARCH := $(shell uname -m)
 
-# Set Hugo package name based on OS and ARCH
+# Set Hugo package based on OS and ARCH
 ifeq ($(OS),darwin)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_darwin-universal.tar.gz
-else ifeq ($(ARCH),aarch64)
+endif
+ifeq ($(ARCH),aarch64)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
-else ifeq ($(ARCH),arm64)
+endif
+ifeq ($(ARCH),arm64)
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-arm64.tar.gz
-else
+endif
+ifndef HUGO_PKG
   HUGO_PKG := hugo_extended_$(HUGO_VERSION)_linux-amd64.tar.gz
 endif
 
@@ -58,14 +61,14 @@ clean:           ## Clean build artifacts
 
 .bin/hugo:
 	@mkdir -p .bin
-	@echo "Downloading Hugo for $(OS)/$(ARCH)..."
-	@echo "Package: $(HUGO_PKG)"
+	@echo "Platform detected: $(OS)/$(ARCH)"
+	@echo "Downloading: $(HUGO_PKG)"
 	@curl -fL -o .bin/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_PKG)"
 	@tar -xzf .bin/hugo.tar.gz -C .bin
 	@rm -f .bin/hugo.tar.gz
 	@if [ -f .bin/hugo ]; then mv .bin/hugo .bin/hugo; fi
 	@if [ -f .bin/hugo_extended ]; then mv .bin/hugo_extended .bin/hugo; fi
 	@chmod +x .bin/hugo
-	@echo "Hugo binary ready: $$(.bin/hugo version)"
+	@echo "Hugo ready: $$(.bin/hugo version)"
 
 # Help Source: https://gist.github.com/prwhite/8168133
