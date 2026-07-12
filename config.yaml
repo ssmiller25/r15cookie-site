@@ -33,6 +33,7 @@ params:
   navTitleLink: /
   mainSections: post
   github_corner_url: "https://github.com/ssmiller25/r15cookie-site"
+  github_repo: "ssmiller25/r15cookie-site"  # Used for commit links
   footer: true
 
 menu:
