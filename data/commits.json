@@ -1,5 +1,109 @@
 [
   {
+    "full_hash": "33808cccfbd93b7edfc274d619cd19ab0e1d8596",
+    "short_hash": "33808cc",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:33:27-04:00",
+    "subject": "feat: Generate 100 commits for better pagination",
+    "body": "- Increase commit limit from 10 to 100\n- Provide more history for pagination\n- Improve commit browsing experience",
+    "changed_files": [
+      "scripts/generate-commits-data.py"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      }
+    ]
+  },
+  {
+    "full_hash": "2bd6754cb8f97fa5e56e25ecf0d31ee5a5a1e20b",
+    "short_hash": "2bd6754",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:23:12-04:00",
+    "subject": "Fix: Properly add generate-commits Makefile target",
+    "body": "",
+    "changed_files": [
+      "Makefile",
+      "Makefile.bak"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
+        "type": "github",
+        "file_path": "Makefile"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile.bak",
+        "type": "github",
+        "file_path": "Makefile.bak"
+      }
+    ]
+  },
+  {
+    "full_hash": "c196b3f3eb647f4382065d6fb02ec612aa4a6d39",
+    "short_hash": "c196b3f",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:22:18-04:00",
+    "subject": "Add Makefile target and update GitHub Actions workflow",
+    "body": "- Add 'make generate-commits' target for local execution\n- Update GitHub Actions to run generate-commits-data.py before build\n- Ensure commits data is available during site generation",
+    "changed_files": [
+      ".github/workflows/deploy-hugo-pages.yml",
+      "Makefile"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/.github/workflows/deploy-hugo-pages.yml",
+        "type": "github",
+        "file_path": ".github/workflows/deploy-hugo-pages.yml"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/Makefile",
+        "type": "github",
+        "file_path": "Makefile"
+      }
+    ]
+  },
+  {
+    "full_hash": "e604902de049743345a6796d3545e2bc15327b60",
+    "short_hash": "e604902",
+    "author_name": "Steve Miller",
+    "author_email": "me@r15cookie.com",
+    "date": "July 12, 2026",
+    "iso_date": "2026-07-12T10:21:22-04:00",
+    "subject": "feat: Replace home page with git commits listing",
+    "body": "- Add script to generate commits data from git log\n- Update theme submodule to use feature/git-commits-support branch\n- Home page now displays last 10 commits with details\n- Links to changed files (rendered pages or GitHub)\n- Includes commit hash, date, author, and full message",
+    "changed_files": [
+      "data/commits.json",
+      "scripts/generate-commits-data.py",
+      "themes/r15-papercss-hugo-theme"
+    ],
+    "changed_files_mapped": [
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/data/commits.json",
+        "type": "github",
+        "file_path": "data/commits.json"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/scripts/generate-commits-data.py",
+        "type": "github",
+        "file_path": "scripts/generate-commits-data.py"
+      },
+      {
+        "url": "https://github.com/ssmiller25/r15cookie-site/blob/main/themes/r15-papercss-hugo-theme",
+        "type": "github",
+        "file_path": "themes/r15-papercss-hugo-theme"
+      }
+    ]
+  },
+  {
     "full_hash": "84fb980768e1a596a01b2db93ca3156588f23a93",
     "short_hash": "84fb980",
     "author_name": "Steve Miller",
@@ -1064,92 +1168,6 @@
         "url": "/info/monitor/",
         "type": "page",
         "file_path": "content/info/monitor.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "97507239bbfac71f91efdf8d7a8b3e5986256229",
-    "short_hash": "9750723",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "September 06, 2024",
-    "iso_date": "2024-09-06T23:30:03+00:00",
-    "subject": "Crowdstrike incident",
-    "body": "",
-    "changed_files": [
-      "content/info/plan.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/plan/",
-        "type": "page",
-        "file_path": "content/info/plan.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "1e309e07340fff373cc6c24b90a3450b3b9c98b4",
-    "short_hash": "1e309e0",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "September 02, 2024",
-    "iso_date": "2024-09-02T15:13:23+00:00",
-    "subject": "Git https auth fix",
-    "body": "",
-    "changed_files": [
-      "content/info/gitcheatsheet.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/gitcheatsheet/",
-        "type": "page",
-        "file_path": "content/info/gitcheatsheet.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "64aea6a177c68a97600449a0c0e4bc4330854606",
-    "short_hash": "64aea6a",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "August 24, 2024",
-    "iso_date": "2024-08-24T12:35:06+00:00",
-    "subject": "Business card generator update, other cleanup",
-    "body": "",
-    "changed_files": [
-      "content/about.md",
-      "content/info/career.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/about/",
-        "type": "page",
-        "file_path": "content/about.md"
-      },
-      {
-        "url": "/info/career/",
-        "type": "page",
-        "file_path": "content/info/career.md"
-      }
-    ]
-  },
-  {
-    "full_hash": "a7505ad95ef5309d709c9c118e388032cc5cecf7",
-    "short_hash": "a7505ad",
-    "author_name": "Steven Miller",
-    "author_email": "steve@r15cookie.com",
-    "date": "August 18, 2024",
-    "iso_date": "2024-08-18T13:58:52+00:00",
-    "subject": "Adding mint",
-    "body": "",
-    "changed_files": [
-      "content/info/k8s.md"
-    ],
-    "changed_files_mapped": [
-      {
-        "url": "/info/k8s/",
-        "type": "page",
-        "file_path": "content/info/k8s.md"
       }
     ]
   }
