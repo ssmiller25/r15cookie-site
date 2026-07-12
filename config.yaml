@@ -35,6 +35,7 @@ params:
   github_corner_url: "https://github.com/ssmiller25/r15cookie-site"
   github_repo: "ssmiller25/r15cookie-site"  # Used for commit links
   footer: true
+  enable_search: true  # Enable search functionality
 
 menu:
   nav:
@@ -81,3 +82,15 @@ markup:
   tableOfContents:
     endLevel: 12
     startLevel: 2
+
+outputFormats:
+  SearchIndex:
+    mediaType: application/json
+    baseName: search
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - SearchIndex
