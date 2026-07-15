@@ -61,7 +61,7 @@ notes-sync:   ## Pull refs/notes/site-display from origin (not included in a nor
 
 .PHONY: update-theme
 update-theme:   ## Update the Hugo theme from remote repo
-	@./update-theme.sh feature/git-commits-support
+	@./update-theme.sh main
 
 .PHONY: clean
 clean:           ## Clean build artifacts

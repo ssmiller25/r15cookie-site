@@ -2,7 +2,7 @@
 # Update the r15-papercss-hugo-theme
 # Usage: ./update-theme.sh [branch]
 
-BRANCH=${1:-feature/git-commits-support}
+BRANCH=${1:-main}
 THEME_DIR="themes/r15-papercss-hugo-theme"
 
 echo "Updating theme from branch: $BRANCH"

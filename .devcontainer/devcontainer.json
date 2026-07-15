@@ -35,7 +35,7 @@
 	// Note: rm -f .git/index.lock guards are needed because VS Code's background git status
 	// polling can race with these git commands on a freshly created container, leaving a stale
 	// index.lock that makes the next git command fail with "Unable to create index.lock".
-	"postCreateCommand": "rm -f .git/index.lock; if [ -f .git ] && grep -q 'gitdir:' .git; then rm -f .git && git init && git remote add origin https://github.com/ssmiller25/r15cookie-site.git && git fetch origin feature/git-commits-homepage && rm -f .git/index.lock && git checkout -f feature/git-commits-homepage; fi && ./update-theme.sh feature/git-commits-support && git config --local user.email 'me@r15cookie.com' && git config --local user.name 'Steve Miller'"
+	"postCreateCommand": "rm -f .git/index.lock; if [ -f .git ] && grep -q 'gitdir:' .git; then rm -f .git && git init && git remote add origin https://github.com/ssmiller25/r15cookie-site.git && git fetch origin feature/git-commits-homepage && rm -f .git/index.lock && git checkout -f feature/git-commits-homepage; fi && ./update-theme.sh main && git config --local user.email 'me@r15cookie.com' && git config --local user.name 'Steve Miller'"
 
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
