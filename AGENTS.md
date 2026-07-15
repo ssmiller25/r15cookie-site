@@ -46,3 +46,4 @@ Route out when: cross-domain prioritization → `../AGENTS.md`. Private business
 - Prefer small, verifiable edits to content and config.
 - Run narrow validation before broad build/release steps.
 - For publish-risking changes, summarize impact and rollback path.
+- Git notes (`refs/notes/site-display`, used to correct a commit's displayed heading/body without rewriting history — see README) are NOT included in a normal `git push`/`fetch`/`clone`. After `make note`, run `make notes-push` to publish it; run `make notes-sync` to pull down notes made elsewhere.

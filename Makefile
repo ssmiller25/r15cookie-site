@@ -1,4 +1,5 @@
 HUGO_VERSION := 0.131.0
+NOTES_REF := refs/notes/site-display
 
 # Detect OS and Architecture
 OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
@@ -43,6 +44,20 @@ smoke-check: ## Run lightweight repository smoke checks
 .PHONY: generate-commits
 generate-commits:   ## Generate commits data for home page
 	uv run scripts/generate-commits-data.py
+
+.PHONY: note
+note:   ## Add/edit a display-override note: make note HASH=<hash> (local only - git push does NOT push notes, run notes-push after)
+	@test -n "$(HASH)" || (echo "Usage: make note HASH=<commit-hash>"; exit 1)
+	@git notes --ref=$(NOTES_REF) edit $(HASH)
+	@echo "Note saved locally. Run 'make notes-push' to publish it."
+
+.PHONY: notes-push
+notes-push:   ## Push refs/notes/site-display to origin (required after 'make note' - not included in a normal git push)
+	@git push origin $(NOTES_REF)
+
+.PHONY: notes-sync
+notes-sync:   ## Pull refs/notes/site-display from origin (not included in a normal git fetch/pull/clone)
+	@git fetch origin $(NOTES_REF):$(NOTES_REF)
 
 .PHONY: update-theme
 update-theme:   ## Update the Hugo theme from remote repo
