@@ -38,24 +38,26 @@ to put a cookie on the R15 resistor"
 
 Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com/ssmiller25/present)
 
-
 ## Professional Experience
 
 ### Tuition.io - DevOps Engineering Manager  (March 2025 - Present)
 
-Responsible for DevOps and QA at Tuition.io.
-
-- AI based security and operational integration.
-
+- Hired, onboarded, and mentor two direct reports (Jr DevOps + QA/automation lead).
+- Drove AI-fluency and AI-assisted engineering across the team — self-hosted inference PoC (Gemma on AWS Inferentia/Neuron), an AWS DevOps agent experiment, standardized LLM observability, and evaluation of ephemeral environments + AI as a unified developer platform.
+- Delivered full-stack SSO/SAML, including code maintenance and implementation of SP-initiated SAML Single Logout.
 
 ### Tuition.io - Sr. DevOps Engineer (Dec 2021 - March 2025)
 
-Responsible for development and operation of production infrastructure and site reliability engineering at Tuition.io
-
-- AWS
-- Kubernetes
-- Terraform
-- Security and Compliance
+- Sole owner of the entire cloud platform for 4+ years — architected and operated Tuition.io's full AWS / Kubernetes (EKS) / Terraform stack, CI/CD, developer experience, and cross-service operational health across a 6-account multi-environment layout 
+- Built the Infrastructure-as-Code platform (tio-infra), replacing manual configuration and Cloudformation deployed by the Serverless Framework
+- Built the cloud developer-experience platform — first piloting Coder, then a Github Codespaces/ devcontainer methodology, evolving into ephemeral per-PR environments and an in-house tooling to give the whole engineering org a fast, reproducible inner-dev loop.
+- Migrated legacy monorepo from CircleCI to GitHub Actions with custom Docker-based actions, reusable workflows, and seeded Postgres/LocalStack test containers.
+- Kubernetes management and improvements leveraging AWS's management EKS upgrade program across all environments, including EBS CSI migration, load-balancer-controller and core-component upgrades. 
+- Designed and built the disaster-recovery program and dedicated "Whiskey" DR environment — automated cross-account, cross-region RDS snapshot copy with KMS re-encryption, S3/DB/GitHub replication, and later AWS Backup with immutable, Vault-Lock air-gapped vaults.
+- Led the technical management of the tuitionmanager.com acquisition from Wiley, decoupling every vendor component into Tuition.io control: monitoring, security, DNS, and SSH/system access.
+- Owned security & compliance engineering — passed external penetration tests and the ISO 27001 audit, performed CIS hardening, deployed Wazuh for HIDS, migrated secrets to AWS, and reduced privileged/direct-DB access; currently building out SAST/GRC tooling.
+- Led a sustained Sidekiq/Rails performance & reliability overhaul (Oct 2025–Jan 2026), along with latency mitigation in card services leveraging improvements on our Kubernetes EKS configuration.
+- Standardized observability across the platform, implementing Datadog APM/Tracing across Rails and Python Kubernetes Microservices and AWS Lambda Serverless, standardized LLM monitoring, and authored a cross-repo dashboard-coverage audit.
 
 ### Plex Systems - Sr. Software Engineer (Dec 2019 - Dec 2021)
 
@@ -162,7 +164,6 @@ Responsible for the technology program, including all PC and Network maintenance
 - [Kubeserial](https://github.com/janekbaraniewski/kubeserial)
   - Kubernetes Operator to provision and deprovision resources based on hardware events.
 
-
 ## Volunteer/Organizations
 
 ### Civo - Ambassador (Oct 2020 - Present)
@@ -197,9 +198,9 @@ endpoints to query data that was used in custom front-end code.
 - **Monitoring:** Prometheus, Grafana, Loki, ELK (Elasticsearch, Logstash, and Kibana), Nagios, VMWare vRealize Operations
 - **Virtualization/Containerization**: Kubernetes, Docker, Vmware vSphere/ESXi, LXC, KVM
 - **Programming Languages:** Shell Scripting (Bash, KSH), GoLang, Python, Perl, PHP, Java, SQL
-- **Applications:** Active Directory, Apache, Ansible, Chef, Git, MySQL, Nagios, Puppet, Tomcat
+- **Applications:** Active Directory, Apache, Ansible, Chef, Git, MySQL, Puppet, Tomcat
 - **Cluster:** HP ServiceGuard, Veritas Cluster/File System
-- **Network:** F5 Local Traffic Manager, OpenSSL, iptables, PXELinux, dhpcd, tftp, Squid Web Caching, Cacti, Wireshark/tcpdump, Nagios, Cisco IOS, Palo Alto Firewall
+- **Network:** F5 Local Traffic Manager, OpenSSL, iptables, PXELinux, dhpcd, tftp, Squid Web Caching, Cacti, Wireshark/tcpdump, Cisco IOS, Palo Alto Firewall
 - **Storage/Backup:**  EMC Clariion, Netapp, Pure, Veritas Netbackup
 - **Cloud:** Alibaba Cloud, Amazon AWS, Google Cloud, Microsoft Azure
 
