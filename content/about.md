@@ -48,15 +48,15 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 ### Tuition.io - Sr. DevOps Engineer (Dec 2021 - March 2025)
 
-- Sole owner of the entire cloud platform for 4+ years — architected and operated Tuition.io's full AWS / Kubernetes (EKS) / Terraform stack, CI/CD, developer experience, and cross-service operational health across a 6-account multi-environment layout 
-- Built the Infrastructure-as-Code platform (tio-infra), replacing manual configuration and Cloudformation deployed by the Serverless Framework
-- Built the cloud developer-experience platform — first piloting Coder, then a Github Codespaces/ devcontainer methodology, evolving into ephemeral per-PR environments and an in-house tooling to give the whole engineering org a fast, reproducible inner-dev loop.
+- Sole owner of the entire cloud platform for 4+ years. Architected and operated Tuition.io's full AWS / Kubernetes (EKS) / Terraform stack, CI/CD, developer experience, and cross-service operational health across a 6-account multi-environment layout.
+- Built the Infrastructure-as-Code platform, replacing manual configuration and Cloudformation deployed by the Serverless Framework
+- Built the cloud developer-experience platform devcontainer based ephemeral per-PR environments and an in-house tooling to give the whole engineering org a fast, reproducible inner-dev loop.
 - Migrated legacy monorepo from CircleCI to GitHub Actions with custom Docker-based actions, reusable workflows, and seeded Postgres/LocalStack test containers.
-- Kubernetes management and improvements leveraging AWS's management EKS upgrade program across all environments, including EBS CSI migration, load-balancer-controller and core-component upgrades. 
-- Designed and built the disaster-recovery program and dedicated "Whiskey" DR environment — automated cross-account, cross-region RDS snapshot copy with KMS re-encryption, S3/DB/GitHub replication, and later AWS Backup with immutable, Vault-Lock air-gapped vaults.
+- Kubernetes management and improvements leveraging AWS's management EKS upgrade program across all environments, including EBS CSI migration, load-balancer-controller and core-component upgrades.
+- Designed and built the disaster-recovery program and dedicated DR environment — automated cross-account, cross-region RDS snapshot copy with KMS re-encryption, S3/DB/GitHub replication, and later AWS Backup with immutable, Vault-Lock air-gapped vaults.
 - Led the technical management of the tuitionmanager.com acquisition from Wiley, decoupling every vendor component into Tuition.io control: monitoring, security, DNS, and SSH/system access.
-- Owned security & compliance engineering — passed external penetration tests and the ISO 27001 audit, performed CIS hardening, deployed Wazuh for HIDS, migrated secrets to AWS, and reduced privileged/direct-DB access; currently building out SAST/GRC tooling.
-- Led a sustained Sidekiq/Rails performance & reliability overhaul (Oct 2025–Jan 2026), along with latency mitigation in card services leveraging improvements on our Kubernetes EKS configuration.
+- Owned security & compliance engineering. Passed external penetration tests and the ISO 27001 audit, performed CIS hardening, deployed Wazuh for HIDS, migrated secrets to AWS, and reduced privileged/direct-DB access; currently building out SAST/GRC tooling.
+- Led a sustained Sidekiq/Rails performance & reliability overhaul, along with latency mitigation in critical services leveraging improvements on our Kubernetes EKS configuration.
 - Standardized observability across the platform, implementing Datadog APM/Tracing across Rails and Python Kubernetes Microservices and AWS Lambda Serverless, standardized LLM monitoring, and authored a cross-repo dashboard-coverage audit.
 
 ### Plex Systems - Sr. Software Engineer (Dec 2019 - Dec 2021)
