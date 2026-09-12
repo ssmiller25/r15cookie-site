@@ -40,7 +40,7 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 ## Professional Experience
 
-### Dynatrace - Principle Software Engineer  (March 2025 - September 2026)
+### Dynatrace - Principal Software Engineer  (September 2026 - Present)
 
 - Working with the [Bindplane](https://bindplane.com/) division, recently aquired, in a vaiety of infrastructure related projects
 
