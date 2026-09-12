@@ -40,16 +40,30 @@ Presentation Site: <https://present.r15cookie.com> - [Source](https://github.com
 
 ## Professional Experience
 
-### Tuition.io - DevOps Engineering Manager  (March 2025 - Present)
+### Dynatrace - Principle Software Engineer  (March 2025 - September 2026)
 
+- Working with the [Bindplane](https://bindplane.com/) division, recently aquired, in a vaiety of infrastructure related projects
+
+### Tuition.io - DevOps Engineering Manager  (March 2025 - September 2026)
+
+- Promoted to manage the DevOps and QA function while remaining ~60% hands-on IC — owning roadmap, quarterly priorities, and capacity planning for a QA Lead, a Junior DevOps Engineer, and an offshore ValueLabs test-engineering pod (SDET, SDE, PM).
 - Hired, onboarded, and mentor two direct reports (Jr DevOps + QA/automation lead).
 - Drove AI-fluency and AI-assisted engineering across the team — self-hosted inference PoC (Gemma on AWS Inferentia/Neuron), an AWS DevOps agent experiment, standardized LLM observability, and evaluation of ephemeral environments + AI as a unified developer platform.
 - Delivered full-stack SSO/SAML, including code maintenance and implementation of SP-initiated SAML Single Logout.
+- Led an effort, including development, of CAN-SPAM-compliant email unsubscribe headers and links.
+- Coordinated the move of tuitionmanager.com to AWS managed infrastructure, with the tema handling the cloud/infrastructure components, to increase reliablity and security
+- Own vendor and cloud-spend management: AWS cost analysis and reduction strategy across RDS/Redshift/MWAA/QuickSight, GitHub Enterprise and Copilot spend guardrails with per-user limits and inactive-seat reclamation, and vendor evaluations for MDM, DAST, and test-automation partners presented to executive leadership.
+
 
 ### Tuition.io - Sr. DevOps Engineer (Dec 2021 - March 2025)
 
-- Sole owner of the entire cloud platform for 4+ years. Architected and operated Tuition.io's full AWS / Kubernetes (EKS) / Terraform stack, CI/CD, developer experience, and cross-service operational health across a 6-account multi-environment layout.
+- Operated as the org's most horizontally-scoped engineer, shipping production code in 22 of the company's 23 repositories. Those included Terraform, Kubernetes Manifests, Ruby/Rails, Python/FastAPI, TypeScript/Ember, and CI — with 1,255 merged PRs and 1,208 PRs reviewed across the org.
+- Repeatedly took work end-to-end that crossed every team boundary: migrated an aquired asset tuitionmanager.com under company control and decoupled it from inherited Wiley components; onboarded dozens of enterprise health systems and universities across DNS, SFTP, and SSO; and owned the infrastructure, deployment, and application layers of every new microservice launched since 2022.
+- Built and owned the company's AWS infrastructure-as-code for 4+ years. ~136K lines of Terraform across production, staging, UAT, sandbox, and disaster-recovery accounts in two regions, covering VPC/networking, EKS, RDS, CloudFront, Route 53, MSK, OpenSearch, ElastiCache, Lambda, S3, SES, and managed SFTP.
 - Built the Infrastructure-as-Code platform, replacing manual configuration and Cloudformation deployed by the Serverless Framework
+- Stood up Kafka (Amazon MSK) as the async messaging backbone with zero-downtime cutovers.
+- Drove continuous fleet-wide modernization — PostgreSQL 11 → 16, Kubernetes 1.21+, Rails 8, Python 3.10 → 3.14, Node/Terraform/AWS-provider major versions, and repeated OpenSearch upgrades — each rolled environment-by-environment with rollback plans.
+- Led sustained infrastructure hardening: org-wide S3 public-access blocks and default encryption, least-privilege IAM and IRSA migration, TLS policy and CloudFront security headers, SPF/DKIM/DMARC lockdown, dedicated CloudTrailfor AI/Bedrock execution, and SSH key lifecycle management for 40+ enterprise SFTP partners via Ansible.
 - Built the cloud developer-experience platform devcontainer based ephemeral per-PR environments and an in-house tooling to give the whole engineering org a fast, reproducible inner-dev loop.
 - Migrated legacy monorepo from CircleCI to GitHub Actions with custom Docker-based actions, reusable workflows, and seeded Postgres/LocalStack test containers.
 - Kubernetes management and improvements leveraging AWS's management EKS upgrade program across all environments, including EBS CSI migration, load-balancer-controller and core-component upgrades.
