@@ -44,3 +44,7 @@ at least information I find interesting :-)
   * [Embedded Systems](/info/embedded)
   * [Weather](/info/weather)
 
+## Interests
+
+  * [Math](/info/math)
+  * [Quotes](/info/quotes)
