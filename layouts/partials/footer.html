@@ -1,10 +1,10 @@
-
-  <div class="row align-middle child-borders margin"></div>
-    <div class="sm-12 col border-dotted border-4">
- 
-    <em>{{ .Site.Copyright | markdownify }} |
-      Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
-      <a href="{{.Site.BaseURL}}/index.xml">Subscribe</a></em>
-    
-    
-  </div>
+<footer class="site-footer">
+{{ with .Site.Copyright }}
+  <p class="site-footer-copyright">{{ . | markdownify }}</p>
+{{ end }}
+  <p class="site-footer-title">{{ .Site.Title }}</p>
+  <p class="site-footer-meta">Built with <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/ssmiller25/papercss">PaperCSS</a>.</p>
+{{ with .Site.Home.OutputFormats.Get "RSS" }}
+  <p class="site-footer-subscribe"><a href="{{ .Permalink }}">Subscribe</a></p>
+{{ end }}
+</footer>

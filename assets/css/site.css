@@ -1,0 +1,21 @@
+/*
+ * Site-level style overrides for r15cookie.com.
+ *
+ * Loaded AFTER the theme's layer (assets/css/custom.css is concatenated ahead
+ * of this file by layouts/partials/head.html), so anything here wins on equal
+ * specificity. Keep this file small: it should hold only this site's deltas,
+ * not a copy of the theme stylesheet.
+ */
+
+/* flat background: drop the theme's speckle texture, use a solid #eeeeee
+   ground in light mode. Dark mode keeps the framework's dark surface. */
+body {
+  background-image: none;
+}
+
+html:not(.dark) body {
+  background-color: #eeeeee;
+}
+
+/* Table of contents styling (underline bleed, small-screen alignment) is
+   theme-owned as of theme v1.1.1 — no site delta needed. */

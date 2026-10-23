@@ -5,12 +5,19 @@
 
   {{ hugo.Generator }}
   <link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "RSS" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end }}
 
-  {{ if .IsHome }}
-    {{ with .Site.Params.homeMetaContent }}
+{{ if .IsHome }}
+{{ with .Site.Params.homeMetaContent }}
       <meta name="description" content="{{ . | plainify }}">
-    {{ end }}
-  {{ end }}
+{{ end }}
+{{ else }}
+{{ $summary := trim (.Summary | plainify | htmlUnescape) "\n\r"
+| default .Title }}
+    <meta name="description" content="{{ $summary }}">
+{{ end }}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -20,22 +27,56 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" type="text/css" href="{{ "css/paper.css" | relURL }}">
+{{ if site.Params.enableDarkMode }}
+  <script>
+    // Apply the saved (or system) color mode before first paint so the page
+    // never flashes the wrong ground. Runs before the stylesheets are parsed.
+    (function () {
+      var KEY = "r15-papercss-hugo-theme:color-mode";
+      var mode = "auto";
+      try {
+        var stored = window.localStorage.getItem(KEY);
+        if (stored === "light" || stored === "dark" || stored === "auto") {
+          mode = stored;
+        }
+      } catch (e) { /* storage unavailable: fall through to auto */ }
+      var prefersDark = false;
+      try {
+        prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      } catch (e) { /* matchMedia unavailable: treat as light */ }
+      var resolved = mode === "auto" ? (prefersDark ? "dark" : "light") : mode;
+      var root = document.documentElement;
+      if (resolved === "dark") {
+        root.classList.add("dark");
+      } else {
+        root.classList.remove("dark");
+      }
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", resolved === "dark" ? "#41403e" : "#ffffff");
+      }
+    })();
+  </script>
+{{ end }}
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ssmiller25/papercss@v2.0.2/dist/paper.min.css" integrity="sha384-X6OIslUE2lkIrtz1qoMMAFZrjXkE+wjL6x+tSbtQa31zv1YQ2CBp4gSSTJ/dd6LS" crossorigin="anonymous">
 
-  {{ $customCssPath := "css/custom.css" }}
-  {{ $customCss:= resources.Get $customCssPath | resources.ExecuteAsTemplate $customCssPath . }}
-  <link rel="stylesheet" type="text/css" href="{{ $customCss.RelPermalink }}">
-  
-  {{ if hugo.IsProduction }}
+{{- /* Concatenate the theme's override layer with this site's deltas into one
+       fingerprinted bundle. The theme file (assets/css/custom.css) resolves
+       here only while the site does NOT define assets/css/custom.css — do not
+       reintroduce that path in this repo, or it will shadow the theme layer. */ -}}
+{{ $themeCss := resources.Get "css/custom.css" | resources.ExecuteAsTemplate "css/theme-layer.css" . }}
+{{ $siteCss := resources.Get "css/site.css" | resources.ExecuteAsTemplate "css/site.css" . }}
+{{ $customCss := slice $themeCss $siteCss | resources.Concat "css/bundle.css" | minify | fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $customCss.RelPermalink }}" integrity="{{ $customCss.Data.Integrity }}">
+
+{{ if hugo.IsProduction }}
     {{ template "_internal/google_analytics.html" . }}
-  {{ end }}
+{{ end }}
 
-  <!-- before corner -->
-
-  {{ $title := print .Title " | " .Site.Title }}
-  {{ if .IsHome }}
-    {{ $title = .Site.Title }}
-  {{ end }}
+{{ $title := print .Title " | " .Site.Title }}
+{{ if .IsHome }}
+{{ $title = .Site.Title }}
+{{ end }}
   <title>{{ $title }}</title>
 </head>

@@ -9,7 +9,8 @@ theme: r15-papercss-hugo-theme
 googleAnalytics: G-BVT83YVLPP
 disqusShortname: r15cookieblog
 
-paginate: 5
+pagination:
+  pagerSize: 5
 
 privacy:
   disqus:
@@ -36,6 +37,9 @@ params:
   github_repo: "ssmiller25/r15cookie-site"  # Used for commit links
   footer: true
   enable_search: true  # Enable search functionality
+  enableDarkMode: true  # Paper/Ink color-mode switch (defaults to system preference)
+  lightModeLabel: Paper
+  darkModeLabel: Ink
 
 menu:
   nav:
@@ -93,4 +97,5 @@ outputFormats:
 outputs:
   home:
     - HTML
+    - RSS
     - SearchIndex

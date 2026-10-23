@@ -20,10 +20,19 @@ RUN apk add --no-cache \
     rsync
 
 # Keep Docker build Hugo version aligned with GitHub Actions Pages workflow.
-ENV HUGOVERSION 0.125.7
-RUN mkdir -p /usr/local/src \
+ENV HUGOVERSION 0.131.0
+# Resolve the Hugo release arch for wherever this image is built (amd64 or
+# arm64). Prefer BuildKit's TARGETARCH and fall back to uname for non-BuildKit
+# builders, normalizing the common aliases.
+ARG TARGETARCH
+RUN HUGO_ARCH="${TARGETARCH:-$(uname -m)}" \
+    && case "${HUGO_ARCH}" in \
+         x86_64|amd64)  HUGO_ARCH=amd64 ;; \
+         aarch64|arm64) HUGO_ARCH=arm64 ;; \
+       esac \
+    && mkdir -p /usr/local/src \
     && cd /usr/local/src \
-    && curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGOVERSION}/hugo_${HUGOVERSION}_Linux-64bit.tar.gz | tar -xz \
+    && curl -fL "https://github.com/gohugoio/hugo/releases/download/v${HUGOVERSION}/hugo_extended_${HUGOVERSION}_linux-${HUGO_ARCH}.tar.gz" | tar -xz \
     && mv hugo /usr/local/bin/hugo \
     && addgroup -Sg 1000 hugo \
     && adduser -SG hugo -u 1000 -h /src hugo
