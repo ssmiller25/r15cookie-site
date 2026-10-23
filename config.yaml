@@ -37,6 +37,7 @@ params:
   github_repo: "ssmiller25/r15cookie-site"  # Used for commit links
   footer: true
   enable_search: true  # Enable search functionality
+  enableToc: false  # No table of contents on posts by default; a post opts in with toc: true
   enableDarkMode: true  # Paper/Ink color-mode switch (defaults to system preference)
   lightModeLabel: Paper
   darkModeLabel: Ink
